@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Basic C++/Untitled.md",
+                "file": "Basic C++/Pointers.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,6 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Basic C++/Pointers.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -101,6 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Basic C++/Pointers.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -123,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Untitled.md"
+                "file": "Basic C++/Pointers.md"
               }
             }
           }
@@ -144,9 +146,12 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "2d03379fbe211b70",
+  "active": "6fa485c7fc239465",
   "lastOpenFiles": [
-    "Basic C++/Untitled.md",
+    "Basic C++/Include and *Preprocessor in c.md",
+    "Basic C++/Pointers.md",
+    "Included images",
+    "Included images/Screenshot 2023-11-25 at 4.20.29 pm.png",
     "Untitled.md",
     "Table - Data Structure and Algorithm with C++.md",
     "Algorithms",
