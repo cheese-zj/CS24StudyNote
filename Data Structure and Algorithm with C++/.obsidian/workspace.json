@@ -13,13 +13,38 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Basic C++/Pointers.md",
+                "file": "Basic C++/Reference and Pointers.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "8f547032d766a007",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Basic C++/Reference and Pointers.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "d74ca9bd07c076b1",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Basic C++/Basic Syntax.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -85,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Basic C++/Pointers.md",
+                "file": "Basic C++/Basic Syntax.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Basic C++/Pointers.md",
+                "file": "Basic C++/Basic Syntax.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +150,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Basic C++/Pointers.md"
+                "file": "Basic C++/Basic Syntax.md"
               }
             }
           }
@@ -146,13 +171,17 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "6fa485c7fc239465",
+  "active": "d74ca9bd07c076b1",
   "lastOpenFiles": [
+    "Basic C++/Reference and Pointers.md",
+    "Basic C++/Basic Syntax.md",
     "Basic C++/Include and *Preprocessor in c.md",
-    "Basic C++/Pointers.md",
+    "Problems/2. Add Two Numbers (Linked List).md",
+    "NOTE.README.md",
+    "Problems/Untitled",
+    "Problems",
     "Included images",
     "Included images/Screenshot 2023-11-25 at 4.20.29 pm.png",
-    "Untitled.md",
     "Table - Data Structure and Algorithm with C++.md",
     "Algorithms",
     "Data Structure",
