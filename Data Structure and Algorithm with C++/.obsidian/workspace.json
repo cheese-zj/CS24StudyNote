@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Basic C++/Basic Syntax.md",
+                "file": "Problems/Leetcode/1685. Sum of Absolute Differences in a Sorted Array.md",
                 "mode": "source",
                 "source": false
               }
@@ -110,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Basic C++/Basic Syntax.md",
+                "file": "Problems/Leetcode/1685. Sum of Absolute Differences in a Sorted Array.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Basic C++/Basic Syntax.md",
+                "file": "Problems/Leetcode/1685. Sum of Absolute Differences in a Sorted Array.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -150,7 +150,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Basic C++/Basic Syntax.md"
+                "file": "Problems/Leetcode/1685. Sum of Absolute Differences in a Sorted Array.md"
               }
             }
           }
@@ -173,12 +173,14 @@
   },
   "active": "d74ca9bd07c076b1",
   "lastOpenFiles": [
+    "Problems/Leetcode/2. Add Two Numbers (Linked List).md",
     "Basic C++/Reference and Pointers.md",
-    "Basic C++/Basic Syntax.md",
     "Basic C++/Include and *Preprocessor in c.md",
-    "Problems/2. Add Two Numbers (Linked List).md",
+    "Basic C++/Basic Syntax.md",
+    "Algorithms/Prefix Sum.md",
+    "Problems/Leetcode/1685. Sum of Absolute Differences in a Sorted Array.md",
     "NOTE.README.md",
-    "Problems/Untitled",
+    "Problems/Leetcode",
     "Problems",
     "Included images",
     "Included images/Screenshot 2023-11-25 at 4.20.29 pm.png",
