@@ -1,0 +1,12 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/jameszhao/USYD/Cpp_study_note/test/testing'
+relocations:
+  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x0, symBinAddr: 0x100003D54, symSize: 0x6C }
+  - { offsetInCU: 0x4645, offset: 0x4645, size: 0x8, addend: 0x0, symName: __ZNSt3__14endlB7v160006IcNS_11char_traitsIcEEEERNS_13basic_ostreamIT_T0_EES7_, symObjAddr: 0x98, symBinAddr: 0x100003DEC, symSize: 0x58 }
+  - { offsetInCU: 0x4685, offset: 0x4685, size: 0x8, addend: 0x0, symName: __ZNSt3__19use_facetB7v160006INS_5ctypeIcEEEERKT_RKNS_6localeE, symObjAddr: 0x174, symBinAddr: 0x100003EC8, symSize: 0x2C }
+  - { offsetInCU: 0x6FF2, offset: 0x6FF2, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x0, symBinAddr: 0x100003D54, symSize: 0x6C }
+  - { offsetInCU: 0x70D5, offset: 0x70D5, size: 0x8, addend: 0x0, symName: __ZNSt3__113basic_ostreamIcNS_11char_traitsIcEEElsB7v160006EPFRS3_S4_E, symObjAddr: 0x6C, symBinAddr: 0x100003DC0, symSize: 0x2C }
+  - { offsetInCU: 0x7107, offset: 0x7107, size: 0x8, addend: 0x0, symName: __ZNKSt3__19basic_iosIcNS_11char_traitsIcEEE5widenB7v160006Ec, symObjAddr: 0xF0, symBinAddr: 0x100003E44, symSize: 0x84 }
+  - { offsetInCU: 0x7173, offset: 0x7173, size: 0x8, addend: 0x0, symName: __ZNKSt3__15ctypeIcE5widenB7v160006Ec, symObjAddr: 0x1A0, symBinAddr: 0x100003EF4, symSize: 0x38 }
+...
