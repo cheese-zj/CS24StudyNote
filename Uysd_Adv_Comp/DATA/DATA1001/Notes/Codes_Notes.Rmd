@@ -1,0 +1,335 @@
+---
+title: "R 101"
+output: html_document
+date: "2023-05-13"
+---
+
+#### 1.1 包
+```{r}
+#install.packages("tidyverse") 下载package
+#library("tidyverse") 用package
+```
+#### 1.2 导入dataset
+```{r}
+#dataset = read.csv("path") 把data读进r（file -> import dataset -> from text (base))
+```
+#### 1.3 rmd路径
+```{r}
+getwd() #拿到此rmd的路径
+```
+
+#### 2.1 dataset的大小
+```{r}
+dim(iris) #看dataset有几行 几列 (rows and columns)
+```
+#### 2.2 variables的名字
+```{r}
+names(iris) #拿到dataset的variables的名字 (column names)
+#names(iris) = c('x1', 'x2', 'x3', 'x4', 'x5') 改这些名字
+```
+#### 2.3 选几行来看
+```{r}
+head(iris)  #看前6行data（6是r默认的，可以自己改 by adding n = 'x'）
+tail(iris, n=3)  #看最后3行data
+iris[5,1] #拿到第五行第一个data
+```
+#### 2.4 dataset大概有些啥
+```{r}
+str(iris) #看dataset有多少个object，多少个variable，都是什么类型 (eg. chr, num, int)
+```
+#### 2.5 提取一行数据出来
+```{r}
+var1 = iris$Sepal.Length #把var1这个variable从dataset提取出来，并起名叫var1
+head(var1) #看前六个data
+class(var1) #看这个variable是什么类型
+length(var1) #看有多少个data
+sum(var1) #所有var1的data的和，如果得到NA说明有missing value
+```
+#### 2.6 排序
+```{r}
+sort(var1) #从小到大把dataset排序
+sort(var1, decreasing = TRUE) #从大到小
+sum(sort(var1)[1:5]) #拿到最小的五个data的和
+```
+#### 2.7 类型变换
+```{r}
+as.character(iris$Sepal.Length[1:5]) #把numerical变成categorical，改了前五行要不然太多数字看着头疼
+as.numeric(iris$Sepal.Length[1:5]) #把categorical变成numerical
+```
+
+#### 3.1 basic r 画图
+```{r}
+table(iris$Sepal.Length) #每个category在数据中出现的次数
+barplot(iris$Petal.Length[1:20]) #前20个数据画成bar plot，全画的话会密集恐惧症
+hist(iris$Petal.Length) #画histogram
+hist(iris$Petal.Length, freq = FALSE) #用probability densities画histogram
+boxplot(iris$Sepal.Length, horizontal = TRUE) #把box plot横过来
+plot(iris$Petal.Width, iris$Petal.Length) #scatter plot, 前面x后面y
+```
+
+
+#### 3.2 ggplot 画bar plot
+```{r}
+library(ggplot2)
+#bar plot
+ggplot(iris, aes(x=factor(Sepal.Width), fill = Species)) + geom_bar() + #Sepal.Width是numerical所以要factor
+  ggtitle("Sepal Width by Species") + xlab("Sepal Width")
+```
+
+#### 3.3 ggplot 画 histogram
+```{r}
+ggplot(iris, aes(x = Sepal.Width)) + geom_histogram(bins = 15)
+```
+
+#### 3.4 ggplot 画 comparative box plot
+```{r}
+ggplot(iris, aes(x = Species, y = Petal.Width, fill = Species)) + geom_boxplot() + 
+  theme(legend.position = 'none')
+```
+
+#### 4.1 把r当计算器 -> Numerical summaries
+```{r}
+mean(iris$Sepal.Length)
+median(iris$Sepal.Length)
+sd(iris$Sepal.Length)
+
+library(rafalib)
+popsd(iris$Sepal.Length)
+
+var(iris$Sepal.Length)
+IQR(iris$Sepal.Length)
+```
+#### 4.2 Normal model
+```{r}
+#已知z-score是0.8，算normal curve下0.8左边的面积：
+pnorm(0.8) #后面不写mean和sd的话默认standard normal curve (mean = 0, sd = 1)
+pnorm(0.8, lower.tail = FALSE) #算0.8右边的面积，也可以
+1-pnorm(0.8)
+pnorm(0.6) - pnorm(0.1) #算这两个值中间的面积
+pnorm(180, mean = 177, sd = 5) #自定义mean和sd
+pnorm(180, 177, 5) #也可以直接写数字
+
+qnorm(0.3, 177, 5) #已知面积，算z-score（也可以理解为 百分之三十的数据小于多少）
+
+curve(dnorm(x), from = -3*1, to = 3*1, 
+    xlab = "x", ylab = "Density", main = "Normal Distribution")
+
+```
+
+
+#### 5.1 Linear model
+```{r}
+#两个numerical data -> scatter plot
+ggplot(iris,aes(x = Petal.Width, y = Petal.Length, colour = Species)) + geom_jitter() + 
+  labs(x = "Petal Width", y = "Petal Length") + ggtitle("Petal Width vs Petal Length") + 
+  geom_smooth(method = "lm", col = "skyblue", se = FALSE) 
+linear_model = lm(Petal.Length~Petal.Width,data = iris)
+summary(linear_model) 
+cor(iris$Petal.Length, iris$Petal.Width) #correlation coefficient (r)
+plot(iris$Petal.Length, linear_model$residuals, xlab = "Petal length", ylab = "Residuals") #plot residuals against y
+abline(h = 0, col = "darkgreen")
+```
+
+#### 6.1 模拟丢硬币
+```{r}
+set.seed(1) #设置随机数种子，使结果可复现 (reproducible research)
+sample(c(0, 1), 1, replace = T, prob = c(0.2, 0.8)) #丢一枚作弊后的硬币
+sample1 = sample(c(0, 1), 10, replace = T) #丢10枚正常硬币
+table(sample1) / 10 #用一个表格总结概率
+```
+
+#### 6.2 概率
+```{r}
+#Suppose we have 10 trials with P(event) = 0.3
+dbinom(4, 10, 0.3) #event发生4次的概率
+pbinom(5, 10, 0.3) #event发生<=5次的概率
+```
+
+#### 7.1 高级一点的模拟丢硬币
+```{r}
+box = c(0,1) #建一个box model（假设丢一枚正常硬币），或者任何binary event
+n = 10 #sample size是10
+mean_box = mean(box)
+mean_box
+library(rafalib)
+sd_box = popsd(box)
+sd_box
+
+#Sample sum:
+n * mean_box #EV
+sd_box * sqrt(n) #SE
+
+#Sample mean:
+mean_box #EV
+sd_box/sqrt(n) #SE
+
+totals = replicate(10000, sum(sample(box, 50, replace = T))) #丢50个硬币，重复10000次
+table(totals) #用一个表格总结次数
+hist(totals) #画一个histogram
+```
+
+#### 7.2 模拟1和0
+```{r}
+box = c(rep(1, 200), rep(0, 250)) #200个1，250个0
+n = 30 #随机抽30个人 (sample size)
+mean_box = mean(box)
+sd_box = sd(box)
+
+ev = mean_box 
+ev #是1的概率
+se = sd_box / sqrt(n) 
+se #standard error
+
+c(ev - 1*se, ev + 1*se) #68% confidence interval
+c(ev - 2*se, ev + 2*se) #95% confidence interval
+c(ev - 3*se, ev + 3*se) #99.7% confidence interval
+```
+
+#### 9.1 Hypothesis testing
+```{r}
+#H0: P = 0.8
+#H1: P > 0.8
+box = c(rep(0, 2), rep(1, 8))
+mean(box)
+library(rafalib)
+popsd(box)
+#sample size 29, 26个1
+n = 29
+ov = 26
+ev = n * mean(box)
+se = sqrt(n) * popsd(box)
+ts = (ov-ev) / se #test statistic
+pnorm(ts, lower.tail = FALSE) #P(test statistic >= 1.3)
+#p-value > 0.05, retain H0
+```
+
+#### 10.1 1 Sample Z test
+```{r}
+#caffeine exhaustion time
+caf0 = c(36.05,52.47,56.55,45.2,35.25,66.38,40.57,57.15,28.34)
+caf13 = c(37.55,59.3,79.12,58.33,70.54,69.47,46.48,66.35,36.2)
+#H0: mean exhaustion time with no caffeine = 45 (mins)
+#H1: mean exhaustion time with no caffeine != 45 (mins)
+teststat = (mean(caf0)-45)/(12/sqrt(length(caf0)))
+teststat
+2*pnorm(teststat, lower.tail = F)
+#0.72 > 0.05, data appears consistent with the null hypothesis
+```
+
+#### 10.2 1 Sample T test
+```{r}
+teststat1 = (mean(caf0)-45) / (sd(caf0)/sqrt(length(caf0)))
+teststat1
+pt(teststat1, 8, lower.tail=F) #1 tailed, 8 = n-1
+2*pt(teststat1, 8, lower.tail=F) #2 tailed
+#p value for t test is slightly larger than z test, due to the extra wideness for a small sample size of n = 9 making the tail area larger
+#conclusion is the same: we retain H0
+
+#speedy way
+t.test(caf0, mu = 45)
+#shows: t = 0.34592, p-value = 0.7383
+#95 percent confidence interval is same as 2 sided test with a = 0.05. As 45 falls inside the CI, we retain H0. 
+```
+
+#### 10.3 Paired T test
+```{r}
+cafdiff = caf13-caf0 #This is 1 sample! 
+t.test(cafdiff, mu = 0)
+#As the p-value is very small (0.01166), we reject H0 and conclude that "there is a difference". 
+```
+
+#### 10.4 2 Sample T test
+```{r}
+#Heart rates (beats per minute) for 2 independent groups of Sydney students, collected 20 minutes after the ‘RB’ group had drunk a 250ml cold can of Red Bull.
+No_RB <- c(84,76,68,80,64,62,74,84,68,96,80,64,65,66)
+RB <- c(72,88,72,88,76,75,84,80,60,96,80,84)
+
+RB_data <- data.frame(group = c(rep("No_RB",14), rep("RB",12)), rate = c(No_RB,RB))
+
+#H0: there is no difference between the mean heart rate of RB and No_RB
+#H1: there is difference
+
+#By formula
+m1 = mean(No_RB)
+m2 = mean(RB)
+n1 = length(No_RB)
+n2 = length(RB)
+sdp2 = ((n1-1) * sd(No_RB)^2 + (n2-1) * sd(RB)^2)/(n1+n2-2)
+se = sqrt(sdp2 * (1/n1 + 1/n2))
+TestStat=(m1 - m2 - 0)/se
+Pvalue=2*pt(abs(TestStat),n1+n2-2,lower.tail=F)
+c(TestStat,Pvalue)
+
+#Using shortcut
+t.test(No_RB, RB, var.equal = T) #var.equal = T indicates that we are doing a two sample T test assuming equal population variances.
+
+#Statistical conclusion: p-value > 0.05, retain H0. Data is consistent with hypothesis that mean heart rates are equal.
+#Scientific conclusion: The data suggests that the consumption of Redbull by university students does not have an effect on heart rate. 
+```
+
+#### 10.5 Checking assumptions
+```{r}
+#Comparative boxplots - for normality and equality of variance assumptions
+ggplot(RB_data, aes(x = group, y = rate, fill = group)) + geom_boxplot() + 
+  ggtitle("Boxplot of effect of Red Bull on student heart rate") + labs(x = "Group", y = "Heart rate (bpm)") + 
+  theme(legend.position = "none")
+
+#QQ-plot - for normality
+ggplot(RB_data, aes(sample = rate, colour = group)) + stat_qq() + stat_qq_line() + ggtitle("QQplot")
+
+#Shapiro-Wilk test - for normality
+shapiro.test(No_RB)
+shapiro.test(RB)
+
+#Levene's test (F-test) - for equal spread
+var.test(No_RB,RB)
+#The F-test gives p-value > 0.05, suggesting that data is consistent with equal variance.
+#If variance is different, we ma yincrease the chance of falsely rejecting H0.
+
+#Suppose variance is different. 
+set.seed(10)
+No_RB <- No_RB + rnorm(14, 0, 20)  #New simulated version of No-RB with larger variance
+var.test(No_RB, RB)
+t.test(No_RB, RB, var.equal = FALSE) #This performs the Welch 2 Sample T Test. 
+# p-value > 0.05, so our conclusion concurs with the previous 2 Sample T Test for equal variances. 
+```
+#### 11.1 Chi-square test - Goodness of Fit
+```{r}
+set.seed(1)
+dice=c(1,2,3,4,5,6)
+fair=c(1/6,1/6,1/6,1/6,1/6,1/6)
+throws1=sample(dice, 60,replace = T,prob=fair)
+throws1a = table(throws1)
+throws1a
+sum(((table(throws1)-10)^2)/10)
+pchisq(4.4,5,lower.tail=F)
+
+#Speedy way
+chisq.test(throws1a, p = c(1/6,1/6,1/6,1/6,1/6,1/6))
+
+#Loaded dice
+set.seed(1)
+dice=c(1,2,3,4,5,6)
+loaded=c(1/6-1/7,1/6,1/6,1/6,1/6,1/6+1/7)
+throws2=sample(dice, 60,replace = T,prob=loaded)
+throws2a <- table(throws2)
+throws2a
+chisq.test(throws2a, p = c(1/6,1/6,1/6,1/6,1/6,1/6))
+```
+#### 11.2 Chi-square test - Independence
+```{r}
+Smoke = matrix(c(9,4,6,6), nrow = 2, ncol = 2, byrow = TRUE, dimnames = list(c("Smoke", "No smoke"), c("Domestic", "International")))
+mosaicplot(Smoke)
+chisq.test(Smoke)
+chisq.test(Smoke, correct = F) # Without continuity correction
+mosaicplot(Smoke, shade = T) # Mosaic plot with standardised residuals
+fisher.test(Smoke) #If you have a small sample size (cells < 5), and you cannot increase the sample size by, for example, combining categories, then you can use Fisher’s exact test fishers.test in R. 
+```
+
+#### 11.3 Regression Test
+
+```{r}
+lm(Petal.Length~Petal.Width, iris)
+summary(lm(Petal.Length~Petal.Width, iris))
+```
+

@@ -1,0 +1,746 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>1112NOTE</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+    margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-interactiveBlue { background-color: rgba(35, 131, 226, .07); }
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-translucentGray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="988a206a-2321-4f99-a4cd-b00b6d8d94bc" class="page sans"><header><h1 class="page-title">1112NOTE</h1><p class="page-description"></p></header><div class="page-body"><details open=""><summary style="font-weight:600;font-size:1.5em;line-height:1.3;margin:0">Binary, OS</summary><div class="indented"><p id="cc14cb80-3e06-4391-9319-00020dc0595f" class="">1.1 Binary ←→ Hex Numbers conversion</p><p id="733714d8-841d-434c-81ee-c0f55afaabf8" class="">1.3 Character Representations</p><ul id="6be3338c-2414-4050-bc3d-78038d1b0a6f" class="toggle"><li><details open=""><summary>1.4 – Instructions</summary><p id="15c66b1b-0666-4027-99fb-743fa8099eef" class="">Source code of programs are compiled and transformed into machine code to be loaded and executed</p><p id="d6a934e6-91a7-41be-8329-9f65a603c24a" class="">Instructions are a sequence of bits, and often broken up into bytes</p><p id="23485aa7-81c4-4a3a-b9bc-1f9edccfa5c3" class="">Example instruction: 01100100 10001100</p><p id="a8068530-3012-4222-9c39-171295a98a95" class="">0110 – add</p><p id="5d8295c0-4c66-4a88-8cec-526523af2974" class="">0100 – address 4</p><p id="25f82bd0-3671-4a9c-9da2-88ee038f3f56" class="">1000 – address 8</p><p id="26233cd3-ee90-4a03-8a50-56b04d28d16f" class="">1100 – address 12</p></details></li></ul><ul id="fce10e06-cbfc-4011-ab8a-4e4a9b616086" class="toggle"><li><details open=""><summary>1.5 Operating Systems</summary><p id="19b64d0c-7a7f-462e-8ce8-9008e552bf50" class="">• OS provides an interface between internal computer hardware, programs, the user and external hardware devices
+• OS is privileged – can access all hardware without restrictions
+• Kernel is main component of OS which allows for interacting
+• Programs will interface with OS to send code to processor and access resources when required
+• Done by sending <em>system call</em> to kernel to request access to service
+• <em>File system</em> – organisation of files on mass storage into files and directories
+• <em>Namespace</em> – interface of names to interact with file system and other devices of computer</p></details></li></ul></div></details><details open=""><summary style="font-weight:600;font-size:1.5em;line-height:1.3;margin:0">Shell basics</summary><div class="indented"><p id="437c980f-0e16-497c-9c12-90e5e0d7f8b6" class="">Shell script starts with: #!/bin/bash and follows with commands to run</p><ul id="724946cc-9688-4300-a435-3ed827394f21" class="toggle"><li><details open=""><summary><strong>Variable, Argument and Argument Checking</strong></summary><p id="60bf6fde-7fa6-4437-ae32-0939baf55f51" class="">Store Variables: $Var=… (no space)</p><p id="4918c936-3e51-4f5f-98e5-6bed9460ea1a" class="">• $0, $1, … – arguments passed to script ($0 is the script name)
+• $@ – all arguments passed to script as array
+•<strong> </strong>$# - length of the argument input. <a href="http://xxx.sh">xxx.sh</a> aaa aaa, #=2 
+</p></details></li></ul><ul id="5a66e0a8-0ead-45a7-b21f-a99fb46c4358" class="toggle"><li><details open=""><summary><strong>Redirection</strong></summary><table id="45f6f0db-8fef-48a0-a836-5ac62071de6c" class="simple-table"><tbody><tr id="5ef79118-3231-4e4e-b3d8-4ada5d1f6589"><td id="WoeG" class="">Command</td><td id="SSK&gt;" class="">Description</td><td id="og]w" class="">Example</td></tr><tr id="7151f3e6-5a89-458d-b464-e3bf6318fd64"><td id="WoeG" class="">&gt;</td><td id="SSK&gt;" class="">Redirects output to a file, Creates one if it does not exist,
+Overrides if it does</td><td id="og]w" class="">echo hello &gt; myfile.txt</td></tr><tr id="db4235aa-44cc-4222-8526-aaa3f44bd587"><td id="WoeG" class="">&gt;&gt;</td><td id="SSK&gt;" class="">Redirects and appends output to a file</td><td id="og]w" class="">echo world &gt;&gt; myfile.txt</td></tr><tr id="3cd3b944-9e20-430b-9247-847fbc7aa5e9"><td id="WoeG" class="">&lt;</td><td id="SSK&gt;" class="">Redirects contents from file to stdin of another command</td><td id="og]w" class="">grep hello &lt; myfile.txt</td></tr><tr id="4123fe15-8ec7-4cbf-a639-e5a5e89b94be"><td id="WoeG" class="">2&gt;</td><td id="SSK&gt;" class="">Redirects stderr to a file</td><td id="og]w" class="">grep hi myfile.txt 2&gt; errors.txt</td></tr></tbody></table></details></li></ul><p id="7d461de0-76ae-4e14-87d9-065821992c13" class=""><strong><strong><strong><strong><strong>Pipe → Take stdout and use this as stdin for second command</strong></strong></strong></strong></strong></p><p id="dcbac13d-13a3-4080-aecc-47d76238e0ea" class="">
+</p><ul id="4e35628a-59eb-4e2c-a97c-68a9111e5b25" class="toggle"><li><details open=""><summary><strong>Shell If Statement</strong></summary><pre id="67a33143-a30d-46c9-8804-fbbe83fb69ba" class="code"><code>if [ condition ]
+then
+    Do something
+elif [ condition ]
+then
+    Do something else
+else
+    Do something different
+fi</code></pre></details></li></ul><ul id="c03a604d-dd1f-42bb-a04f-21a0e40e06db" class="toggle"><li><details open=""><summary><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong>Shell While Statement</strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></summary><pre id="daf38bdf-6f5e-421e-b4eb-744050fda39e" class="code"><code>while program
+do 
+		echo looping
+done</code></pre></details></li></ul><ul id="77bacc02-f807-45b1-8dd4-4fab39624409" class="toggle"><li><details open=""><summary><strong><strong><strong><strong><strong><strong><strong>Shell for Statement</strong></strong></strong></strong></strong></strong></strong></summary><pre id="2f40c73c-d7fd-4c69-9f03-eb9b5509bb01" class="code"><code>for name in Alice Bob Carroll #name is a var, list after &quot;in&quot;
+do 
+		echo name is $name
+done</code></pre></details></li></ul><h2 id="13010c98-fbd1-4933-a054-f01e4c4d42e1" class="">Some Common command line &amp; flags:</h2><pre id="ffd5ffda-3628-4cf3-9f69-87af22692242" class="code"><code>echo -n
+# -n flag basically cancel the new line at the end of each line echoed
+mkdir
+rm #remove
+cp #copy 
+touch #create files 
+sort #sorting -f, --ignore-case // -r, --reverse // -u, --unique 
+		 # // -s, --stable
+ls -l #view metadata with files in the working directory
+chmod &lt;group name&gt;&lt;+/-&gt;&lt;premission&gt;
+find &quot;PATH&quot; -type f/d -name &quot;.txt&quot;
+grep -i &#x27;^[^u]*[aeio][^u]*$&#x27; /usr/share/dict/words | sort -r
+#regular expression  -i case insensitive
+tail #
+head #
+cat #reading content
+
+cut -d &quot;,&quot; -f 1,4 &quot;yellow_pages.csv&quot;
+# -d is like split by &quot;,&quot;, -f (LIST) is choosing the outcome of the cut
+# -b selecting certain bytes, -c = -b but only chars</code></pre></div></details><details open=""><summary style="font-weight:600;font-size:1.5em;line-height:1.3;margin:0">Processes</summary><div class="indented"><p id="642af44a-d8f8-4878-849d-41ff12deb028" class="">• <strong>Program</strong>: executable sequence of instructions stored on mass storage</p><p id="f7d861e4-4868-4865-ac63-e8c1ca125fc2" class="">• <strong>Process</strong>: instructions of program stored in memory, and any other data required by program</p><p id="37e90975-0097-4b14-9f03-becf777f50ff" class=""><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong>unix system has many process stored in memory at same time</strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></p><ul id="3e96fe38-c04f-45d4-8b25-ed2588b83af3" class="toggle"><li><details open=""><summary><strong>For a single CPU, only one program can run at a time</strong></summary><p id="dd093f97-48a5-4b9c-a321-64d6ac80bff1" class="">Not feasible for most computing</p><p id="08c78ca9-9903-4f65-a018-a2d17e09a19f" class="">Kernel uses <strong>interrupt</strong> to save state of program to continue execution later</p></details></li></ul><ul id="fcfd4981-d988-457c-be32-c731535b206f" class="toggle"><li><details open=""><summary><strong>UID associated to process stating who started the process, superuser UID = 0</strong></summary><p id="c477090b-2dc4-4029-9c6d-1aae95c5096a" class="">• Each user is part of at least one associated <strong>group</strong>, which each have their own <strong>group ID</strong>s (<strong>GID</strong>s)</p></details></li></ul><ul id="516d0d87-eb73-4174-aba5-3ccbab72ec50" class="toggle"><li><details open=""><summary><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong>Metadata of file can be seen by running ls -l </strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></summary><p id="471ef6c3-95b8-469d-b8b7-be139b2e0aaa" class="">type of file (- = normal file, d = directory, l = link b = block file)</p><p id="7820eaf1-e665-4bd0-8c7d-a16aea1b6e6e" class="">permissions (r = readable, w = writable, x = executable (for files)/accessible (for directories)) – listed as [r/-][w/-][x/-] for each group, where - means permission doesn’t exist</p><p id="3ce0e600-c1a8-48cb-ab41-bfbf623e33e4" class="">user permissions | group permissions | permissions for users in other groups</p><ul id="85a25b17-a066-4a27-830a-bc7d5651c238" class="toggle"><li><details open=""><summary><strong><strong><strong><strong><strong><strong>Changing Permission using chmod command:</strong></strong></strong></strong></strong></strong></summary><p id="42a98499-5448-4eb6-b542-75f2fc1efb0c" class="">PLACEHOLDER***</p></details></li></ul></details></li></ul><ul id="15ee80f7-7c0e-4942-8e0d-a0b31c6ecfc1" class="toggle"><li><details open=""><summary><strong><strong><strong><strong><strong>Namespace</strong></strong></strong></strong></strong></summary><p id="11b324fa-e2c0-4eda-b302-b3f5909dd4d8" class="">Namespace generally contains the file system of all files/directories stored on the disk</p><p id="16f49734-b3b8-4388-86ba-e5c0dbed9fd6" class="">Namespace can also contain devices, which are accessible in the same way files usually are</p><p id="85a06c89-be20-4809-96c0-96d8a97cbf01" class="">Usually, block (storage) devices are located under the /dev directory</p><p id="c65e089d-42d4-4223-b8f0-ce454019b497" class="">On Linux, the /proc directory contains special ”pseudo” files</p><p id="591b9878-c861-4148-84eb-606a66b07774" class="">These look like regular files, but contain live, updated information on the computer system</p><p id="3ed5a43a-8acc-48c1-a719-73fbf8c74005" class="">Created and served by special driver files</p></details></li></ul></div></details><details open=""><summary style="font-weight:600;font-size:1.5em;line-height:1.3;margin:0">Managing Processes</summary><div class="indented"><p id="30d70e58-5d73-4d7c-838b-d7799d8e584e" class=""><strong>fork</strong><div class="indented"><p id="fee4e048-ad65-4715-993d-3f30fda837b0" class="">→ Create a <em>child </em>process which is identical to parent process, except for PID, parent process PID, resource metadata..runtime </p><p id="5a989da6-783f-474d-a9f9-e274fc4a88e6" class="">→ Once forked, both programs continue from the point of the fork system call<div class="indented"><p id="0cc24e89-86c6-4128-914b-72e71ccfb78c" class="">Parent: fork returns PID of child</p><p id="350db641-a694-49f4-834c-0786450e29bc" class="">Child: fork returns 0</p></div></p></div></p><p id="1a8c7d56-20fb-4030-87e4-5f1d5002bacf" class=""><strong>exec</strong><div class="indented"><p id="26871223-a1aa-4162-9e29-b7be970a7762" class="">→ Used to completely replace the currently running process with a different program specified</p></div></p><p id="4634632e-5c25-4a33-8354-a669e205d3bc" class=""><strong>wait</strong><div class="indented"><p id="569e9a60-ed9a-4aed-9905-b96049a69ddd" class="">→ Suspends execution of current process until one of its child processes exits</p><p id="05d95adf-88f6-4566-be30-d6e070712d7f" class="">→ If child exits but parent has not called wait, child becomes a <em>zombie</em> process until wait is called<div class="indented"><p id="98178f40-feff-4e96-a512-fda9c5d6e2fd" class="">→ Stays in the process table once exited</p></div></p><ul id="270dcca6-69f1-49a4-b282-ece3f17b3be5" class="toggle"><li><details open=""><summary><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong>zombie process example: PLACEHOLDER</strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></summary><pre id="618e2e2f-6d6a-4eed-9c3f-2f4b8f717514" class="code"><code>import os
+import time
+
+def main():
+    pid = os.fork()
+
+    if pid == 0:  # Child process
+        print(&quot;Child process: PID =&quot;, os.getpid())
+        exit(0)  # Exit child process immediately
+    else:  # Parent process
+        print(&quot;Parent process: PID =&quot;, os.getpid())
+        print(&quot;Sleeping for 60 seconds...&quot;)
+        time.sleep(60)  # Sleep for 1 minute
+
+if __name__ == &#x27;__main__&#x27;:
+    main()</code></pre></details></li></ul><p id="b988736e-c5d4-4ad6-99a4-524091a94bb1" class="">
+</p></div></p><p id="974589c1-380a-4413-a178-052ce6b5e5cc" class=""><strong>kill</strong><div class="indented"><p id="e4f62246-e27e-48f9-ab05-9291279f4e2b" class="">→ not really “kill” but sending signals to process, Syntax: kill &lt;flag&gt; &lt;pid&gt;</p><table id="184bae3c-5ec5-4c28-a5d2-0afdcc66cef7" class="simple-table"><tbody><tr id="1bfb7b49-f8d6-41ca-a917-88bff9aaa382"><td id="WoeG" class="" style="width:88.5px">Signal</td><td id="SSK&gt;" class="" style="width:303.5px">Description</td><td id="OJHm" class="" style="width:62.5px">Code</td><td id="og]w" class="" style="width:154.5px">Example</td></tr><tr id="b358bc36-ed34-468c-a7e6-ede998a3c7f4"><td id="WoeG" class="" style="width:88.5px">SIGINT</td><td id="SSK&gt;" class="" style="width:303.5px">Signal Interrupt </td><td id="OJHm" class="" style="width:62.5px">2</td><td id="og]w" class="" style="width:154.5px">kill -2 22</td></tr><tr id="4f3643b2-1ab1-48df-a66c-3423f2e635da"><td id="WoeG" class="" style="width:88.5px">SIGKILL</td><td id="SSK&gt;" class="" style="width:303.5px">Terminate process</td><td id="OJHm" class="" style="width:62.5px">9</td><td id="og]w" class="" style="width:154.5px">kill -9 22</td></tr><tr id="29884ec3-aca5-4278-95e8-6fd265803757"><td id="WoeG" class="" style="width:88.5px">SIGSTOP</td><td id="SSK&gt;" class="" style="width:303.5px">Stop the process</td><td id="OJHm" class="" style="width:62.5px">19</td><td id="og]w" class="" style="width:154.5px">kill -19 22</td></tr><tr id="17197ef9-5027-48a9-8915-502ef13c02a0"><td id="WoeG" class="" style="width:88.5px">SIGCONT</td><td id="SSK&gt;" class="" style="width:303.5px">Continue the process</td><td id="OJHm" class="" style="width:62.5px">18</td><td id="og]w" class="" style="width:154.5px">kill -18 22</td></tr></tbody></table></div></p><hr id="842fa1ad-dea4-41dc-95a4-38da5ad4e739"/><h2 id="c7ac284d-0275-430c-a761-ce7ee00ab5c8" class="">Running Background Processes</h2><p id="99f5af80-9903-434f-be57-7d845cd21e23" class="">When we want to run a process <em>in the background</em>, we use a &quot;&amp;&quot; symbol.</p><p id="dc47b58e-40b8-4462-88dc-58fb49a22e60" class=""><strong>Example:</strong></p><pre id="11006e91-9d9c-4fce-b5d7-2bd20e6b2d8f" class="code"><code>$ sleep 300 &amp;
+[1] 22 # 22 here is the process ID
+$ jobs
+[1]+  Running                 sleep 300 &amp; 
+$ fg 1 # 1 here is referring to the [1] in the above line
+sleep 300</code></pre><p id="8903316b-17d4-47c2-b723-f5345b9b7a2b" class=""><strong>PROCESS STATE CODES</strong></p><table id="6a8c346b-317c-4d1f-abd3-7faf62443d80" class="simple-table"><tbody><tr id="e4f68b50-76c1-4d04-afc1-60b278aef0c4"><td id="Ou=b" class="">PROCESS STATE CODES</td><td id="LW|z" class="" style="width:442px">Description</td></tr><tr id="89e6680e-890f-4ae4-b3ba-1e565b5bf6c1"><td id="Ou=b" class="">D</td><td id="LW|z" class="" style="width:442px">uninterruptible sleep (usually IO)</td></tr><tr id="513678e5-2c19-4da4-834b-a71370f85fc7"><td id="Ou=b" class="">R</td><td id="LW|z" class="" style="width:442px">running or runnable (on run queue)</td></tr><tr id="bdce47b8-9b5e-4da1-a882-55cfdccf538a"><td id="Ou=b" class="">S</td><td id="LW|z" class="" style="width:442px">interruptible sleep (waiting for an event to complete)</td></tr><tr id="ec30096a-aaca-4be5-99f6-74e977744c29"><td id="Ou=b" class="">T</td><td id="LW|z" class="" style="width:442px">stopped, either by a job control signal or because it is being traced.</td></tr><tr id="14c4e549-815e-4dd0-b388-199efe3d1049"><td id="Ou=b" class="">W</td><td id="LW|z" class="" style="width:442px">paging (not valid since the 2.6.xx kernel)</td></tr><tr id="95ef1755-3bbe-4996-95a9-ff59af97de53"><td id="Ou=b" class="">X</td><td id="LW|z" class="" style="width:442px">dead (should never be seen)</td></tr><tr id="4674a024-c70d-429e-9be8-47164c04600c"><td id="Ou=b" class="">Z</td><td id="LW|z" class="" style="width:442px">defunct (&quot;zombie&quot;) process, terminated but not reaped by its parent.</td></tr></tbody></table><p id="d9db7eaf-2910-42fa-8162-b0d992192f0a" class="">For <a href="https://www.howtogeek.com/190773/htg-explains-whats-the-difference-between-linux-and-bsd/">BSD formats</a> and when the stat keyword is used, additional characters may be displayed:</p><table id="42d4837d-4e11-4148-a2aa-a29091432150" class="simple-table"><tbody><tr id="48e8f2e1-b314-47b2-9e78-3654f181eb97"><td id="fYjO" class="">Character</td><td id="oej[" class="" style="width:499px">Description</td></tr><tr id="d02b98a4-562f-4eaa-a7b1-c5521a6d09e2"><td id="fYjO" class="">&lt;</td><td id="oej[" class="" style="width:499px">high-priority (not nice to other users)</td></tr><tr id="6d2fd819-9bcc-4a1b-9a97-430b9fa263b9"><td id="fYjO" class="">N</td><td id="oej[" class="" style="width:499px">low-priority (nice to other users)</td></tr><tr id="da47305a-9e31-4ac1-ba1e-fd7b60684f6f"><td id="fYjO" class="">L</td><td id="oej[" class="" style="width:499px">has pages locked into memory (for real-time and custom IO)</td></tr><tr id="832e0e36-2067-4b7b-9890-10a2491153b0"><td id="fYjO" class="">s</td><td id="oej[" class="" style="width:499px">is a session leader</td></tr><tr id="a09d9bd8-245c-46fc-8bbf-4728f48b1b0f"><td id="fYjO" class="">l</td><td id="oej[" class="" style="width:499px">is multi-threaded (using CLONE_THREAD, like NPTL pthreads do)</td></tr><tr id="dbb23e1d-6864-4fd4-a520-98ba01bbf3e7"><td id="fYjO" class="">+</td><td id="oej[" class="" style="width:499px">is in the foreground process group.</td></tr></tbody></table></div></details><details open=""><summary style="font-weight:600;font-size:1.5em;line-height:1.3;margin:0">File System</summary><div class="indented"><p id="6b980b8f-87ee-4f2d-bcf5-59c44a23aa5b" class="">A file system describes a way to lay out/represent file data on mass storage</p><p id="8a16a3ab-6935-4d8f-8679-25bf6840b344" class="">Operating systems have file system module, which provides an interface to the namespace to interact with files from mass storage, or other devices</p><p id="51112cee-eba4-4e2c-9f0f-237453d3e635" class="">File systems can also “mount” ‘files’ which display information about the system</p><p id="b91918b4-b57a-4881-a358-fd473401bbf3" class="">Example: /proc directory on Linux.</p><p id="fdd54676-bbcd-4112-a83e-d81217822e5c" class="">This means there are many implementations of file systems, optimised for different features such as speed, reliability/redundancy etc</p><p id="7d6c029e-e395-471c-b0c1-99f881e0dd4f" class="">For example: <strong>FAT16, FAT32, exFAT</strong> in the Windows operating system, <strong>ext2, ext4, BtrFS, ZFS</strong> etc for the Linux operating system.</p><ul id="c22c3bf9-8829-4330-a12c-b0b782061007" class="toggle"><li><details open=""><summary><strong><strong><strong><strong><strong><strong>Mount</strong></strong></strong></strong></strong></strong></summary><p id="253b9721-601b-43f9-83ae-b6dbd49b0f0d" class="">Mounting a file system on Linux is generally a straightforward two-step process: </p><p id="54af136c-de52-49a6-b591-4f9296e903a0" class="">Create a mount point directory, and use the <code>mount</code> command to mount the device at the mount point.</p><p id="463d493a-0b14-43f4-933f-9079109374f2" class="">Unless the file system is in use, unmounting → requiring only the <code>umount</code> command.</p></details></li></ul></div></details><details open=""><summary style="font-weight:600;font-size:1.5em;line-height:1.3;margin:0">Memory Management</summary><div class="indented"><p id="c786f623-7716-4f8e-9c5b-bab87bb55804" class="">Memory for processes is stored in the following layout:<div class="indented"><ul id="bbe32ac6-d066-44f7-b7e1-371d481d3c0c" class="bulleted-list"><li style="list-style-type:disc">program code instructions: at the bottom of program </li></ul><ul id="01db0eda-6d01-4d26-8774-2c49271e610f" class="bulleted-list"><li style="list-style-type:disc">static and global data<ul id="a9be0209-3cf6-422e-bdcc-5833d9510c13" class="bulleted-list"><li style="list-style-type:circle">data available to the whole program and constants often</li></ul></li></ul><ul id="c7ecb36b-b362-427b-a1e2-5eb4d404feb4" class="bulleted-list"><li style="list-style-type:disc"><strong>heap - used to store data structures.</strong><ul id="9e7543dd-7a97-4eec-955c-186ccd2dfe2d" class="bulleted-list"><li style="list-style-type:circle">eg. objects in OOP code</li></ul><ul id="6b2f5c23-e266-4f8d-b889-8b3c1ee19bd6" class="bulleted-list"><li style="list-style-type:circle">grows upwards to expand </li></ul></li></ul><ul id="cea90ba7-98d0-41e2-92f6-f4c3a1b04ee6" class="bulleted-list"><li style="list-style-type:disc"><strong>Stack - </strong>used to store temporary variables<ul id="473e1d24-7df3-48cc-a752-de3edacbd475" class="bulleted-list"><li style="list-style-type:circle">e.g. variables which are used within a function, or function arguments</li></ul><ul id="6fefd706-2090-4790-8a2c-725096d5cda6" class="bulleted-list"><li style="list-style-type:circle">often discarded when not needed</li></ul><ul id="0edc29da-229d-4c85-b00a-16d12a85f5f9" class="bulleted-list"><li style="list-style-type:circle">grows <strong>downwards </strong>to expand</li></ul></li></ul></div></p><ul id="3a566928-3bba-4535-82a2-a3335ea87297" class="toggle"><li><details open=""><summary><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong>Virtual Memory</strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></summary><ul id="1503628a-76e2-46df-ad03-04ffb2f24150" class="bulleted-list"><li style="list-style-type:disc">Each process is allocated <strong>virtual memory</strong><ul id="8533d011-9158-41a4-a403-ce26a9293f27" class="bulleted-list"><li style="list-style-type:circle">The process sees this as a regular, contiguous memory block</li></ul><ul id="3672d7a9-6bbe-4369-8439-9c43d1fd9c31" class="bulleted-list"><li style="list-style-type:circle">In reality, the OS maps different parts of this memory to the different locations of RAM/mass storage in which they are stored, as in the diagram</li></ul></li></ul><ul id="723a5606-d579-4b1c-b403-948689845577" class="bulleted-list"><li style="list-style-type:disc">Why use mass storage for memory?<ul id="8f134c39-2ab3-42d4-a8de-50253b5903d4" class="bulleted-list"><li style="list-style-type:circle">RAM has more limited size than hard drives</li></ul><ul id="70b34195-44f8-443c-ac98-bd8e2d8e433d" class="bulleted-list"><li style="list-style-type:circle">If some memory required by the program won’t be accessed/changed much, it makes sense to temporarily store it in mass storage</li></ul></li></ul><ul id="4e709f96-3139-4d34-8cce-4e708d542257" class="bulleted-list"><li style="list-style-type:disc">Benefits of virtual memory<ul id="a91b5c0c-acdc-4fce-86f6-a3f6a6589dd0" class="bulleted-list"><li style="list-style-type:circle">If process memory needs to be expanded, the page table entry for the process can be adjusted to account for extra memory</li></ul></li></ul></details></li></ul><ul id="d7898a2e-6540-4c41-90ba-7b95b079a491" class="toggle"><li><details open=""><summary><strong>Accessing Memory on mass storage</strong></summary><ul id="e895f5cd-6fc6-48ce-937c-3c471144207c" class="bulleted-list"><li style="list-style-type:disc">What happens if a process needs to access memory on mass storage?<ul id="de85d770-ffb7-47d7-a824-8a315d303d69" class="bulleted-list"><li style="list-style-type:circle">Request for access will throw an <em>interrupt</em> to OS kernel – essentially telling CPU to save what it’s doing and handle this request</li></ul><ul id="412c148f-2b6f-419f-ad5a-ba582e06cc86" class="bulleted-list"><li style="list-style-type:circle">Kernel finds section on disk, and writes it to free area of RAM<ul id="f48b4540-78fd-4bd0-903d-5d96c6ba90a4" class="bulleted-list"><li style="list-style-type:square">If there is no free RAM left, the kernel must take some existing block of memory from a process in the RAM, and <em>swap</em> it to mass storage</li></ul></li></ul><ul id="38514bce-3fbe-4941-8ab5-7b82fb5cab0a" class="bulleted-list"><li style="list-style-type:circle">Page table updated to account for this changes</li></ul></li></ul><ul id="1bd85dad-5d1c-4056-94c3-6fbea693be49" class="bulleted-list"><li style="list-style-type:disc">Handy features of virtual memory<ul id="78b88d77-f504-4d22-b51d-3e14e1e64078" class="bulleted-list"><li style="list-style-type:circle">“shared memory” – processes can have parts of their memory mapped to the same physical block</li></ul><ul id="c0a22c1b-8693-4af2-b5dd-c464d0834df4" class="bulleted-list"><li style="list-style-type:circle">“copy on write” – when a process is forked, both parent and child share the same memory, until it needs to be changed</li></ul></li></ul><ul id="395bbf8b-43e0-41ee-8394-d7626c2861da" class="bulleted-list"><li style="list-style-type:disc">Find info about virtual and “real” memory of a process<ul id="a4c3335c-20e6-49a5-8f3a-d019991bcbe7" class="bulleted-list"><li style="list-style-type:circle">In ps:<ul id="999903ad-6a8a-475f-8386-b1618d7d2259" class="bulleted-list"><li style="list-style-type:square">the VSZ field tells us about the size of the process’s virtual memory</li></ul><ul id="a30ba18e-5789-404a-afa3-d19f0f80d08a" class="bulleted-list"><li style="list-style-type:square">the RSS field tells us about how much physical RAM a process is using</li></ul></li></ul></li></ul></details></li></ul></div></details><details open=""><summary style="font-weight:600;font-size:1.5em;line-height:1.3;margin:0">Scheduling</summary><div class="indented"><ul id="dee935c1-87b8-4b78-8cfd-4eac2912aae0" class="bulleted-list"><li style="list-style-type:disc">Sleeping: (maybe<ul id="71ed4196-e095-413c-9cd7-bcad1cf96782" class="bulleted-list"><li style="list-style-type:circle">waiting for resource (e.g. file, I/O device) to become available</li></ul><ul id="422bf655-77c9-4408-abd9-cffa6b2111bf" class="bulleted-list"><li style="list-style-type:circle">waiting to be executed by CPU</li></ul></li></ul><ul id="96cbdb19-4ec1-48f9-9f82-7063d698e0a4" class="bulleted-list"><li style="list-style-type:disc">Priority of process: indication and changing it<ul id="992d03c2-3283-4f00-8ba3-60abcf6df9de" class="bulleted-list"><li style="list-style-type:circle">Range from negative integers (highest priority) to positive integers (lowest priority)</li></ul><ul id="0d8be14d-dd28-436f-bfbb-09ba84ff283d" class="bulleted-list"><li style="list-style-type:circle">On Linux, by default, the priority for processes started by users is 20</li></ul><ul id="171132a3-6030-4667-8096-cfb689eff981" class="bulleted-list"><li style="list-style-type:circle">nice value<ul id="f90d7302-a146-46e2-b7a2-dfd994009116" class="bulleted-list"><li style="list-style-type:square">nice value adds/subtracts a number to a process’s priority to modify its default priority</li></ul><ul id="535f894f-1cf9-4842-a4c6-81f076abef7e" class="bulleted-list"><li style="list-style-type:square">nice value is separated from the priority itself</li></ul><ul id="9e8f29ef-fb2d-4c19-9e06-0f4214b03096" class="bulleted-list"><li style="list-style-type:square">Valid nice values typically range from -20 (highest priority) to 19 (lowest priority).</li></ul><ul id="53256287-2b62-4476-97ad-100f601bc423" class="bulleted-list"><li style="list-style-type:square">Default value is 0 (has a neutral priority)</li></ul><pre id="451d8c60-f65f-471b-bef8-1dba35de04bc" class="code"><code>$ nice -n 5 sleep 30
+$ renice 10 -p 1203</code></pre></li></ul></li></ul></div></details><details open=""><summary style="font-weight:600;font-size:1.5em;line-height:1.3;margin:0">Boot Sequence</summary><div class="indented"><table id="dcd74d2c-77b8-4eb7-b6bf-b722f34dfdec" class="simple-table"><tbody><tr id="701e274e-d61e-48fc-bb5d-9c9f21f05c7d"><td id="WoeG" class="" style="width:226.5px">power on </td><td id="HCVn" class="" style="width:265px">hardware self-checks</td></tr><tr id="ad010ca1-9422-4478-a9eb-47614c3c3798"><td id="WoeG" class="" style="width:226.5px">BIOS running</td><td id="HCVn" class="" style="width:265px">in flash memory</td></tr><tr id="f882b34f-a517-4e1e-af65-43adf7fd1f41"><td id="WoeG" class="" style="width:226.5px">MBR loaded </td><td id="HCVn" class="" style="width:265px">from 1st block of disk</td></tr><tr id="384ffcb3-e978-44c1-9290-e0fc304c7d5d"><td id="WoeG" class="" style="width:226.5px">GRUB loaded</td><td id="HCVn" class="" style="width:265px">also from early part of disk</td></tr><tr id="d94d7327-a4f1-4e20-affc-2bbf932ad08f"><td id="WoeG" class="" style="width:226.5px">kernel loaded</td><td id="HCVn" class="" style="width:265px">started by kernel from file system</td></tr><tr id="bc1d8602-4f3f-451c-8bfa-4a7cfa031772"><td id="WoeG" class="" style="width:226.5px">init started, PID=1</td><td id="HCVn" class="" style="width:265px">started by kernel from file system</td></tr><tr id="840155a2-41ed-48e0-8dd4-b241c652f673"><td id="WoeG" class="" style="width:226.5px">system processes running</td><td id="HCVn" class="" style="width:265px">started by init</td></tr><tr id="e6f6eefe-2a1e-4113-9ac4-32bd134672ca"><td id="WoeG" class="" style="width:226.5px">system operating normally</td><td id="HCVn" class="" style="width:265px">/</td></tr></tbody></table></div></details><details open=""><summary style="font-weight:600;font-size:1.5em;line-height:1.3;margin:0">Bitwise Operations </summary><div class="indented"><ul id="52913a2b-3961-40a9-8528-5979aa005d09" class="bulleted-list"><li style="list-style-type:disc">AND operation - logical AND performed on every bit<ul id="33fd5528-236c-436a-995f-bd138e80de63" class="bulleted-list"><li style="list-style-type:circle"><strong>Bit Masking → the part we want = 1, otherwise = 0</strong></li></ul></li></ul><ul id="8edcca99-facc-4cc4-b60e-bafe0f573656" class="bulleted-list"><li style="list-style-type:disc">Bit shifting &lt;&lt;  &gt;&gt;<ul id="b25d545e-7bf8-4b71-a339-46077c790b79" class="bulleted-list"><li style="list-style-type:circle">to perform shift in actual scenarios → do bit masking to get rid of parts we don’t want first</li></ul></li></ul><p id="a0387380-31bb-4f78-a7be-ce03642de5f2" class="">
+</p></div></details><details open=""><summary style="font-weight:600;font-size:1.5em;line-height:1.3;margin:0">Emulators, Virtual Machines, Containers</summary><div class="indented"><p id="b844ab9a-6581-42dc-bfef-c950e6b43262" class="">Assembly language → Human readable format(?) which directly represents instructions CPU will execute</p><ul id="624660ef-d138-41c0-ac9b-34012fca3602" class="bulleted-list"><li style="list-style-type:disc"><strong>Emulators</strong> – programs which can run code designed for a different CPU/system architecture, and translate it to run on our own system<ul id="d3269a8b-5a18-4f96-990b-db3028477ede" class="bulleted-list"><li style="list-style-type:circle">Name of “emulate” – effectively simulates a completely different system</li></ul><ul id="76904cee-2606-4e8a-a3a8-7741783ba7a4" class="bulleted-list"><li style="list-style-type:circle">Emulators will take CPU instructions given by a program for a specific system hardware (e.g. x86), and translate it to system instructions for another hardware type (e.g. ARM)</li></ul><ul id="13c23d64-da1c-4f3e-a8ff-96fa3da457d4" class="bulleted-list"><li style="list-style-type:circle">Often used to<ul id="4a838906-2f1e-4ea8-be6b-31ed6b2e6741" class="bulleted-list"><li style="list-style-type:square">emulate older system architecture to run programs (e.g. Commodore 64, PowerPC)</li></ul><ul id="624cf93a-8e76-4a1d-9029-bb4906b7534d" class="bulleted-list"><li style="list-style-type:square">emulate a game console to play console games on a computer</li></ul></li></ul></li></ul><ul id="8f4ec018-3591-4c9d-9fce-57f169b3c04d" class="bulleted-list"><li style="list-style-type:disc"><strong>Virtual machines</strong> – program which gains limited access to real hardware resources and constructs a <strong>virtual computer</strong> based on this hardware<ul id="8b5b40f9-6d85-4a9a-b2d7-9e3f8e39ae97" class="bulleted-list"><li style="list-style-type:circle">Does <strong>not</strong> emulate system code – so “virtual” system must have same architecture as host computer (so that the same CPU instructions are used)</li></ul><ul id="55fba110-d686-4e56-a837-bdd7f884c7bd" class="bulleted-list"><li style="list-style-type:circle">Can choose how much hardware resources to allocate to virtual system</li></ul><ul id="65969dc5-47b7-44aa-9284-5cc2a4a7db9d" class="bulleted-list"><li style="list-style-type:circle">Often faster than emulators, as instructions do not have to be translated</li></ul></li></ul><ul id="e87eb464-314a-455a-bf85-e2a9f8875804" class="bulleted-list"><li style="list-style-type:disc"><strong>Containers</strong><ul id="76fd4d74-84fe-4159-ace9-0e0dc2f183f6" class="bulleted-list"><li style="list-style-type:circle"><strong>Containers</strong> are programs which provide a virtualised namespace for applications to access with an <strong>emulated system call interface</strong><ul id="a7269677-fe36-45c0-966f-4735d4725837" class="bulleted-list"><li style="list-style-type:square">Applications think they are running in a completely different environment, or even OS</li></ul></li></ul><ul id="9d898695-eafc-452b-9453-774bb284a7f5" class="bulleted-list"><li style="list-style-type:circle">Because containers only emulate system call interface, applications can access real hardware<ul id="df4080d6-ab35-4e62-a741-a31c63dc309f" class="bulleted-list"><li style="list-style-type:square">more lightweight than virtual machine</li></ul></li></ul><ul id="002dd39e-f435-4cbd-adee-7cc71597b187" class="bulleted-list"><li style="list-style-type:circle">Virtualised namespaces often contain common utilities found on a regular OS:<ul id="20edf564-cd8e-40a6-9a5e-7919b5d5e621" class="bulleted-list"><li style="list-style-type:square">standard command-line programs</li></ul><ul id="7f8d18da-530b-489b-b323-9efd114a9d19" class="bulleted-list"><li style="list-style-type:square">configuration files</li></ul><ul id="150d2765-c79c-4f89-b2ca-786bc57afa70" class="bulleted-list"><li style="list-style-type:square">libraries</li></ul></li></ul></li></ul><p id="62929f84-9332-48bc-a1bf-3f767400acf3" class="">
+</p><p id="e3475cdb-aa3a-4dcd-83bb-6a384228cdfc" class="">
+</p></div></details><hr id="9cde06d0-3775-49b3-85c3-8640c8760a37"/><h1 id="55a2135c-8911-4653-a216-f2a3f9236b1a" class="">Networks … and Encrypting (Security)?</h1><details open=""><summary style="font-weight:600;font-size:1.5em;line-height:1.3;margin:0">Packet Switching</summary><div class="indented"><ul id="2cd247cb-e307-4a60-a929-678c39f422da" class="bulleted-list"><li style="list-style-type:disc"><strong>Packet switching</strong> is a technology developed to overcome shortcomings in circuit-switched communications<ul id="55ee6564-3b62-4192-a198-8f9d5b8ac9c0" class="bulleted-list"><li style="list-style-type:circle">Rather than being sent along a continuous stream, data is broken down into smaller <strong>packets</strong></li></ul><ul id="62fd5b73-582e-47b7-9fd0-9044dd8831c9" class="bulleted-list"><li style="list-style-type:circle">Packets travel independently from sender to receiver – they don’t have to necessarily follow the same path!</li></ul><ul id="33cefd6f-7cc7-46c9-8105-1296fe647bf0" class="bulleted-list"><li style="list-style-type:circle">Important thing is that all data is transmitted</li></ul></li></ul><p id="8a60f5f5-9674-498b-99fa-e1eee8e87b0e" class="">data stream divided into packets at the source computer, send through routers, then be reconstructed from received packets at destination</p><ul id="5b9d05cf-ef33-4348-9ec0-13ed7199cd9f" class="bulleted-list"><li style="list-style-type:disc"><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong>Reroute → As packets follow different routes around a network, they can be rerouted</strong></strong></strong></strong></strong></strong></strong></strong></strong></strong><ul id="fce00ffd-22a2-4ecd-83fb-692d913c7520" class="bulleted-list"><li style="list-style-type:circle">cases: congestion on one connection</li></ul><ul id="83aeb688-bcaa-480e-8160-d45a03573211" class="bulleted-list"><li style="list-style-type:circle">a connection is broken</li></ul></li></ul><ul id="4ca601da-984c-4bbe-8fe8-e278dcc85402" class="bulleted-list"><li style="list-style-type:disc"><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong>Rerouting gives data sent through packets switching resilience</strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></li></ul><ul id="be352e6c-f99d-413e-bdd1-109999653a6f" class="bulleted-list"><li style="list-style-type:disc">Furthermore, packet switching allows for multiple packets from different sources to be sent over the same connection</li></ul></div></details><details open=""><summary style="font-weight:600;font-size:1.5em;line-height:1.3;margin:0">LAN, WAN</summary><div class="indented"><ul id="d8be1d50-759f-4eba-9b7d-7b8be24ce28f" class="bulleted-list"><li style="list-style-type:disc"><strong>Local area networks (LAN)</strong> – networks that are localised to one specific location, such as a house, business, or university campus — 256 addresses<ul id="0fa13a9c-6e7a-4264-871c-52ae96ff4f2e" class="bulleted-list"><li style="list-style-type:circle">LANs are generally connected with <strong>ethernet</strong> technology (for wired connections), or <strong>Wi-Fi</strong> for wireless networks<ul id="cddd6586-5734-4e13-8789-472c338e17c6" class="bulleted-list"><li style="list-style-type:square"><strong>Router</strong> used to route internet data correctly to connected devices</li></ul><ul id="a5e1af01-48ca-469c-93d4-2ea31855c1ba" class="bulleted-list"><li style="list-style-type:square">Routers connect to <strong>modems</strong>, which connect to the outside Internet, and are used to convert between analogue à digital data when downloading, or digital à analogue data when uploading (hence the name: <strong>mo</strong>dulator-<strong>dem</strong>odulator)<ul id="bff4f72e-bf39-4da0-ac38-6459ec98efe7" class="bulleted-list"><li style="list-style-type:disc">Most modern home routers are combined with a modem in a single package</li></ul></li></ul></li></ul></li></ul><ul id="b299f938-a9c6-4644-8aee-4cd2d9143b5d" class="bulleted-list"><li style="list-style-type:disc"><strong>Wide area networks (WAN)</strong> – networks that connect multiple LANs together to create a larger, interconnected network – i.e. all LANs connected in Sydney, or indeed, the Internet</li></ul></div></details><details open=""><summary style="font-weight:600;font-size:1.5em;line-height:1.3;margin:0">Protocol</summary><div class="indented"><ul id="1e2488ac-ebf5-47d4-984f-f45c01126da7" class="bulleted-list"><li style="list-style-type:disc"><strong>Protocol</strong> – set rules/standards which dictate how communication should occur between two devices<ul id="720cb02f-5498-44e5-a115-a50bd4eee448" class="bulleted-list"><li style="list-style-type:circle">Many protocols used in network communications</li></ul><ul id="9242ab41-1ac3-4710-8336-a604ee5658bb" class="bulleted-list"><li style="list-style-type:circle">Protocols can be divided up into “layers”<ul id="f3c5b7f7-ed96-449e-b67e-061524ed1d59" class="bulleted-list"><li style="list-style-type:square">“Internet Protocol Suite” or “TCP/IP Model” dictates basic, functional layers of protocols</li></ul><ul id="2cb2040e-90fa-4702-acbc-02baced059ea" class="bulleted-list"><li style="list-style-type:square">OSI model is more of a theoretical (rather than practical) layout of protocol layers</li></ul></li></ul></li></ul><ul id="2477ddb0-0b06-45f8-a32e-30e7d103112e" class="bulleted-list"><li style="list-style-type:disc">As data packets move <strong>down</strong> the protocol stack, the lower layers wrap the packet in more information with their own <strong>headers</strong> and <strong>footers</strong></li></ul><ul id="9dfb21f7-a261-4c88-9ac1-4813ce7157f2" class="bulleted-list"><li style="list-style-type:disc">As the data packets move <strong>up</strong> the protocol stack, these headers/footers are removed to access data</li></ul><ul id="a4c0f525-e0a9-405c-b86b-5af9bdadb700" class="bulleted-list"><li style="list-style-type:disc">Example of protocol:<ul id="3c610f31-a112-4a02-b081-34e792eba118" class="bulleted-list"><li style="list-style-type:circle"><strong>Ethernet</strong> – protocol in the “Link” (lowest) layer of internet protocol suite<ul id="13af3d01-86be-48de-a144-176edd4f2599" class="bulleted-list"><li style="list-style-type:square">Ethernet packets are used to transfer data from one point to another point in a network (e.g. from one router to another)</li></ul><ul id="45b7f8ef-0dab-4f4d-9674-498460b5fbf5" class="bulleted-list"><li style="list-style-type:square">Packets only exist for this single “hop”, before they are unwrapped and wrapped up again to get to the next point</li></ul><ul id="157cba5a-2ab4-40a7-a237-fc764b381878" class="bulleted-list"><li style="list-style-type:square">Uses <strong>MAC address</strong> to store information on source, and find destination of “hop”<ul id="997796fb-f08d-4226-a84e-34f2f23c781e" class="bulleted-list"><li style="list-style-type:disc">A MAC (Media Access Control) address, sometimes referred to as a <strong>hardware</strong> or<strong> physical </strong>address, is a unique, 12-character alphanumeric attribute that is used to identify individual electronic devices on a network. An example of a MAC address is: 00-B0-D0-63-C2-26.<ul id="581ad48e-891c-4c79-af48-f38357bae97b" class="bulleted-list"><li style="list-style-type:circle">Unique address for all devices which connect to the internet</li></ul></li></ul></li></ul></li></ul><ul id="ed4047f2-4956-42d2-86f6-70d029671cd2" class="bulleted-list"><li style="list-style-type:circle"><strong>Internet Protocol (IP)</strong> – used for communication between any two devices connected to the Internet<ul id="fb2af929-7e41-456c-aa20-5afbeac7a7ff" class="bulleted-list"><li style="list-style-type:square">Header contains destination <strong>address</strong> and source <strong>address</strong><ul id="a67f88bd-c48a-4d7a-89c0-6dd8c9245a5f" class="bulleted-list"><li style="list-style-type:disc">IPv4 address is 4 bytes long, and written in 4 sections (e.g. 129.168.0.1)</li></ul><ul id="b687bd80-e73a-47d7-ad30-bde36c1afc64" class="bulleted-list"><li style="list-style-type:disc">Difference between <strong>local IP address</strong> and <strong>public IP address</strong><ul id="f621067b-5873-485a-87f5-446c29cef16d" class="bulleted-list"><li style="list-style-type:circle">Public IP address is what is used to communicate over the internet</li></ul><ul id="77fccb72-b9e4-4660-9c60-67b744ce5832" class="bulleted-list"><li style="list-style-type:circle">Router is able to use IP packet to convert a public IP into a local IP address</li></ul></li></ul></li></ul><ul id="bd4b0a07-e1a7-4bf8-aaeb-d7a49e7fc3ef" class="bulleted-list"><li style="list-style-type:square">When a data packet gets to the IP layer, the router finds the next device in which the packet should “hop” to to get to its destination, and puts this in a surrounding ethernet frame</li></ul></li></ul><ul id="af8e154c-5b04-4c03-861b-4b255f8db0dd" class="bulleted-list"><li style="list-style-type:circle"><strong>Transmission Control Protocol (TCP)</strong> – used in order to check for any errors during data packet transmission that may have occurred by calculating <strong>checksum</strong><ul id="87fe5c18-bb56-4482-9204-78fc8c0ff858" class="bulleted-list"><li style="list-style-type:square">Compares calculated checksum to checksum stored in header</li></ul></li></ul></li></ul><details open=""><summary style="font-weight:600;font-size:1.5em;line-height:1.3;margin:0">IP Routing</summary><div class="indented"><ul id="be33a0ba-9a44-482d-88b5-595edd5d1775" class="bulleted-list"><li style="list-style-type:disc"><strong>Internet Protocol (IP)</strong> – used for communication between any two devices connected to the Internet<ul id="c3f12de2-5886-4592-a82d-04a0156c3e98" class="bulleted-list"><li style="list-style-type:circle">Wraps packets in higher protocol layers, such as</li></ul><ul id="140d661c-6749-4267-9504-b488159a63dd" class="bulleted-list"><li style="list-style-type:circle">Transmission Control Protocol (TCP)</li></ul><ul id="8d745d3e-c17e-46d1-9ff2-d56294a5be9c" class="bulleted-list"><li style="list-style-type:circle">User Datagram Protocol (UDP)</li></ul><ul id="07fd98c7-6be3-47d9-b826-874419ab74a8" class="bulleted-list"><li style="list-style-type:circle">Internet Control Message Protocol (ICMP)</li></ul></li></ul><ul id="e49cd3fe-9b12-4d59-b6c1-991ea78df18c" class="bulleted-list"><li style="list-style-type:disc"><strong>ICMP</strong> – protocol which dictates a simple “echo” request<ul id="7b0bb348-0e3b-491e-a6d5-765582b3a7f9" class="bulleted-list"><li style="list-style-type:circle">When the intended receiver receives this packet with an echo request, it re-sends the packet back to the sender</li></ul><ul id="295dc72c-730b-491e-a2c4-7292b9a51584" class="bulleted-list"><li style="list-style-type:circle">Used in ping command</li></ul><ul id="62a76d12-43f8-44b3-83a1-69c75c020ea6" class="bulleted-list"><li style="list-style-type:circle">Has “time to live” (ttl) property, which states maximum number of “hops” packet can take<ul id="2561f831-1505-4abc-9f4c-0cb5441a071e" class="bulleted-list"><li style="list-style-type:square">Once maximum number of hops is reached, the receiving device (if it is not the intended receiver) sends the packet back with a “time exceeded” message</li></ul><ul id="64e0d5e3-0b3a-4106-85ec-f0e9a43c1a34" class="bulleted-list"><li style="list-style-type:square">Used in traceroute command</li></ul></li></ul></li></ul><ul id="919d7c03-a05c-49e6-876b-251c4a065a55" class="bulleted-list"><li style="list-style-type:disc">WAN routing<ul id="d022e699-0279-4e0a-8d6f-4bf793312529" class="bulleted-list"><li style="list-style-type:circle">Internet Assigned Numbers Authority (IANA) assigns IP addresses<ul id="aa79298a-e7d2-424b-83c7-bc09197f6eb9" class="bulleted-list"><li style="list-style-type:square">Delegates regional assignment to local authorities</li></ul></li></ul><ul id="89d3fc62-41e6-4491-ac71-71ab09b3e885" class="bulleted-list"><li style="list-style-type:circle">Recall IPv4 uses 32 bits (4 byte) addresses<ul id="fbae4682-1f4a-477b-adcc-c3342b8f19d7" class="bulleted-list"><li style="list-style-type:square">What could be the problem with this?</li></ul></li></ul></li></ul><ul id="202602fb-514e-4d9c-b762-a76d035b41e5" class="bulleted-list"><li style="list-style-type:disc">IPv4 limited addresses:<ul id="d0dbc3bf-cdf6-4c06-b730-e503e314ec00" class="bulleted-list"><li style="list-style-type:circle">IANA designates certain addresses as “private”<ul id="952ada4b-3e65-499b-9995-4b777dc53060" class="bulleted-list"><li style="list-style-type:square">These can be reused in local networks</li></ul><ul id="ffa45bd7-6bcd-46f4-b55a-2f11a543a02d" class="bulleted-list"><li style="list-style-type:square">Example: 192.168.0.0– 192.168.0.255</li></ul></li></ul><ul id="bfa17662-ca0e-4118-a0a2-50dc02048a5a" class="bulleted-list"><li style="list-style-type:circle">If a device in a LAN wants to talk to another device in a different LAN, we must translate the private IP address to a public one<ul id="e8aee755-9d28-4647-9eac-5b115f5f08f5" class="bulleted-list"><li style="list-style-type:square">Done through Network Address Translation (NAT) at router</li></ul><ul id="5907d3ca-5a64-41a7-9ca9-09763a5508ea" class="bulleted-list"><li style="list-style-type:square">Each router in a LAN remembers translation, so it can translate a public IP to a private one</li></ul></li></ul></li></ul></div></details></div></details><details open=""><summary style="font-weight:600;font-size:1.5em;line-height:1.3;margin:0">DNS</summary><div class="indented"><ul id="ccc6042f-46c0-47d9-ade5-0c3ffb15a561" class="bulleted-list"><li style="list-style-type:disc">1983 – <strong>Domain Name System (DNS)</strong> introduced<ul id="c032f484-5ffa-460a-8556-db0f2785f467" class="bulleted-list"><li style="list-style-type:circle">Rather than a centralised file containing mappings, a <strong>distributed system</strong> was developed</li></ul><ul id="516ac3d7-ac2a-402b-b0dc-0e1b5143692c" class="bulleted-list"><li style="list-style-type:circle">When a simple name needs to be translated to an IP address, a request is made to a server, which responds with the necessary information</li></ul></li></ul><ul id="c30a819d-b7b3-4e2b-95bf-ab9b2fa3e524" class="bulleted-list"><li style="list-style-type:disc">Structure of domain names<ul id="a181750c-224d-487c-9dfc-d02927961019" class="bulleted-list"><li style="list-style-type:circle"><strong>Hierarchical</strong> – similar to file system<ul id="04dc14d4-1f8c-42b9-8367-2037729d65af" class="bulleted-list"><li style="list-style-type:square">Each text section separated by a dot forms a part of this hierarchy</li></ul><ul id="b90ed5ad-638b-4b4d-8a68-aae0e2398ce5" class="bulleted-list"><li style="list-style-type:square">Hierarchy forms a tree</li></ul></li></ul><ul id="6c15a505-126f-49b6-b170-4f6eee362522" class="bulleted-list"><li style="list-style-type:circle">Example: <a href="http://www.sydney.edu.au/">www.sydney.edu.au</a>›</li></ul><ul id="0abb14b7-253c-4438-9b65-810a8b632858" class="bulleted-list"><li style="list-style-type:circle">“Dot” represents “root” of the tree (not included in domain name)</li></ul><ul id="0268b128-d6ec-4da2-bfc9-5fdf4a392ab7" class="bulleted-list"><li style="list-style-type:circle">Below root is <strong>top-level domain name, </strong>Each ”level” represents a “nameserver” that contains information about the level below<ul id="ce359fd2-08cd-4570-ae14-e21e1deaccef" class="bulleted-list"><li style="list-style-type:square">Used to represent country of registration, e.g. Australia</li></ul><ul id="53e98116-e042-4a6d-8629-0b955d895881" class="bulleted-list"><li style="list-style-type:square">Separates each level into various purposes, e.g. “.com” represents commercial, “.edu” – educational</li></ul></li></ul></li></ul><hr id="68b146d5-c22b-4cc5-9bc8-e7b7b705a178"/><ul id="25125c9f-42e9-44eb-bc65-c727816decf6" class="bulleted-list"><li style="list-style-type:disc">Each computer’s network configuration includes<ul id="97e9a887-80b1-4538-8bc2-6e2e3d2f43bf" class="bulleted-list"><li style="list-style-type:circle">its own IP address in the LAN</li></ul><ul id="b96c5047-f20a-4217-9617-7eb212d60afc" class="bulleted-list"><li style="list-style-type:circle">the IP address of a nameserver for domain lookups</li></ul></li></ul><ul id="d708c63a-db76-4d00-b896-8e2a672be5ea" class="bulleted-list"><li style="list-style-type:disc">When a computer looks up a domain name, it asks the configured nameserver for the IP using the <strong>DNS protocol</strong><ul id="717d637b-023e-43b0-9cfa-bc1810c7c8c7" class="bulleted-list"><li style="list-style-type:circle">DNS sends messages using <strong>Unified Datagram Protocol (UDP)</strong> – faster than TCP due to not caring about errors</li></ul><ul id="ade02cd4-4118-4410-8175-2c4c62182811" class="bulleted-list"><li style="list-style-type:circle">Configured name server communicates with name servers on each layer to get more information</li></ul></li></ul><hr id="97e4d131-70a9-42ed-b603-21600ea67c3e"/><ul id="a23a85b9-e6bb-47b7-88dc-a81f62a1cbc4" class="bulleted-list"><li style="list-style-type:disc">How does a computer get IP and DNS information?<ul id="92875f3c-cd01-4900-98e6-edae806cd6c8" class="bulleted-list"><li style="list-style-type:circle"><strong>Dynamic Host Configuration Protocol (DHCP)</strong> – commonly used protocol to dynamically assign IP addresses in a LAN based on which IP addresses are currently free</li></ul><ul id="2e11f9ac-9f29-4bf1-8167-095933059752" class="bulleted-list"><li style="list-style-type:circle">When a computer connects to a network, it sends a broadcast packet that requests information from a DHCP server, receiving the computer’s IP address and what DNS server to use</li></ul></li></ul><hr id="2fb99677-6d14-4c6c-9ef4-a1541ed871a3"/><ul id="97aa76e6-cf3b-4b25-9627-8a9b82ba46c1" class="bulleted-list"><li style="list-style-type:disc">Within domain names, each “level” has its own authority which manages the namespace<ul id="8d65b862-a3e3-49de-b4ff-6429ab91d5ba" class="bulleted-list"><li style="list-style-type:circle">E.g. sydney.edu.au<ul id="7647b7f2-5f61-4011-9990-1739b2a2282d" class="bulleted-list"><li style="list-style-type:square">“.au” domains are country code top level domains (TLD) managed by auDA</li></ul><ul id="47e940e9-9d30-4f95-b0f8-5e38b765d73b" class="bulleted-list"><li style="list-style-type:square">“.edu” Sections of a domain level authority can become “delegated subzones” to be managed by education Australia</li></ul><ul id="6acb4516-4c6f-4afb-bd4c-6cea265952ee" class="bulleted-list"><li style="list-style-type:square">“Sydney” finally all Sydney.edu.au websites can be edited, created and managed by Sydney.edu.au (USYD)</li></ul></li></ul></li></ul></div></details><details open=""><summary style="font-weight:600;font-size:1.5em;line-height:1.3;margin:0">Application Protocol</summary><div class="indented"><ul id="701e1462-3f7a-40e9-87d5-56551d1e6547" class="bulleted-list"><li style="list-style-type:disc">Recap: <strong>application layer</strong> protocols are highest layers of Internet Protocol Suite<ul id="4bc2011a-453d-448e-aa1e-b6a0dc96f375" class="bulleted-list"><li style="list-style-type:circle">Dictates the standards in how individual applications can communicate with each other<ul id="632f68ca-7006-429d-b267-f9d3261e4a8c" class="bulleted-list"><li style="list-style-type:square">email software</li></ul><ul id="fdf4c2f6-6ff9-4be8-a5ec-0f1a4ba95e0c" class="bulleted-list"><li style="list-style-type:square">web pages and websites</li></ul><ul id="3de8963b-9251-4073-b809-430636595fa6" class="bulleted-list"><li style="list-style-type:square">text/video chat services</li></ul></li></ul></li></ul><ul id="138db179-a3b2-4e70-85c4-5bdd65f7cda5" class="bulleted-list"><li style="list-style-type:disc">Examples:<ul id="be0b352b-d251-4ed8-b2ce-ee980dcb7c12" class="bulleted-list"><li style="list-style-type:circle"><strong>HyperText</strong><strong> Transfer Protocol (HTTP)</strong> – for transmitting web pages</li></ul><ul id="4048b116-237c-486a-923e-c10d620d655a" class="bulleted-list"><li style="list-style-type:circle"><strong>Simple Mail Transfer Protocol (SMTP)</strong> – for sending emails</li></ul></li></ul><ul id="f1f0227a-b131-430a-a84d-e48aa66ad272" class="bulleted-list"><li style="list-style-type:disc">These protocols are generally <em>text-based</em><ul id="b66202b4-ff09-4979-92df-fc007a4b4c08" class="bulleted-list"><li style="list-style-type:circle">Anyone, including yourself, could implement an application layer protocol</li></ul></li></ul><h3 id="51b52911-2b63-430b-88f6-32a0038c365b" class="">Again: <strong>Transmission Control Protocol (TCP)</strong></h3><ul id="61a5e8d3-9c32-41e1-9fd8-84d5a200e1ee" class="bulleted-list"><li style="list-style-type:disc">Used to ensure packets are transmitted correctly by performing error detection and correction</li></ul><ul id="ddf75f90-5b3a-4c9d-be0d-9af9ca349498" class="bulleted-list"><li style="list-style-type:disc">On top of the existing IP address, TCP connections contain a <strong>port</strong><ul id="bb37a139-036a-4e3b-9457-2b15508fd1b6" class="bulleted-list"><li style="list-style-type:circle">16-bit number that defines a specific connection point on a machine</li></ul><ul id="28148f03-01e2-47c1-940f-a6ed96b3eda4" class="bulleted-list"><li style="list-style-type:circle">Analogy: IP address is like a building, and ports are like doors</li></ul><ul id="c89520c8-be17-4234-9bcb-2e95c6e182d7" class="bulleted-list"><li style="list-style-type:circle">Applications can attach themselves to ports</li></ul></li></ul><ul id="13f6d801-d012-4b51-ab07-96d4b9e4e3a1" class="bulleted-list"><li style="list-style-type:disc">Many ports are reserved, however, a large number are available for general use<ul id="c3dfe73b-5f8a-4cfc-b1d9-90db81f9d8d0" class="bulleted-list"><li style="list-style-type:circle">HTTP has port 80 reserved</li></ul><ul id="5ef9106e-59ea-4e6d-92fa-914e1efbe052" class="bulleted-list"><li style="list-style-type:circle">SMTP has port 25 reserved</li></ul></li></ul><ul id="a24e2a43-c422-4db4-9f01-d86dc032cc86" class="bulleted-list"><li style="list-style-type:disc">HTTP<ul id="affb2af6-49ca-4df2-b547-ac3120489ef3" class="bulleted-list"><li style="list-style-type:circle">When a client wants to fetch a web page, it sends a GET request to the web server, specifically to port 80</li></ul><ul id="86f1856b-867a-4068-b19c-12c34c03489d" class="bulleted-list"><li style="list-style-type:circle">Web server looks in database of web pages and fetches the web page the client wants</li></ul><ul id="3c7b16b0-8adc-4283-bf08-49ceeb171b4c" class="bulleted-list"><li style="list-style-type:circle">Web server sends the result of the request back, and if successful, the HTML code of the desired webpage</li></ul></li></ul><ul id="de35e638-0a2c-4fc4-9a21-72c0a6ebd109" class="bulleted-list"><li style="list-style-type:disc">SMTP<ul id="e896854b-a38a-483e-bbfa-af9453a1e599" class="bulleted-list"><li style="list-style-type:circle">Client determines mail server IP from the DNS MX record (indicating <strong>m</strong>ail e<strong>x</strong>change)</li></ul><ul id="3427a042-4c23-45ca-8eea-98033d106f42" class="bulleted-list"><li style="list-style-type:circle">Connection made to mail server</li></ul><ul id="1c150230-cf92-4667-9c7b-617ddb93b7e3" class="bulleted-list"><li style="list-style-type:circle">Server sends initial status message</li></ul><ul id="37d17542-5fbd-4dbf-ac0b-eca41fdcf6d4" class="bulleted-list"><li style="list-style-type:circle">Client responds with request to fetch mail items</li></ul><ul id="674141a6-dae1-4f06-9ca3-97dabd1740ec" class="bulleted-list"><li style="list-style-type:circle">Server responds with mail items</li></ul></li></ul><ul id="58e4ab06-71aa-4af5-b7c4-6596a5b2c8e1" class="bulleted-list"><li style="list-style-type:disc">SMTP<ul id="d0b2d733-3931-43ff-a95d-3f41aaa1cea3" class="bulleted-list"><li style="list-style-type:circle">General standard for email messages is <strong>Multipurpose Internet Mail Extensions (MIME)</strong></li></ul><ul id="a3ede143-a4c5-45c2-b2e1-075e8f4a1470" class="bulleted-list"><li style="list-style-type:circle">Email follows specific structure as shown:</li></ul><ul id="e68d9d47-4bda-4af1-ab96-f23c6a27bad4" class="bulleted-list"><li style="list-style-type:circle">MIME can not only carry text data, but other information as well (such as file attachments)</li></ul></li></ul></div></details><details open=""><summary style="font-weight:600;font-size:1.5em;line-height:1.3;margin:0">Computer and Network Security</summary><div class="indented"><ul id="fb013442-56e7-45ad-a3e6-11d5413915d5" class="bulleted-list"><li style="list-style-type:disc"><strong>Encryption ~ </strong><ul id="246f43d1-901d-4d49-ab53-c5a84d0296a9" class="bulleted-list"><li style="list-style-type:circle">Simple definition: <strong>systematic scrambling of data so that an interceptor cannot understand the data, but the recipient can unscramble it to get the original data.</strong></li></ul><ul id="f5269a01-e5fa-4032-83b4-93c5fb784313" class="bulleted-list"><li style="list-style-type:circle">Study and use of encryption is known as <strong>cryptology</strong>, which encompasses</li></ul><ul id="fb83e2b0-eaf8-4405-b35a-8d4b5765e33a" class="bulleted-list"><li style="list-style-type:circle"><strong>cryptography</strong>: study of creating encrypted codes</li></ul><ul id="104faf84-980f-4ce8-9866-8da0c93471b5" class="bulleted-list"><li style="list-style-type:circle"><strong>cryptanalysis</strong>: study of encrypted codes to understand how they work and find improvements</li></ul></li></ul><ul id="5ae1c92e-7b4d-49fd-afef-7843dac92f30" class="bulleted-list"><li style="list-style-type:disc">Three key things we want to have in network connections<ul id="84372fc4-0394-4964-85ec-f16cce793166" class="bulleted-list"><li style="list-style-type:circle"><strong>Confidentiality</strong><ul id="08e0ccb6-e538-4fda-a185-b7b975146193" class="bulleted-list"><li style="list-style-type:square">Interception protection</li></ul><ul id="8e5173d1-21c3-4495-9b9f-0c59df30bad9" class="bulleted-list"><li style="list-style-type:square">“Message is only readable by the intended party&quot;</li></ul></li></ul><ul id="880db340-20be-4172-96d4-019e0b7bb43d" class="bulleted-list"><li style="list-style-type:circle"><strong>Integrity</strong><ul id="cb056e0c-eded-4824-a499-b901e056374f" class="bulleted-list"><li style="list-style-type:square">Ensure data has not been tampered with</li></ul><ul id="b28545d1-f7ed-4c0f-9d07-57c856d50649" class="bulleted-list"><li style="list-style-type:square">“Message is the same one that was sent”</li></ul></li></ul><ul id="ea148293-2a90-4d4b-8c20-c0406806e430" class="bulleted-list"><li style="list-style-type:circle"><strong>Authenticity</strong><ul id="0b817bcd-3609-490e-8214-a69266eb35e8" class="bulleted-list"><li style="list-style-type:square">Ensuring we know who the sender is and cannot dispute it is actually them</li></ul><ul id="3715be4a-1f64-4bf5-b3a0-4f5999ab4a48" class="bulleted-list"><li style="list-style-type:square">“We know who sent the message”</li></ul></li></ul></li></ul><hr id="29764d52-947f-4465-8496-c4ca0cb7b56a"/><ul id="9b86aa7d-caa3-47d0-9f10-a09433465943" class="bulleted-list"><li style="list-style-type:disc">Security when browsing the web<ul id="1345594b-641f-4ad3-b8e1-3f0f03b0f07a" class="bulleted-list"><li style="list-style-type:circle">By default, HTTP transmits data as plain text<ul id="bf645f53-48cb-4769-92f9-deee8dc8cc23" class="bulleted-list"><li style="list-style-type:square">Not secure for confidential information, like credentials!</li></ul></li></ul><ul id="9ef51943-e4ff-43c9-883c-81ceca9df2c8" class="bulleted-list"><li style="list-style-type:circle">HTTP has a secure version called <strong>HTTPS</strong><ul id="9ef79322-fe65-40d6-a673-0dec8c052dab" class="bulleted-list"><li style="list-style-type:square">Encrypts HTTP data using <strong>Transport Layer Security (TLS)</strong></li></ul></li></ul><ul id="a5a929d3-8a07-4611-945c-b27cf9ffa5d3" class="bulleted-list"><li style="list-style-type:circle">TLS sits between HTTP and TCP – effectively between application and transport layer<ul id="3802846f-98b9-40d1-926b-73318053e0b4" class="bulleted-list"><li style="list-style-type:square">Encrypts HTTP data before it is passed to TCP, and, vice versa, decrypts TCP data before going to HTTP</li></ul></li></ul></li></ul><hr id="fdbbf60c-f6c4-499b-a630-5ce73687827d"/><ul id="e5e02304-1892-4489-9cb4-f1fc40d46ae4" class="bulleted-list"><li style="list-style-type:disc">Basics of sending encrypted message<ol type="1" id="0d39df2f-e83e-409f-8039-ea0192183b18" class="numbered-list" start="1"><li>Encrypting message with the encryption function E to produce cyphertext: E(m)=“wy@523hDua#9sh” Original = “Hi Bob!”</li></ol><ol type="1" id="1a68382d-f9d7-4f30-9e9a-e38d39f92d9a" class="numbered-list" start="2"><li>Sending the cyphertext over the internet to ones E(m)=“wy@523hDua#9sh”</li></ol><ol type="1" id="0299f85c-3787-49b6-b606-c18c6e1ba895" class="numbered-list" start="4"><li>By using the decryption function D to decrypt the cyphertext received: D(E(m))=“Hi Bob!”</li></ol></li></ul><ul id="4095e276-c4bc-47b2-ab10-1c1c711cf544" class="bulleted-list"><li style="list-style-type:disc">This theoretically stops messages from being read by an interceptor<ul id="7c7aa6a6-7282-42f5-a078-17b0a3481af4" class="bulleted-list"><li style="list-style-type:circle">But is there a way Carol can somehow find out the original message?</li></ul></li></ul><ul id="a5727496-f25f-4917-9f57-737bf8355bef" class="bulleted-list"><li style="list-style-type:disc">Sending an encrypted message with a key<ol type="1" id="d4ed9f51-c288-4d21-8334-2feb544cab8b" class="numbered-list" start="1"><li>Alice has a message m she intends to send to Bob  m=“Hi Bob!”</li></ol><ol type="1" id="f4027b62-4afd-4bcc-9414-094e0385b2a8" class="numbered-list" start="2"><li>Alice encrypts the message with the encryption function E, using the shared secret key k, to produce cyphertext:   E(m,k)=“hdd&amp;#hduw)38”</li></ol><ol type="1" id="cd2abf3f-4881-44be-a67b-8e2a6ae5313a" class="numbered-list" start="3"><li>Alice sends the cyphertext over the internet to Bob  E(m,k)=“hdd&amp;#hduw)38”</li></ol><ol type="1" id="6b40b426-e8fb-4d06-aaba-962f4e010fde" class="numbered-list" start="4"><li>Bob uses the decryption function D and the shared secret key k to decrypt the cyphertext Alice sent him: D(E(m),k)=“Hi Bob!”</li></ol><ol type="1" id="9c5dd3a4-1a25-4c07-845e-a1ab376e9c50" class="numbered-list" start="5"><li>Bob is now able to read the original message m from Alice</li></ol></li></ul></div></details><details open=""><summary style="font-weight:600;font-size:1.5em;line-height:1.3;margin:0">Integrity and Public Key Cryptography</summary><div class="indented"><ul id="bd843ca5-7cc0-40fa-8a2f-ff511e443ce9" class="bulleted-list"><li style="list-style-type:disc"><strong><strong><strong>Hashing</strong></strong></strong><ul id="3d3d5b65-24d6-4f98-9a53-51a2c821e85a" class="bulleted-list"><li style="list-style-type:circle">One-way function which calculates checksum representing a <strong>hash</strong> or <strong>message digest</strong> for some data <strong>→</strong> Can’t get original data back from hash</li></ul><ul id="8d5a7d7b-a2c4-4a66-b153-a1385c53cca1" class="bulleted-list"><li style="list-style-type:circle">A good hash function should have unique values for any input data<ul id="c1098d07-0ea4-445f-91ed-6a3d98a94051" class="bulleted-list"><li style="list-style-type:square">i.e. it should be very difficult for H(m)=H(n)</li></ul></li></ul><ul id="31e6b125-3e90-4564-9cd8-673fef8f633c" class="bulleted-list"><li style="list-style-type:circle">Example: <strong>SHA-256</strong></li></ul><ul id="e66ffef5-c774-4d88-ac37-1c6caef5f828" class="bulleted-list"><li style="list-style-type:circle">If the hash of Bob’s message from Alice does not match the hash Alice previously sent, it can be said the massage has been changed or tampered with during transmission</li></ul></li></ul><ul id="35ea6693-11e5-4c6d-bb7d-b11ac776755c" class="bulleted-list"><li style="list-style-type:disc"><strong>Salting</strong><ul id="16158bc6-6e7f-449c-aca0-93c98f3ef6a8" class="bulleted-list"><li style="list-style-type:circle">A <strong>salt</strong> is a random string of characters that is generated to go along with hashed data</li></ul><ul id="204ee48d-66d5-448a-b7e0-a8b305533233" class="bulleted-list"><li style="list-style-type:circle">This salt can then be used as part of the hashing function</li></ul><ul id="d7bf9a84-e02d-407f-966e-7f5801b6269a" class="bulleted-list"><li style="list-style-type:circle">This means that even if a password for 2 different users was the same, if the <em>salt</em> for each user is different, the hash is still unique</li></ul><ul id="b0ba4ce8-be9a-48ba-9778-abd2a1788ba1" class="bulleted-list"><li style="list-style-type:circle">Thus, salts prevent:<ul id="a7a83e91-e70c-4a9f-8a15-7738a9a3107a" class="bulleted-list"><li style="list-style-type:square">attackers from being able to derive the hashing function from password hashes</li></ul><ul id="55d88564-86ef-40fa-b452-86416b99d5e2" class="bulleted-list"><li style="list-style-type:square">using a user’s compromised hashed password in other locations</li></ul></li></ul><ul id="055f8edd-c12e-4ad8-bfdf-eca987b3f8cd" class="bulleted-list"><li style="list-style-type:circle">Salt is usually stored along with hashed password</li></ul></li></ul></div></details><details open=""><summary style="font-weight:600;font-size:1.5em;line-height:1.3;margin:0">Digital Signatures</summary><div class="indented"><ul id="af0b46df-fbd9-48ba-9090-32245d9c6910" class="bulleted-list"><li style="list-style-type:disc">If our cryptography functions D and E can operate in any order, <ul id="a2a67b3d-0013-446c-923d-f1fdfb450e42" class="bulleted-list"><li style="list-style-type:circle">i.e. <style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>D</mi><mo stretchy="false">(</mo><mi>E</mi><mo stretchy="false">(</mo><mi>m</mi><mo separator="true">,</mo><msub><mi>k</mi><mrow><mi>p</mi><mi>u</mi><mi>b</mi></mrow></msub><mo stretchy="false">)</mo><mo separator="true">,</mo><msub><mi>k</mi><mrow><mi>p</mi><mi>r</mi><mi>i</mi></mrow></msub><mo stretchy="false">)</mo><mo>=</mo><mi>m</mi><mo>=</mo><mi>E</mi><mo stretchy="false">(</mo><mi>D</mi><mo stretchy="false">(</mo><mi>m</mi><mo separator="true">,</mo><msub><mi>k</mi><mrow><mi>p</mi><mi>r</mi><mi>i</mi></mrow></msub><mo stretchy="false">)</mo><mo separator="true">,</mo><msub><mi>k</mi><mrow><mi>p</mi><mi>u</mi><mi>b</mi></mrow></msub><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">D(E(m,k_{pub}),k_{pri} )=m=E(D(m,k_{pri}),k_{pub})</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.036108em;vertical-align:-0.286108em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">D</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.05764em;">E</span><span class="mopen">(</span><span class="mord mathnormal">m</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03148em;">k</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361079999999999em;"><span style="top:-2.5500000000000003em;margin-left:-0.03148em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">p</span><span class="mord mathnormal mtight">u</span><span class="mord mathnormal mtight">b</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"><span></span></span></span></span></span></span><span class="mclose">)</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03148em;">k</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.311664em;"><span style="top:-2.5500000000000003em;margin-left:-0.03148em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">p</span><span class="mord mathnormal mtight" style="margin-right:0.02778em;">r</span><span class="mord mathnormal mtight">i</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"><span></span></span></span></span></span></span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">m</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1.036108em;vertical-align:-0.286108em;"></span><span class="mord mathnormal" style="margin-right:0.05764em;">E</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.02778em;">D</span><span class="mopen">(</span><span class="mord mathnormal">m</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03148em;">k</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.311664em;"><span style="top:-2.5500000000000003em;margin-left:-0.03148em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">p</span><span class="mord mathnormal mtight" style="margin-right:0.02778em;">r</span><span class="mord mathnormal mtight">i</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"><span></span></span></span></span></span></span><span class="mclose">)</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03148em;">k</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361079999999999em;"><span style="top:-2.5500000000000003em;margin-left:-0.03148em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">p</span><span class="mord mathnormal mtight">u</span><span class="mord mathnormal mtight">b</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"><span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span></span><span>﻿</span></span>, </li></ul></li></ul><ul id="7543b3e1-0cc6-470c-ae09-5621807e9260" class="bulleted-list"><li style="list-style-type:disc">then we can use these to <strong>sign</strong> a message<ul id="512eeaa3-f1af-4006-bdc7-6a5486ee2a79" class="bulleted-list"><li style="list-style-type:circle">Signing a message involves the sending party sending a <strong>signature</strong> of the message, h, generated by <style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>h</mi><mo>=</mo><mi>D</mi><mo stretchy="false">(</mo><mi>m</mi><mo separator="true">,</mo><msub><mi>k</mi><mrow><mi>p</mi><mi>r</mi><mi>i</mi><mo separator="true">,</mo><mi>s</mi><mi>e</mi><mi>n</mi><mi>d</mi><mi>e</mi><mi>r</mi></mrow></msub><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">h=D(m,k_{pri,sender} )</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathnormal">h</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1.036108em;vertical-align:-0.286108em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">D</span><span class="mopen">(</span><span class="mord mathnormal">m</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03148em;">k</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361079999999999em;"><span style="top:-2.5500000000000003em;margin-left:-0.03148em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">p</span><span class="mord mathnormal mtight" style="margin-right:0.02778em;">r</span><span class="mord mathnormal mtight">i</span><span class="mpunct mtight">,</span><span class="mord mathnormal mtight">se</span><span class="mord mathnormal mtight">n</span><span class="mord mathnormal mtight">d</span><span class="mord mathnormal mtight" style="margin-right:0.02778em;">er</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"><span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span></span><span>﻿</span></span></li></ul><ul id="656e80b9-7df8-4b48-9b69-55b71d3f657b" class="bulleted-list"><li style="list-style-type:circle">The recipient can then check that h is equal to m by checking whether this occurs<style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi><mo>=</mo><mi>E</mi><mo stretchy="false">(</mo><mi>h</mi><mo separator="true">,</mo><msub><mi>k</mi><mrow><mi>p</mi><mi>u</mi><mi>b</mi><mo separator="true">,</mo><mi>s</mi><mi>e</mi><mi>n</mi><mi>d</mi><mi>e</mi><mi>r</mi></mrow></msub><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">m=E(h,k_{pub,sender})</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">m</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1.036108em;vertical-align:-0.286108em;"></span><span class="mord mathnormal" style="margin-right:0.05764em;">E</span><span class="mopen">(</span><span class="mord mathnormal">h</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03148em;">k</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361079999999999em;"><span style="top:-2.5500000000000003em;margin-left:-0.03148em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">p</span><span class="mord mathnormal mtight">u</span><span class="mord mathnormal mtight">b</span><span class="mpunct mtight">,</span><span class="mord mathnormal mtight">se</span><span class="mord mathnormal mtight">n</span><span class="mord mathnormal mtight">d</span><span class="mord mathnormal mtight" style="margin-right:0.02778em;">er</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"><span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span></span><span>﻿</span></span></li></ul><ul id="3e7f967b-50eb-45a0-9847-34993ddac960" class="bulleted-list"><li style="list-style-type:circle">This effectively verifies Alice as the sender, as only Alice has access to her private key</li></ul></li></ul><hr id="8c6e1697-a188-4064-a600-3720e5461692"/><ul id="048446fc-089a-401a-98c6-6d8d0869fce3" class="bulleted-list"><li style="list-style-type:disc">Public key cryptography is much slower than using shared secret cryptography</li></ul><ul id="d0a1ba1d-5faa-488f-937d-a2952433e49a" class="bulleted-list"><li style="list-style-type:disc">However, we can utilise the best of both methods in order to send data confidentially</li></ul><ul id="d883aeee-c43a-45e7-a65e-4ab567be9a2c" class="bulleted-list"><li style="list-style-type:disc">Alice can generate a shared secret key to use for communication with Alice and Bob, and send this key to Bob encrypted with Bob’s public key, and signed with Alice’s private key<ul id="802a1f03-2167-4af0-9767-10fbb49ac7c9" class="bulleted-list"><li style="list-style-type:circle">Whilst anyone can see Alice and Bob’s public keys, the decryption and signature verification remains confidential, as private keys were used in the signing</li></ul></li></ul><ul id="cccd6377-4433-415f-bc68-ee0d47ee6a60" class="bulleted-list"><li style="list-style-type:disc">Once Bob receives and decrypts/verifies the shared secret key sent by Alice, they can use this key in symmetric encryption to send data</li></ul><hr id="0bacc4cd-e9cf-466b-ac62-97078235b2c4"/><h3 id="c3683e16-daa4-4334-9b15-03b4068d8b22" class="">Digital Certificate</h3><ul id="a7d2ce4d-c9b4-4472-be2e-c7268f75ec16" class="bulleted-list"><li style="list-style-type:disc">A <strong>digital certificate</strong> is a data structure that certifies a public key is owned by a specific person/organisation</li></ul><ul id="e8f37976-385b-48ef-9b86-c7785756b7a6" class="bulleted-list"><li style="list-style-type:disc">Certificates are managed by <strong>certificate authorities (CAs)</strong> – trusted organisations which issue certificates<ul id="624126e7-7411-4bfb-b4ea-02ecabc7ac45" class="bulleted-list"><li style="list-style-type:circle">Certificates are signed by the private key of the CA, and can be checked using the CA’s public key</li></ul></li></ul><ul id="392654ed-68ee-4e55-b973-f3caf4ec903a" class="bulleted-list"><li style="list-style-type:disc">Example: HTTPS<ul id="1cb91266-edad-4f04-9b83-e59fd11b815d" class="bulleted-list"><li style="list-style-type:circle">When a URL beginning with https is requested, the web server sends a public key to the browser along with the signed certificate</li></ul><ul id="d2366932-9b55-466e-a5c2-c0f2080f0576" class="bulleted-list"><li style="list-style-type:circle">The certificate is checked with the public key of the CA to verify its authenticity</li></ul><ul id="dcf370fd-f579-453a-82c9-2dd298cc8926" class="bulleted-list"><li style="list-style-type:circle">Thus, the public key sent by the web server can be trusted</li></ul></li></ul></div></details><h1 id="55c2454c-31b0-4be7-82e1-6a4f157efe9d" class="">Cloud Computing, Window Systems, Micro-services</h1><details open=""><summary style="font-weight:600;font-size:1.5em;line-height:1.3;margin:0">Cloud Computing</summary><div class="indented"><ul id="97c9f2af-c63a-4b3e-980f-41b78ffec903" class="bulleted-list"><li style="list-style-type:disc">What is “the cloud”?<ul id="be39f658-cdc5-4fa0-b23d-ab7577609df7" class="bulleted-list"><li style="list-style-type:circle">Using computing infrastructure that’s not yours in order store, manage and process data</li></ul><ul id="c1721a0c-2394-4e9d-ba8f-66c012e24435" class="bulleted-list"><li style="list-style-type:circle">Used rather than relying on a personal computer or local server in an organisation</li></ul></li></ul><ul id="1fe6b4c7-b164-48e6-8fd8-ba00d710b3d5" class="bulleted-list"><li style="list-style-type:disc">Largest Providers include:<ul id="42edb072-cf34-49b5-b2cb-afcc2ee89f4d" class="bulleted-list"><li style="list-style-type:circle">Amazon Web Services (AWS)</li></ul><ul id="ad2137c1-288b-45b6-a291-b996f9474940" class="bulleted-list"><li style="list-style-type:circle">Microsoft Azure</li></ul><ul id="ccfdfefd-afdf-4b8f-8cb1-6a1c6d93ef91" class="bulleted-list"><li style="list-style-type:circle">IBM Cloud</li></ul><ul id="68390cf7-b3c0-4421-a1fa-4576d9df002c" class="bulleted-list"><li style="list-style-type:circle">Google Cloud</li></ul></li></ul><ul id="be1271ee-8e33-4853-8468-a97a2574dccf" class="bulleted-list"><li style="list-style-type:disc">Physical servers for large organisations are distributed around the world <strong>→</strong><ul id="d6c695dc-c134-4fae-aa9f-77e9f7bc3b4e" class="bulleted-list"><li style="list-style-type:circle">Closer to users – reduced latency à faster/less-delayed connections</li></ul><ul id="024eac5f-cc14-41e6-867d-119237e02198" class="bulleted-list"><li style="list-style-type:circle">Placed in locations with cheap and/or environmentally-friendly power</li></ul><ul id="4b16c21a-766b-4910-8a91-99f5ae5f10c5" class="bulleted-list"><li style="list-style-type:circle">Users of providers can request access to resources that match their needs<ul id="ca75c877-bc61-4f3b-bd09-971966704175" class="bulleted-list"><li style="list-style-type:square">CPU power</li></ul><ul id="fbc63dcd-0504-4c39-9b9d-87313248f3a6" class="bulleted-list"><li style="list-style-type:square">RAM</li></ul><ul id="0170be8c-e422-41d4-a6ac-9ebe659ab3de" class="bulleted-list"><li style="list-style-type:square">Storage</li></ul></li></ul><ul id="5f27013d-cbdb-4686-a1fd-fa636381a328" class="bulleted-list"><li style="list-style-type:circle">Provider then “spins up” virtualised environment for user<ul id="d0295664-2da5-4776-b973-850e3f6d41ac" class="bulleted-list"><li style="list-style-type:square">Can be virtual machine or container</li></ul></li></ul></li></ul><h3 id="89d98f68-a54b-454b-979e-2b4b0513a45c" class="">API</h3><ul id="793bddfd-eb91-4bc2-addc-182e9dfba7b6" class="bulleted-list"><li style="list-style-type:disc">How can services be managed remotely?<ul id="ebedd61d-a668-4ca8-9e8e-7813d98725bd" class="bulleted-list"><li style="list-style-type:circle">Large providers provide an <strong>Application Programming Interface (API)</strong> to configure a cloud service<ul id="9b7e19c3-a33b-4289-a583-caaed6dcd05a" class="bulleted-list"><li style="list-style-type:square">User can start, stop and configure services using an API</li></ul><ul id="d919cdce-af97-4f32-a434-028e43ed3bed" class="bulleted-list"><li style="list-style-type:square">Usually provided via a web interface as a management console</li></ul></li></ul><ul id="56564274-07cb-472f-b3d3-441927ea8901" class="bulleted-list"><li style="list-style-type:circle">For more direct configuration, users can also remotely SSH into a VM/container</li></ul></li></ul><h3 id="c05a74b4-f189-4b14-b88f-6e0544bb1b3d" class="">Cloud Computing Service Available</h3><ul id="4bda4207-ff23-4178-b35e-f73bc4f73b82" class="bulleted-list"><li style="list-style-type:disc"><strong>Virtual Machines</strong> – have a virtual server set up to use as you need</li></ul><ul id="b3305132-d842-40b2-be14-a1bbccc5b6b0" class="bulleted-list"><li style="list-style-type:disc"><strong>Storage services</strong><ul id="3f6d7b80-e2cd-4035-9412-3fad9ddf98db" class="bulleted-list"><li style="list-style-type:circle">Simple storage, e.g. AWS S3 – store any sort of object</li></ul><ul id="416707ec-a162-4541-9066-24315b832ba9" class="bulleted-list"><li style="list-style-type:circle">Backup/archival services – cheaper, but may take a lot of time to retrieve an object required</li></ul></li></ul><ul id="b5a78736-72a0-429e-8c01-772212b8368d" class="bulleted-list"><li style="list-style-type:disc"><strong>Notification services</strong></li></ul><ul id="4de11059-5e01-4165-98a6-6abac4bd4f92" class="bulleted-list"><li style="list-style-type:disc"><strong>Email services</strong> e.g. pre-configured SMTP servers – which we will explore in the lab content!</li></ul><ul id="d34f181e-2262-4e11-be51-ce3fbc1c774b" class="bulleted-list"><li style="list-style-type:disc"><strong>API gateway</strong></li></ul><ul id="a15b3050-1450-410a-9709-f7cd5f535c7b" class="bulleted-list"><li style="list-style-type:disc"><strong>Serverless computing</strong><ul id="b9b8e82d-398b-4e2c-a424-609c61ee515e" class="bulleted-list"><li style="list-style-type:circle">Rather than continuously running a server to wait for some action to occur and then perform something in response, users provide any sort of <strong>programming function</strong> that can be called when needed</li></ul><ul id="6396dd30-ed48-4e57-87f2-5416ee3e16b5" class="bulleted-list"><li style="list-style-type:circle">Function can be called in response to some action (e.g. user performs some transaction)</li></ul><ul id="6c575516-46b4-44e0-ad46-4ce4a85edbc1" class="bulleted-list"><li style="list-style-type:circle">Function can call other functions too</li></ul><ul id="eb1cc276-3007-41a8-a632-76cc93db414a" class="bulleted-list"><li style="list-style-type:circle">When the function is called, a VM/container is quickly generated, executes the function, and is shut down</li></ul><ul id="a6d6a5a1-154b-49fe-bc74-fe2c136be79c" class="bulleted-list"><li style="list-style-type:circle">Many languages supported</li></ul></li></ul><ul id="4961bc6a-9671-45bb-9b19-ee5f56e37099" class="bulleted-list"><li style="list-style-type:disc"><strong>Security of cloud services</strong><ul id="a21a3ab2-64a1-45a3-b12d-a0c85090b89d" class="bulleted-list"><li style="list-style-type:circle">Important, as services are accessed through the Internet</li></ul><ul id="0e4cc339-d68a-4708-af0e-3678d8a01356" class="bulleted-list"><li style="list-style-type:circle">Requires protection to/from<ul id="a4bf36a5-6f44-4f68-a8f2-9e220f27a249" class="bulleted-list"><li style="list-style-type:square">Manage access to servers/resources</li></ul><ul id="5b025230-0c30-4d53-8101-1da9c71a690e" class="bulleted-list"><li style="list-style-type:square">Malware attacks</li></ul><ul id="52e3a976-1372-4411-9224-1a12789a6f38" class="bulleted-list"><li style="list-style-type:square">Denial-of-service attacks</li></ul></li></ul><ul id="eb101840-e8de-429c-a589-3d5bcd410bcf" class="bulleted-list"><li style="list-style-type:circle">Large providers implement these protections on their own services</li></ul><ul id="05f994ff-6bd8-4e1f-b27d-48ba398171ac" class="bulleted-list"><li style="list-style-type:circle">Large providers can also implement these services for users at a low cost</li></ul></li></ul><ul id="2aa9fc6a-f032-4a96-b0b5-1bb6a25fbe45" class="bulleted-list"><li style="list-style-type:disc"><strong><strong><strong><strong>IoT (Internet of Things)</strong></strong></strong></strong><ul id="ccc1a6e3-b98b-48b7-b0f4-cde5665b1717" class="bulleted-list"><li style="list-style-type:circle">IoT – the interconnected networks created through the many smart devices we have available today, such as:<ul id="d584303c-096e-4467-b165-229424001857" class="bulleted-list"><li style="list-style-type:square">smart lighting systems</li></ul><ul id="726e9837-3c38-461c-a2b2-243ba8455677" class="bulleted-list"><li style="list-style-type:square">smart appliances</li></ul><ul id="eafa99fd-01ab-410b-a26a-9f8554763d33" class="bulleted-list"><li style="list-style-type:square">cars</li></ul></li></ul><ul id="292b359e-e81e-4fa9-a3b1-98ec20f2f968" class="bulleted-list"><li style="list-style-type:circle">These devices connect to the Internet to transmit/receive information</li></ul><ul id="6a2d8ac2-f082-47ae-8893-9414ca1e2153" class="bulleted-list"><li style="list-style-type:circle">Cloud services can:<ul id="4bef4911-cc47-42b3-9e24-a89a1184e3a0" class="bulleted-list"><li style="list-style-type:square">store data from IoT devices in a centralised manner</li></ul><ul id="accc9fac-d9bf-43e9-8462-725bd662d6e6" class="bulleted-list"><li style="list-style-type:square">process data produced by IoT devices – useful, as IoT devices may not have required processing power in some cases</li></ul></li></ul></li></ul></div></details><details open=""><summary style="font-weight:600;font-size:1.5em;line-height:1.3;margin:0">Windows Systems and Android</summary><div class="indented"><ul id="67a195cf-7dfc-462a-a254-d259030e48d5" class="bulleted-list"><li style="list-style-type:disc"><strong>Window Server</strong><ul id="c7470137-fe08-4f21-a2da-c151dc4921cd" class="bulleted-list"><li style="list-style-type:circle">Program which holds information about elements on the screen as data structures</li></ul><ul id="99c2b23c-c25a-436a-92f2-9b94b0eb5ea2" class="bulleted-list"><li style="list-style-type:circle">Includes:<ul id="b555757a-7dab-4e0d-89a4-d472a01ffc68" class="bulleted-list"><li style="list-style-type:square">windows</li></ul><ul id="313c94bd-77a3-42b6-9333-7e40f3acd1fc" class="bulleted-list"><li style="list-style-type:square">window elements (such as scroll bars, close/minimise/maximise buttons)</li></ul><ul id="02c6606f-41b6-4e04-9dc9-2746d3b13b95" class="bulleted-list"><li style="list-style-type:square">other parts of a user interface</li></ul></li></ul></li></ul><ul id="1eb2b74c-5be6-4517-bb94-07a1b4f3b958" class="bulleted-list"><li style="list-style-type:disc"><strong>Window server</strong> can be broken down into sub-components or programs<ul id="847f930a-1f04-4821-8771-c12ce8b47526" class="bulleted-list"><li style="list-style-type:circle"><strong>Window manager</strong> is responsible specifically for displaying windows on the screen</li></ul><ul id="20949ff6-270c-47ad-a2ca-4af8d33a54c4" class="bulleted-list"><li style="list-style-type:circle"><strong>Desktop environment</strong> provides overall look-and-feel of interface<ul id="fccb751f-d283-4b65-9192-bf4fea12d522" class="bulleted-list"><li style="list-style-type:square">OSs such as Linux provide a variety of desktop environments</li></ul></li></ul></li></ul><ul id="1616c128-1ea5-4955-a319-d0cdb9ef44a9" class="bulleted-list"><li style="list-style-type:disc">Each program in a window acts as a <strong>client</strong> of the server<ul id="6a551e39-711e-41b0-9c21-33341033b10e" class="bulleted-list"><li style="list-style-type:circle">Server communicates with client to dictate styling of common elements (e.g. buttons, scroll bars, etc.)</li></ul></li></ul><ul id="bbe31c0b-9f5b-43a2-95ef-cb9cc9392f05" class="bulleted-list"><li style="list-style-type:disc">Android – how does that relate to Unix?<ul id="555b17c7-1884-4fdb-be6e-6dcef9677d61" class="bulleted-list"><li style="list-style-type:circle">Kernel android uses is based upon Linux kernel (95% similar)</li></ul><ul id="9d1abceb-5862-48db-9858-41f2c0b37ab6" class="bulleted-list"><li style="list-style-type:circle">Uses its own window server to display programs as <strong>apps</strong></li></ul><ul id="f3ebd9a6-9363-491b-be4b-4a68c6dd6630" class="bulleted-list"><li style="list-style-type:circle">Each manufacturer needs to provide its own drivers so that the phone’s hardware can interact with the common Android software</li></ul></li></ul><ul id="a05a0f34-602c-459b-b0a3-0b13ba4067ad" class="bulleted-list"><li style="list-style-type:disc"><strong>JVM - Java Virtual Machine</strong><ul id="874aaae2-8997-4e3f-8bb1-5f4e4f8ec45f" class="bulleted-list"><li style="list-style-type:circle">JVM is open-source, but owned by Oracle<ul id="d77439bd-9261-41fb-9e81-fd5e99a34aa7" class="bulleted-list"><li style="list-style-type:square">To use the JVM in a commercial project, a license is required<ul id="c73b360d-45ed-4e13-a887-6aaa931cfa99" class="bulleted-list"><li style="list-style-type:disc">Android initially got around this by writing its own virtual machine compatible with Java bytecode, <strong>Dalvik</strong>…</li></ul><ul id="80c0e3f9-68da-4d8a-9525-2bc805481179" class="bulleted-list"><li style="list-style-type:disc">…but this got them in a legal scuffle with Oracle!</li></ul></li></ul></li></ul><ul id="162454cd-a461-4f57-8a2c-6bf72cb2f893" class="bulleted-list"><li style="list-style-type:circle">Dalvik in modern Android<ul id="ad60ec7c-fcb3-4f5c-928b-39c2822cb74f" class="bulleted-list"><li style="list-style-type:square">Modern Android apps are compile as native binaries to improve performance</li></ul><ul id="9f5e1094-8a83-477a-8a0f-083c0a737c89" class="bulleted-list"><li style="list-style-type:square">JVM still included in Android for compatibility reasons</li></ul></li></ul></li></ul></div></details><details open=""><summary style="font-weight:600;font-size:1.5em;line-height:1.3;margin:0">Microservices</summary><div class="indented"><ul id="81164d3b-6295-45ed-a815-ba2d13c61bd0" class="bulleted-list"><li style="list-style-type:disc">Lightweight services accessible via the Internet</li></ul><ul id="36a26786-c546-4e0a-9e01-19cc571022e2" class="bulleted-list"><li style="list-style-type:disc">Provide an API to communicate via a protocol<ul id="317f50ae-109b-41a1-ab97-c0e18021927e" class="bulleted-list"><li style="list-style-type:circle">Can be an existing protocol</li></ul><ul id="cb15364e-2547-4191-a386-5ad19e52f1a2" class="bulleted-list"><li style="list-style-type:circle">Can be its own custom application-layer protocol as an extension to the protocol stack</li></ul></li></ul><h2 id="78429914-d2d8-415e-8167-5a31e1ab9012" class=""><strong>API - Application Programming Interface</strong></h2><ul id="c27779b2-eead-4c63-93fe-8b481324e957" class="bulleted-list"><li style="list-style-type:disc">a standardised structure and methodology for 2 programs to communicate with each other</li></ul><ul id="3a37b878-d298-42a0-822e-e784bfba9b16" class="bulleted-list"><li style="list-style-type:disc">Can standardise communication, e.g. if a client sends some specific data, the server responds with data in a specific format</li></ul><ul id="66f80c3e-0372-4dff-817e-8334a8df83d2" class="bulleted-list"><li style="list-style-type:disc">Primarily used to send and receive data over the Internet whilst hiding the details of how that data is implemented</li></ul><ul id="b7079aab-8134-4267-ae72-6c9c07c70c1a" class="bulleted-list"><li style="list-style-type:disc">Can be thought of as “function calls”, with their own parameters and return results</li></ul><h2 id="7c885fbd-7501-4856-9c8d-db15ba79925c" class="">Implementation of APIs</h2><ul id="7ae8149b-1d64-4a27-b448-07f2346509b4" class="bulleted-list"><li style="list-style-type:disc"><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong>Web protocols are commonly used for communicating over APIs</strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></li></ul><ul id="72990d16-e2ca-4242-9e46-215247f67bcc" class="bulleted-list"><li style="list-style-type:disc">sending data over a web protocol → Make parameters part of URLs (may use structured text encoding to present) : XML / JSON → We all know JSON</li></ul><ul id="37d5e460-5a02-46c6-a1ad-5536eaf643b4" class="bulleted-list"><li style="list-style-type:disc"><strong>API aggregators → organisations which collate micro-services accessible via APIs → </strong>Provide template code to integrate communication with micro-service API in your own code</li></ul><p id="14834d1e-0534-4d86-96b3-15c3d3026954" class="">
+</p></div></details></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
