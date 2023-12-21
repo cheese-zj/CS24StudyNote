@@ -1085,16 +1085,68 @@ body .markdown-body
 <h3 id="akshare">针对要求，寻找AKshare接口信息<a class="headerlink" href="#akshare" title="Permanent link"></a></h3>
 <ul>
 <li>沪深300
-<div class="highlight"><pre>https://akshare.akfamily.xyz/data/option/option.html#id7
+<div class="highlight"><pre>https://akshare.akfamily.xyz/tutorial.html#id1
 </pre></div></li>
 <li>A股公司
 <div class="highlight"><pre>https://akshare.akfamily.xyz/data/stock/stock.html#id13
 </pre></div></li>
 </ul>
 <h3 id="_1">针对接口信息创建数据库表结构<a class="headerlink" href="#_1" title="Permanent link"></a></h3>
+<h5 id="_2">当前<a class="headerlink" href="#_2" title="Permanent link"></a></h5>
+<p><strong>Database</strong>: <code>Task</code>  Store tasks need to be finished </p>
+<p><strong>Tables</strong>:
+- User_tasks 
+User&rsquo;s input, these tasks should be executed based on user&rsquo;s will
+<div class="highlight"><pre><span class="k">CREATE</span> <span class="k">TABLE</span> <span class="err">{</span><span class="k">table_name</span><span class="err">}</span> <span class="p">(</span>
+    <span class="n">stock_id</span> <span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">10</span><span class="p">),</span>
+    <span class="n">start_date</span> <span class="nb">DATE</span><span class="p">,</span>
+    <span class="n">end_date</span> <span class="nb">DATE</span><span class="p">,</span>
+    <span class="n">operation_type</span> <span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">10</span><span class="p">),</span>
+    <span class="k">PRIMARY</span> <span class="k">KEY</span> <span class="p">(</span><span class="n">stock_id</span><span class="p">,</span> <span class="n">start_date</span><span class="p">,</span> <span class="n">end_date</span><span class="p">)</span>
+<span class="p">);</span>
+</pre></div></p>
+<ul>
+<li>Daily_tasks
+Daily tasks,should be executed at a certain time point
+<div class="highlight"><pre><span class="k">CREATE</span> <span class="k">TABLE</span> <span class="err">{</span><span class="k">table_name</span><span class="err">}</span> <span class="p">(</span>
+    <span class="n">stock_id</span> <span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">10</span><span class="p">),</span>
+    <span class="n">start_date</span> <span class="nb">DATE</span><span class="p">,</span>
+    <span class="n">end_date</span> <span class="nb">DATE</span><span class="p">,</span>
+    <span class="n">operation_type</span> <span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">10</span><span class="p">),</span>
+    <span class="k">PRIMARY</span> <span class="k">KEY</span> <span class="p">(</span><span class="n">stock_id</span><span class="p">,</span> <span class="n">start_date</span><span class="p">,</span> <span class="n">end_date</span><span class="p">)</span>
+<span class="p">);</span>
+</pre></div></li>
+</ul>
+<p><strong>Database</strong>: <code>Stock_sh</code>  存储沪A股的日k线数据:</p>
+<p><strong>Tables</strong>:
+A_share[0-9]</p>
+<div class="highlight"><pre><span class="k">CREATE</span> <span class="k">TABLE</span> <span class="err">{</span><span class="k">table_name</span><span class="err">}</span> <span class="p">(</span>
+    <span class="n">stock_id</span> <span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">10</span><span class="p">),</span>
+    <span class="nb">date</span> <span class="nb">DATE</span><span class="p">,</span>
+    <span class="k">open</span> <span class="nb">DECIMAL</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span>
+    <span class="n">high</span> <span class="nb">DECIMAL</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span>
+    <span class="n">low</span> <span class="nb">DECIMAL</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span>
+    <span class="k">close</span> <span class="nb">DECIMAL</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span>
+    <span class="n">amount</span> <span class="nb">BIGINT</span><span class="p">,</span>
+    <span class="k">PRIMARY</span> <span class="k">KEY</span> <span class="p">(</span><span class="n">stock_id</span> <span class="p">,</span><span class="nb">date</span><span class="p">)</span>
+<span class="p">);</span>
+</pre></div>
+
+<p><strong>优化方向</strong>:
+- 索引要加吗
+- 临时表池
+- 连接池</p>
 <h3 id="python">设计Python代码，实现数据获取及数据库数据写入(单线程)<a class="headerlink" href="#python" title="Permanent link"></a></h3>
+<p>Updated soon
+Now in <code>Single_threading</code></p>
 <h3 id="2">优化代码，实现多线程的并发查询和写入(2线程)<a class="headerlink" href="#2" title="Permanent link"></a></h3>
+<p><strong>优化方向</strong>:
+- 错误处理
+- 日志和监控
+- 用户交互</p>
+<p>An error occurred while writing to the database: &lsquo;Value based partial slicing on non-monotonic DatetimeIndexes with non-existing keys is not allowed.&rsquo;                                                                                                            <br />
+An error occurred while writing to the database: &lsquo;Value based partial slicing on non-monotonic DatetimeIndexes with non-existing keys is not allowed.&rsquo;        </p>
 <h2 id="application">Application<a class="headerlink" href="#application" title="Permanent link"></a></h2>
 <h3 id="a7320210101-20210220">计算生成A股指数的周线、月线，连阴天数及对应的时间周期(如，7周（3月），20210101-20210220)<a class="headerlink" href="#a7320210101-20210220" title="Permanent link"></a></h3>
-<h3 id="_2">计算生成个股的相关信息<a class="headerlink" href="#_2" title="Permanent link"></a></h3>
+<h3 id="_3">计算生成个股的相关信息<a class="headerlink" href="#_3" title="Permanent link"></a></h3>
 <h3 id="int">提供函数方法，针对证券编号、过滤类型(周线、月线)，持续时间(int)返回最终结果数据。<a class="headerlink" href="#int" title="Permanent link"></a></h3></article></body></html>

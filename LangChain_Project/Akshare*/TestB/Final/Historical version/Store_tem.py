@@ -27,30 +27,45 @@ def hash_id_to_digit(id_str):
 
     return digit
 
-def Update_to_db_direct(engine, item):
+
+def Update_to_db_tem(engine, item):
     try:
         with engine.begin() as conn:
-            print(f"Fetching data for stock: {item[0]}")
+        	# 根据id,起始日期,结束日期得到数据
+        	# get data based on id,start date and end date
+            tmp_table_name = f"{item[0]}_{item[1]}_{item[2]}_{item[3]}"
             stock_data = ak.stock_zh_a_hist_tx(symbol=f"{item[0]}", start_date=format_date(item[1], 'no_hyphen'), end_date=format_date(item[2], 'no_hyphen'))
 
-            print("Processing data")
+            # 将数据转换为 DataFrame 并写入临时表
+            # Convert data to DataFrame and write to temporary table
             stock_data['date'] = pd.to_datetime(stock_data['date']).dt.date
             stock_data['stock_id'] = item[0]
+            stock_data.to_sql(name=tmp_table_name, con=engine, if_exists='replace', index=False)
 
             main_table_name = f"A_share{hash_id_to_digit(item[0])}"
 
-            print(f"Deleting existing data from {main_table_name}")
-            delete_query = text(f"""
-            DELETE FROM {main_table_name}
-            WHERE stock_id = :stock_id AND date BETWEEN :start_date AND :end_date
+            # 插入或更新数据到主表
+            # Inseret of update date to main table
+            insert_query = text(f"""
+            INSERT INTO {main_table_name} (stock_id, date, open, high, low, close, amount)
+            SELECT stock_id, date, open, high, low, close, amount
+            FROM `{tmp_table_name}`
+            ON DUPLICATE KEY UPDATE
+                open = VALUES(open),
+                high = VALUES(high),
+                low = VALUES(low),
+                close = VALUES(close),
+                amount = VALUES(amount);
             """)
-            conn.execute(delete_query, {'stock_id': item[0], 'start_date': format_date(item[1], 'no_hyphen'), 'end_date': format_date(item[2], 'no_hyphen')})
 
-            # print(f"Inserting new data into {main_table_name}")
-            # # 设置 chunksize 参数为例如 1000
-            # stock_data.to_sql(name=main_table_name, con=engine, if_exists='append', index=False, method='multi', chunksize=1000)
+            conn.execute(insert_query)
 
-            # print("Data written to database successfully.")
+
+            # 删除临时表
+            # Delete the temporary table
+            drop_query = text(f"DROP TABLE IF EXISTS `{tmp_table_name}`")
+            conn.execute(drop_query)
+
 
     except Exception as e:
         print(f"An error occurred while writing to the database: {e}")
@@ -106,22 +121,21 @@ def main():
     engine_Task = create_db_engine('Config/Task_db.json')
 
     items = read_Tasks(engine_Task,"User_tasks")
-    print(f"Tasks read from database: {items}")
+
 
     # Using ThreadPoolExecutor to process items in parallel
-    with ThreadPoolExecutor(max_workers=1) as executor:  # Changed to 1 for single-threaded execution
-        futures = [executor.submit(Update_to_db_direct, engine_Stock_sh, item) for item in items]
+    with ThreadPoolExecutor(max_workers=5) as executor:
+        futures = [executor.submit(Update_to_db_tem, engine_Stock_sh, item) for item in items]
 
         # Optionally, handle the results of the futures if necessary
         for future in futures:
             try:
                 result = future.result()  # This blocks until the future is done
-                print(f"Future result: {result}")  # Handle the result as needed
+                #print(result)  # Handle the result as needed
             except Exception as e:
                 print(f"An error occurred: {e}")
 
-
 if __name__=="__main__":
-	main()
+    main()
 
 

@@ -65,26 +65,26 @@ CREATE TABLE {table_name} (
 );
 ```
 
-__优化方向__:
-- 索引要加吗
-- 临时表池
-- 连接池
-
 ### 设计Python代码，实现数据获取及数据库数据写入(单线程)
 Updated soon
 Now in `Single_threading`
 
 ### 优化代码，实现多线程的并发查询和写入(2线程)
 
-__优化方向__:
-- 错误处理
-- 日志和监控
-- 批量插入 
-- 修复 dir 中的锁等待问题
-- 用户交互
+__优化方向__: 
+
+- 错误处理 
+- 日志和监控 
+- 用户交互 
+- 不稳定的Akshare接口?: 
+```
+An error occurred while writing to the database: 'Value based partial slicing on non-monotonic DatetimeIndexes with non-existing keys is not allowed.'                                                                                                              
+An error occurred while writing to the database: 'Value based partial slicing on non-monotonic DatetimeIndexes with non-existing keys is not allowed.'    
+```    
 
 ## Application
 
-### 计算生成A股指数的周线、月线，连阴天数及对应的时间周期(如，7周（3月），20210101-20210220) 
+### 计算生成A股指数的周线、月线，连阴天数及对应的时间周期(如，7周（3月），20210101-20210220)
+
 ### 计算生成个股的相关信息 
 ### 提供函数方法，针对证券编号、过滤类型(周线、月线)，持续时间(int)返回最终结果数据。
