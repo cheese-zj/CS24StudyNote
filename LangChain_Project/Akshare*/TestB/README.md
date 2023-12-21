@@ -8,7 +8,6 @@
 
 
 ## Data Initialization
-__time limitation: 12 months__
 ### 针对要求，寻找AKshare接口信息
 - 沪深300
 ```
@@ -20,21 +19,72 @@ https://akshare.akfamily.xyz/data/stock/stock.html#id13
 ```
 
 ### 针对接口信息创建数据库表结构
-__python script => bash 集成__
-`check.py` __check if databases,tables exsits, if not, automatically create__
+##### 当前
+__Database__: `Task`  Store tasks need to be finished 
 
-`create_database.py` __create `Stock` database__
-`create_tables.py` __create `沪深300`,`A股`表格__
-`drop_database.py` __delete `Stock` database if exists__
+__Tables__:
+- User_tasks 
+User's input, these tasks should be executed based on user's will
+```sql
+CREATE TABLE {table_name} (
+    stock_id VARCHAR(10),
+    start_date DATE,
+    end_date DATE,
+    operation_type VARCHAR(10),
+    PRIMARY KEY (stock_id, start_date, end_date)
+);
+```
+
+- Daily_tasks
+Daily tasks,should be executed at a certain time point
+```sql
+CREATE TABLE {table_name} (
+    stock_id VARCHAR(10),
+    start_date DATE,
+    end_date DATE,
+    operation_type VARCHAR(10),
+    PRIMARY KEY (stock_id, start_date, end_date)
+);
+```
+
+__Database__: `Stock_sh`  存储沪A股的日k线数据:
+
+__Tables__:
+A_share[0-9]
+
+```sql
+CREATE TABLE {table_name} (
+    stock_id VARCHAR(10),
+    date DATE,
+    open DECIMAL(10, 3),
+    high DECIMAL(10, 3),
+    low DECIMAL(10, 3),
+    close DECIMAL(10, 3),
+    amount BIGINT,
+    PRIMARY KEY (stock_id ,date)
+);
+```
+
+__优化方向__:
+- 索引要加吗
+- 临时表池
+- 连接池
 
 ### 设计Python代码，实现数据获取及数据库数据写入(单线程)
-
-due:2023.12.20 24:00
+Updated soon
+Now in `Single_threading`
 
 ### 优化代码，实现多线程的并发查询和写入(2线程)
+
+__优化方向__:
+- 错误处理
+- 日志和监控
+- 批量插入 
+- 修复 dir 中的锁等待问题
+- 用户交互
 
 ## Application
 
 ### 计算生成A股指数的周线、月线，连阴天数及对应的时间周期(如，7周（3月），20210101-20210220) 
 ### 计算生成个股的相关信息 
-### 提供函数方法，针对证券编号、过滤类型(周线、月线)，持续时间(int)返回最终结果数据。 
+### 提供函数方法，针对证券编号、过滤类型(周线、月线)，持续时间(int)返回最终结果数据。

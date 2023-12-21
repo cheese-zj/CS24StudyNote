@@ -1,0 +1,8 @@
+{
+    "dialect": "mysql+pymysql",
+    "username": "root",
+    "password": "aaqqRew???sett",
+    "host": "localhost",
+    "port": 3306,
+    "database": "Task"
+}
