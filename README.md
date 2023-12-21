@@ -16,7 +16,7 @@ Some content from first year
 ```
 /LangChain_Project
 ```
-Covers the `Python` and `SQL` basics required for the project, and `akshare` Interface will be updated soon.
+Covers the `Python` and `SQL` basics required for the project, and `Akshare*` final version will be released soon
 ### Cpp_sn
 ```
 ```
