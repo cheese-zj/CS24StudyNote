@@ -21,7 +21,6 @@ def write_to_db(engine):
             INSERT INTO CSI_INDEX_300 (date, open, high, low, close, volume)
             SELECT date, open, high, low, close, volume
             FROM {tmp_table_name}
-            WHERE date >= '2023-01-01'
             ON DUPLICATE KEY UPDATE
                 open = VALUES(open),
                 high = VALUES(high),
@@ -34,10 +33,10 @@ def write_to_db(engine):
     except Exception as e:
         print(f"An error occurred while writing to the database: {e}")
 
-def main():
+def run():
     try:
         # 数据库配置
-        database_url = "mysql+pymysql://root:aaqqRew???sett@localhost:3306/Stock_single"
+        database_url = "mysql+pymysql://root:aaqqRew???sett@localhost:3306/Stock_sh"
         engine = create_engine(database_url)
 
         # 将数据写入数据库
@@ -46,7 +45,4 @@ def main():
         print(f"Database error: {db_error}")
     except Exception as e:
         print(f"An error occurred: {e}")
-
-if __name__ == "__main__":
-    main()
 

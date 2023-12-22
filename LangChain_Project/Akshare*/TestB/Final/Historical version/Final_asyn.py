@@ -11,7 +11,7 @@ import json
 from datetime import datetime, timedelta ,date
 
 from concurrent.futures import ThreadPoolExecutor
-
+import multiprocessing
 import sup
 
 import traceback
@@ -22,36 +22,36 @@ def Update_to_db_direct(engine, item):
     try:
         # 执行删除操作
         with engine.begin() as conn:
-            print(f"Processing item: {item}")
-
             start_date_formatted = sup.format_date(item[1], 'no_hyphen')
-
             end_date_formatted = sup.format_date(item[2], 'no_hyphen')
-            print(f"Formatted start date: {start_date_formatted}, end date: {end_date_formatted}")
 
             stock_data = ak.stock_zh_a_hist_tx(symbol=f"{item[0]}", start_date=start_date_formatted, end_date=end_date_formatted)
-
-
             stock_data['stock_id'] = item[0]
-
             main_table_name = f"A_share{sup.hash_id_to_digit(item[0])}"
-            print(f"Main table name: {main_table_name}")
 
             delete_query = text(f"""
             DELETE FROM {main_table_name}
             WHERE stock_id = :stock_id AND date BETWEEN :start_date AND :end_date
             """)
             conn.execute(delete_query, {'stock_id': item[0], 'start_date': start_date_formatted, 'end_date': end_date_formatted})
-            print(f"Deleted existing records from {main_table_name} for stock ID {item[0]} between {start_date_formatted} and {end_date_formatted}")
 
-        #执行插入操作
+        # 执行插入操作
         with engine.begin() as conn:
-            print(f"Inserting new records into {main_table_name}")
             stock_data.to_sql(name=main_table_name, con=engine, if_exists='append', index=False, method='multi', chunksize=20)
-            print(f"Inserted new records into {main_table_name}")
+
+            # 数据验证
+            verify_query = text(f"""
+            SELECT COUNT(*) FROM {main_table_name}
+            WHERE stock_id = :stock_id AND date BETWEEN :start_date AND :end_date
+            """)
+            result = conn.execute(verify_query, {'stock_id': item[0], 'start_date': start_date_formatted, 'end_date': end_date_formatted}).fetchone()
+            if result[0] == len(stock_data):
+                print(f"数据插入验证成功，表 {main_table_name} 中新插入了 {result[0]} 条记录。")
+            else:
+                print(f"数据插入验证失败，期望更新 {len(stock_data)} 条，实际更新 {result[0]} 条。")
 
     except Exception as e:
-        print(f"An error occurred while writing to the database: {e}")
+        print(f"在更新数据库时发生错误: {e}")
         traceback.print_exc()
 
 
@@ -79,34 +79,33 @@ def read_Tasks(engine, table_name):
 
     return data
 
-
-def main():
-    engine_Stock_sh = create_db_engine('Config/Stock_sh_db.json')
-    engine_Task = create_db_engine('Config/Task_db.json')
-
-    items = read_Tasks(engine_Task, "User_tasks")
-
-    #将 items 分组
-    grouped_items = sup.group_items_by_hash_id(items)
-    print(grouped_items)
-
-    #使用 ThreadPoolExecutor 处理分组的 items
-    with ThreadPoolExecutor(max_workers=5) as executor:
-        for group in grouped_items:
-            executor.submit(process_group, engine_Stock_sh, group)
-    return
-    
-
-def process_group(engine, group):
+def process_group(db_config_file, group):
+    engine = create_db_engine(db_config_file)
     for item in group:
         try:
             Update_to_db_direct(engine, item)
         except Exception as e:
-            print(f"An error occurred: {e}")
+            print(f"处理组 {group} 中的项 {item} 时出现错误: {e}")
 
-if __name__=="__main__":
+def main():
+    db_config_stock_sh = 'Config/Stock_sh_db.json'
+    db_config_task = 'Config/Task_db.json'
+
+    engine_Task = create_db_engine(db_config_task)
+    items = read_Tasks(engine_Task, "User_tasks")
+    grouped_items = sup.group_items_by_hash_id(items)
+
+    with multiprocessing.Pool(processes=5) as pool:
+        results = []
+        for group in grouped_items:
+            result = pool.apply_async(process_group, args=(db_config_stock_sh, group))
+            results.append(result)
+        pool.close()
+        pool.join()
+
+        for result in results:
+            result.get()
+
+if __name__ == "__main__":
     main()
 
-
-
-    

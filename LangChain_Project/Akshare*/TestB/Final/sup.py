@@ -1,5 +1,27 @@
-from datetime import datetime, timedelta ,date
+import akshare as ak
+import mysql.connector
+import pandas as pd
+from sqlalchemy import create_engine, text, MetaData, Table
+import json
+from datetime import datetime, timedelta, date
+from concurrent.futures import ThreadPoolExecutor
+import sup
+import traceback
+import time
+import logging
+import os
 
+def read_Tasks(engine, table_name):
+    metadata = MetaData()
+    t = Table(f'{table_name}', metadata, autoload_with=engine)
+
+    data = []
+    with engine.connect() as connection:
+        result = connection.execute(t.select())
+        for row in result:
+            data.append(row)
+
+    return data
 
 def hash_id_to_digit(id_str):
     # 计算id的字符总和
@@ -57,3 +79,15 @@ def print_group(grouped_items):
         i += 1
         
     return
+
+def create_db_engine(config_file):
+    try:
+        with open(config_file, 'r') as json_file:
+            db_info = json.load(json_file)
+
+        database_url = f"{db_info['dialect']}://{db_info['username']}:{db_info['password']}@{db_info['host']}:{db_info['port']}/{db_info['database']}"
+        engine = create_engine(database_url)
+        return engine
+    except Exception as e:
+        logging.error(f"An error occurred creating the database engine: {e}")
+        return None

@@ -1,0 +1,87 @@
+2023-12-22 14:59:16,086 DEBUG:Starting new HTTP connection (1): web.ifzq.gtimg.cn:80
+2023-12-22 14:59:16,088 DEBUG:Starting new HTTP connection (1): web.ifzq.gtimg.cn:80
+2023-12-22 14:59:16,088 DEBUG:Starting new HTTP connection (1): web.ifzq.gtimg.cn:80
+2023-12-22 14:59:16,089 DEBUG:Starting new HTTP connection (1): web.ifzq.gtimg.cn:80
+2023-12-22 14:59:16,090 DEBUG:Starting new HTTP connection (1): web.ifzq.gtimg.cn:80
+2023-12-22 14:59:16,137 DEBUG:http://web.ifzq.gtimg.cn:80 "GET /other/klineweb/klineWeb/weekTrends?code=sh600004&type=qfq&_var=trend_qfq&r=0.3506048543943414 HTTP/1.1" 302 137
+2023-12-22 14:59:16,138 DEBUG:Starting new HTTPS connection (1): web.ifzq.gtimg.cn:443
+2023-12-22 14:59:16,140 DEBUG:http://web.ifzq.gtimg.cn:80 "GET /other/klineweb/klineWeb/weekTrends?code=sh600000&type=qfq&_var=trend_qfq&r=0.3506048543943414 HTTP/1.1" 302 137
+2023-12-22 14:59:16,140 DEBUG:http://web.ifzq.gtimg.cn:80 "GET /other/klineweb/klineWeb/weekTrends?code=sh600011&type=qfq&_var=trend_qfq&r=0.3506048543943414 HTTP/1.1" 302 137
+2023-12-22 14:59:16,141 DEBUG:Starting new HTTPS connection (1): web.ifzq.gtimg.cn:443
+2023-12-22 14:59:16,142 DEBUG:Starting new HTTPS connection (1): web.ifzq.gtimg.cn:443
+2023-12-22 14:59:16,145 DEBUG:http://web.ifzq.gtimg.cn:80 "GET /other/klineweb/klineWeb/weekTrends?code=sh600007&type=qfq&_var=trend_qfq&r=0.3506048543943414 HTTP/1.1" 302 137
+2023-12-22 14:59:16,146 DEBUG:Starting new HTTPS connection (1): web.ifzq.gtimg.cn:443
+2023-12-22 14:59:16,148 DEBUG:http://web.ifzq.gtimg.cn:80 "GET /other/klineweb/klineWeb/weekTrends?code=sh600006&type=qfq&_var=trend_qfq&r=0.3506048543943414 HTTP/1.1" 302 137
+2023-12-22 14:59:16,149 DEBUG:Starting new HTTPS connection (1): web.ifzq.gtimg.cn:443
+2023-12-22 14:59:16,255 DEBUG:https://web.ifzq.gtimg.cn:443 "GET /other/klineweb/klineWeb/weekTrends?code=sh600006&type=qfq&_var=trend_qfq&r=0.3506048543943414 HTTP/1.1" 200 None
+2023-12-22 14:59:16,270 DEBUG:https://web.ifzq.gtimg.cn:443 "GET /other/klineweb/klineWeb/weekTrends?code=sh600007&type=qfq&_var=trend_qfq&r=0.3506048543943414 HTTP/1.1" 200 None
+2023-12-22 14:59:16,270 DEBUG:https://web.ifzq.gtimg.cn:443 "GET /other/klineweb/klineWeb/weekTrends?code=sh600011&type=qfq&_var=trend_qfq&r=0.3506048543943414 HTTP/1.1" 200 None
+2023-12-22 14:59:16,282 DEBUG:https://web.ifzq.gtimg.cn:443 "GET /other/klineweb/klineWeb/weekTrends?code=sh600004&type=qfq&_var=trend_qfq&r=0.3506048543943414 HTTP/1.1" 200 None
+2023-12-22 14:59:16,282 DEBUG:https://web.ifzq.gtimg.cn:443 "GET /other/klineweb/klineWeb/weekTrends?code=sh600000&type=qfq&_var=trend_qfq&r=0.3506048543943414 HTTP/1.1" 200 None
+2023-12-22 14:59:17,103 DEBUG:Starting new HTTPS connection (1): proxy.finance.qq.com:443
+2023-12-22 14:59:17,104 DEBUG:Starting new HTTPS connection (1): proxy.finance.qq.com:443
+2023-12-22 14:59:17,105 DEBUG:Starting new HTTPS connection (1): proxy.finance.qq.com:443
+2023-12-22 14:59:17,105 DEBUG:Starting new HTTPS connection (1): proxy.finance.qq.com:443
+2023-12-22 14:59:17,105 DEBUG:Starting new HTTPS connection (1): proxy.finance.qq.com:443
+2023-12-22 14:59:17,243 DEBUG:https://proxy.finance.qq.com:443 "GET /ifzqgtimg/appstock/app/newfqkline/get?_var=kline_day2023&param=sh600007%2Cday%2C2023-01-01%2C2024-12-31%2C640%2C&r=0.8205512681390605 HTTP/1.1" 200 None
+2023-12-22 14:59:17,243 DEBUG:https://proxy.finance.qq.com:443 "GET /ifzqgtimg/appstock/app/newfqkline/get?_var=kline_day2022&param=sh600006%2Cday%2C2022-01-01%2C2023-12-31%2C640%2C&r=0.8205512681390605 HTTP/1.1" 200 None
+2023-12-22 14:59:17,250 DEBUG:https://proxy.finance.qq.com:443 "GET /ifzqgtimg/appstock/app/newfqkline/get?_var=kline_day2023&param=sh600011%2Cday%2C2023-01-01%2C2024-12-31%2C640%2C&r=0.8205512681390605 HTTP/1.1" 200 None
+2023-12-22 14:59:17,256 DEBUG:https://proxy.finance.qq.com:443 "GET /ifzqgtimg/appstock/app/newfqkline/get?_var=kline_day2023&param=sh600000%2Cday%2C2023-01-01%2C2024-12-31%2C640%2C&r=0.8205512681390605 HTTP/1.1" 200 None
+2023-12-22 14:59:17,263 DEBUG:https://proxy.finance.qq.com:443 "GET /ifzqgtimg/appstock/app/newfqkline/get?_var=kline_day2023&param=sh600004%2Cday%2C2023-01-01%2C2024-12-31%2C640%2C&r=0.8205512681390605 HTTP/1.1" 200 None
+2023-12-22 14:59:18,200 DEBUG:Starting new HTTPS connection (1): proxy.finance.qq.com:443
+2023-12-22 14:59:18,215 INFO:Deleted data from A_share5 for stock ID sh600011 between 20230325 and 20230406
+2023-12-22 14:59:18,218 INFO:Deleted data from A_share0 for stock ID sh600007 between 20230702 and 20230709
+2023-12-22 14:59:18,222 INFO:Deleted data from A_share3 for stock ID sh600000 between 20230904 and 20230913
+2023-12-22 14:59:18,222 INFO:Deleted data from A_share7 for stock ID sh600004 between 20230109 and 20230110
+2023-12-22 14:59:18,234 INFO:Data insertion verified successfully, updated 8 records in table A_share3.
+2023-12-22 14:59:18,235 DEBUG:Starting new HTTP connection (1): web.ifzq.gtimg.cn:80
+2023-12-22 14:59:18,236 INFO:Data insertion verified successfully, updated 8 records in table A_share5.
+2023-12-22 14:59:18,236 INFO:Data insertion verified successfully, updated 5 records in table A_share0.
+2023-12-22 14:59:18,236 INFO:Data insertion verified successfully, updated 2 records in table A_share7.
+2023-12-22 14:59:18,238 DEBUG:Starting new HTTP connection (1): web.ifzq.gtimg.cn:80
+2023-12-22 14:59:18,238 DEBUG:Starting new HTTP connection (1): web.ifzq.gtimg.cn:80
+2023-12-22 14:59:18,274 DEBUG:http://web.ifzq.gtimg.cn:80 "GET /other/klineweb/klineWeb/weekTrends?code=sh600009&type=qfq&_var=trend_qfq&r=0.3506048543943414 HTTP/1.1" 302 137
+2023-12-22 14:59:18,275 DEBUG:Starting new HTTPS connection (1): web.ifzq.gtimg.cn:443
+2023-12-22 14:59:18,277 DEBUG:http://web.ifzq.gtimg.cn:80 "GET /other/klineweb/klineWeb/weekTrends?code=sh600008&type=qfq&_var=trend_qfq&r=0.3506048543943414 HTTP/1.1" 302 137
+2023-12-22 14:59:18,278 DEBUG:Starting new HTTPS connection (1): web.ifzq.gtimg.cn:443
+2023-12-22 14:59:18,280 DEBUG:http://web.ifzq.gtimg.cn:80 "GET /other/klineweb/klineWeb/weekTrends?code=sh600012&type=qfq&_var=trend_qfq&r=0.3506048543943414 HTTP/1.1" 302 137
+2023-12-22 14:59:18,281 DEBUG:Starting new HTTPS connection (1): web.ifzq.gtimg.cn:443
+2023-12-22 14:59:18,334 DEBUG:https://proxy.finance.qq.com:443 "GET /ifzqgtimg/appstock/app/newfqkline/get?_var=kline_day2023&param=sh600006%2Cday%2C2023-01-01%2C2024-12-31%2C640%2C&r=0.8205512681390605 HTTP/1.1" 200 None
+2023-12-22 14:59:18,376 DEBUG:https://web.ifzq.gtimg.cn:443 "GET /other/klineweb/klineWeb/weekTrends?code=sh600009&type=qfq&_var=trend_qfq&r=0.3506048543943414 HTTP/1.1" 200 None
+2023-12-22 14:59:18,376 DEBUG:https://web.ifzq.gtimg.cn:443 "GET /other/klineweb/klineWeb/weekTrends?code=sh600012&type=qfq&_var=trend_qfq&r=0.3506048543943414 HTTP/1.1" 200 None
+2023-12-22 14:59:18,389 DEBUG:https://web.ifzq.gtimg.cn:443 "GET /other/klineweb/klineWeb/weekTrends?code=sh600008&type=qfq&_var=trend_qfq&r=0.3506048543943414 HTTP/1.1" 200 None
+2023-12-22 14:59:19,062 INFO:Deleted data from A_share9 for stock ID sh600006 between 20220605 and 20220703
+2023-12-22 14:59:19,064 DEBUG:Starting new HTTPS connection (1): proxy.finance.qq.com:443
+2023-12-22 14:59:19,065 DEBUG:Starting new HTTPS connection (1): proxy.finance.qq.com:443
+2023-12-22 14:59:19,065 DEBUG:Starting new HTTPS connection (1): proxy.finance.qq.com:443
+2023-12-22 14:59:19,074 INFO:Data insertion verified successfully, updated 20 records in table A_share9.
+2023-12-22 14:59:19,075 DEBUG:Starting new HTTP connection (1): web.ifzq.gtimg.cn:80
+2023-12-22 14:59:19,112 DEBUG:http://web.ifzq.gtimg.cn:80 "GET /other/klineweb/klineWeb/weekTrends?code=sh600015&type=qfq&_var=trend_qfq&r=0.3506048543943414 HTTP/1.1" 302 137
+2023-12-22 14:59:19,113 DEBUG:Starting new HTTPS connection (1): web.ifzq.gtimg.cn:443
+2023-12-22 14:59:19,187 DEBUG:https://proxy.finance.qq.com:443 "GET /ifzqgtimg/appstock/app/newfqkline/get?_var=kline_day2023&param=sh600008%2Cday%2C2023-01-01%2C2024-12-31%2C640%2C&r=0.8205512681390605 HTTP/1.1" 200 None
+2023-12-22 14:59:19,195 DEBUG:https://proxy.finance.qq.com:443 "GET /ifzqgtimg/appstock/app/newfqkline/get?_var=kline_day2023&param=sh600012%2Cday%2C2023-01-01%2C2024-12-31%2C640%2C&r=0.8205512681390605 HTTP/1.1" 200 None
+2023-12-22 14:59:19,195 DEBUG:https://proxy.finance.qq.com:443 "GET /ifzqgtimg/appstock/app/newfqkline/get?_var=kline_day2023&param=sh600009%2Cday%2C2023-01-01%2C2024-12-31%2C640%2C&r=0.8205512681390605 HTTP/1.1" 200 None
+2023-12-22 14:59:19,223 DEBUG:https://web.ifzq.gtimg.cn:443 "GET /other/klineweb/klineWeb/weekTrends?code=sh600015&type=qfq&_var=trend_qfq&r=0.3506048543943414 HTTP/1.1" 200 None
+2023-12-22 14:59:19,926 DEBUG:Starting new HTTPS connection (1): proxy.finance.qq.com:443
+2023-12-22 14:59:19,932 INFO:Deleted data from A_share6 for stock ID sh600012 between 20231025 and 20231117
+2023-12-22 14:59:19,936 INFO:Deleted data from A_share1 for stock ID sh600008 between 20230606 and 20230617
+2023-12-22 14:59:19,936 INFO:Deleted data from A_share2 for stock ID sh600009 between 20230524 and 20230616
+2023-12-22 14:59:19,947 INFO:Data insertion verified successfully, updated 9 records in table A_share1.
+2023-12-22 14:59:19,947 INFO:Data insertion verified successfully, updated 18 records in table A_share2.
+2023-12-22 14:59:19,947 INFO:Data insertion verified successfully, updated 18 records in table A_share6.
+2023-12-22 14:59:20,051 DEBUG:https://proxy.finance.qq.com:443 "GET /ifzqgtimg/appstock/app/newfqkline/get?_var=kline_day2022&param=sh600015%2Cday%2C2022-01-01%2C2023-12-31%2C640%2C&r=0.8205512681390605 HTTP/1.1" 200 None
+2023-12-22 14:59:20,259 DEBUG:Starting new HTTPS connection (1): proxy.finance.qq.com:443
+2023-12-22 14:59:20,393 DEBUG:https://proxy.finance.qq.com:443 "GET /ifzqgtimg/appstock/app/newfqkline/get?_var=kline_day2023&param=sh600015%2Cday%2C2023-01-01%2C2024-12-31%2C640%2C&r=0.8205512681390605 HTTP/1.1" 200 None
+2023-12-22 14:59:20,615 INFO:Deleted data from A_share9 for stock ID sh600015 between 20220114 and 20220201
+2023-12-22 14:59:20,622 INFO:Data insertion verified successfully, updated 11 records in table A_share9.
+2023-12-22 14:59:20,624 DEBUG:Starting new HTTP connection (1): web.ifzq.gtimg.cn:80
+2023-12-22 14:59:20,663 DEBUG:http://web.ifzq.gtimg.cn:80 "GET /other/klineweb/klineWeb/weekTrends?code=sh600023&type=qfq&_var=trend_qfq&r=0.3506048543943414 HTTP/1.1" 302 137
+2023-12-22 14:59:20,664 DEBUG:Starting new HTTPS connection (1): web.ifzq.gtimg.cn:443
+2023-12-22 14:59:20,794 DEBUG:https://web.ifzq.gtimg.cn:443 "GET /other/klineweb/klineWeb/weekTrends?code=sh600023&type=qfq&_var=trend_qfq&r=0.3506048543943414 HTTP/1.1" 200 None
+2023-12-22 14:59:20,882 DEBUG:Starting new HTTPS connection (1): proxy.finance.qq.com:443
+2023-12-22 14:59:21,016 DEBUG:https://proxy.finance.qq.com:443 "GET /ifzqgtimg/appstock/app/newfqkline/get?_var=kline_day2022&param=sh600023%2Cday%2C2022-01-01%2C2023-12-31%2C640%2C&r=0.8205512681390605 HTTP/1.1" 200 None
+2023-12-22 14:59:21,226 DEBUG:Starting new HTTPS connection (1): proxy.finance.qq.com:443
+2023-12-22 14:59:21,349 DEBUG:https://proxy.finance.qq.com:443 "GET /ifzqgtimg/appstock/app/newfqkline/get?_var=kline_day2023&param=sh600023%2Cday%2C2023-01-01%2C2024-12-31%2C640%2C&r=0.8205512681390605 HTTP/1.1" 200 None
+2023-12-22 14:59:21,560 INFO:Deleted data from A_share8 for stock ID sh600023 between 20221208 and 20230101
+2023-12-22 14:59:21,569 INFO:Data insertion verified successfully, updated 17 records in table A_share8.
+2023-12-22 14:59:21,570 INFO:All tasks processed successfully.

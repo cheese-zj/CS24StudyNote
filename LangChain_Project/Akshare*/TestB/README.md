@@ -74,17 +74,22 @@ Now in `Single_threading`
 __优化方向__: 
 
 - 错误处理 
-- 日志和监控 
 - 用户交互 
 - 不稳定的Akshare接口?: 
+
 ```
 An error occurred while writing to the database: 'Value based partial slicing on non-monotonic DatetimeIndexes with non-existing keys is not allowed.'                                                                                                              
 An error occurred while writing to the database: 'Value based partial slicing on non-monotonic DatetimeIndexes with non-existing keys is not allowed.'    
 ```    
 
 ## Application
+__优化方向__: 
+- 函数化:arguments (股票/指数id,开始日期,结束日期)
+- 自动更新??
+- 分离周线,月线,
 
 ### 计算生成A股指数的周线、月线，连阴天数及对应的时间周期(如，7周（3月），20210101-20210220)
 
-### 计算生成个股的相关信息 
+### 计算生成个股的相关信息
+
 ### 提供函数方法，针对证券编号、过滤类型(周线、月线)，持续时间(int)返回最终结果数据。
