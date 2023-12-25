@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Basic C++/Include and *Preprocessor in c.md",
+                "file": "Data Structure/Conclude from 2823 slides/Trees.md",
                 "mode": "source",
                 "source": false
               }
@@ -110,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Basic C++/Include and *Preprocessor in c.md",
+                "file": "Data Structure/Conclude from 2823 slides/Trees.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Basic C++/Include and *Preprocessor in c.md",
+                "file": "Data Structure/Conclude from 2823 slides/Trees.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -150,7 +150,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Basic C++/Include and *Preprocessor in c.md"
+                "file": "Data Structure/Conclude from 2823 slides/Trees.md"
               }
             }
           }
@@ -173,8 +173,10 @@
   },
   "active": "d74ca9bd07c076b1",
   "lastOpenFiles": [
-    "Basic C++/Reference and Pointers.md",
     "Basic C++/Include and *Preprocessor in c.md",
+    "Data Structure/Conclude from 2823 slides/Trees.md",
+    "Data Structure/Conclude from 2823 slides",
+    "Basic C++/Reference and Pointers.md",
     "Basic C++/Basic Syntax.md",
     "Problems/Leetcode/191. Number of 1 Bits (Hamming Weight).md",
     "Problems/Leetcode/3.Longest Substring Without Repeating Characters.md",
