@@ -1,0 +1,9 @@
+2023-12-25 14:45:43,057 DEBUG:Starting new HTTP connection (1): web.ifzq.gtimg.cn:80
+2023-12-25 14:45:43,107 DEBUG:http://web.ifzq.gtimg.cn:80 "GET /other/klineweb/klineWeb/weekTrends?code=sh600000&type=qfq&_var=trend_qfq&r=0.3506048543943414 HTTP/1.1" 302 137
+2023-12-25 14:45:43,109 DEBUG:Starting new HTTPS connection (1): web.ifzq.gtimg.cn:443
+2023-12-25 14:45:43,237 DEBUG:https://web.ifzq.gtimg.cn:443 "GET /other/klineweb/klineWeb/weekTrends?code=sh600000&type=qfq&_var=trend_qfq&r=0.3506048543943414 HTTP/1.1" 200 None
+2023-12-25 14:45:43,427 DEBUG:Starting new HTTPS connection (1): proxy.finance.qq.com:443
+2023-12-25 14:45:43,679 DEBUG:https://proxy.finance.qq.com:443 "GET /ifzqgtimg/appstock/app/newfqkline/get?_var=kline_day2023&param=sh600000%2Cday%2C2023-01-01%2C2024-12-31%2C640%2C&r=0.8205512681390605 HTTP/1.1" 200 None
+2023-12-25 14:45:43,920 INFO:Deleted data from A_share3 for stock ID sh600000 between 20230101 and 20231231
+2023-12-25 14:45:43,957 INFO:Data insertion verified successfully, updated 237 records in table A_share3.
+2023-12-25 14:45:43,957 INFO:All tasks processed successfully.

@@ -21,8 +21,7 @@ def setup_logging():
                         level=logging.DEBUG,
                         format='%(asctime)s %(levelname)s:%(message)s')
 
-
-def Update_to_db_direct(engine, item, max_retries=3):
+def Update_to_db_direct(engine, engine_Task, item, max_retries=3):
     for attempt in range(max_retries):
         try:
             # 执行删除操作
@@ -54,6 +53,15 @@ def Update_to_db_direct(engine, item, max_retries=3):
                 result = conn.execute(verify_query, {'stock_id': item[0], 'start_date': start_date_formatted, 'end_date': end_date_formatted}).fetchone()
                 if result[0] == len(stock_data):
                     logging.info(f"Data insertion verified successfully, updated {result[0]} records in table {main_table_name}.")
+                    
+                    with engine_Task.begin() as conn_task:
+                        delete_task_query = text("""
+                        DELETE FROM User_tasks
+                        WHERE stock_id = :stock_id AND start_date = :start_date AND end_date = :end_date
+                        """)
+                        conn_task.execute(delete_task_query, {'stock_id': item[0], 'start_date': item[1], 'end_date': item[2]})
+                        logging.info(f"Deleted completed task for stock ID {item[0]} from User_tasks.")
+
                 else:
                     logging.warning(f"Data insertion verification failed, expected {len(stock_data)} records, but updated {result[0]}.")
 
@@ -67,6 +75,13 @@ def Update_to_db_direct(engine, item, max_retries=3):
                 logging.critical("Reached maximum retry limit, operation failed")
                 raise
 
+def process_group(db_config_file, engine_Task, group):
+    local_engine = sup.create_db_engine(db_config_file)
+    for item in group:
+        try:
+            Update_to_db_direct(local_engine, engine_Task, item)
+        except Exception as e:
+            logging.error(f"Error processing group {group} with item {item}: {e}")
 
 def wr_data():
     setup_logging()  # 设置日志
@@ -79,18 +94,8 @@ def wr_data():
 
     with ThreadPoolExecutor(max_workers=5) as executor:
         for group in grouped_items:
-            executor.submit(process_group, db_config_stock_sh, group)
+            executor.submit(process_group, db_config_stock_sh, engine_Task, group)
 
     logging.info("All tasks processed successfully.")
 
-    return
 
-
-def process_group(db_config_file, group):
-    local_engine = sup.create_db_engine(db_config_file)
-    for item in group:
-        try:
-            Update_to_db_direct(local_engine, item)
-        except Exception as e:
-            logging.error(f"Error processing group {group} with item {item}: {e}")
-    return

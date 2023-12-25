@@ -1,0 +1,322 @@
+2023-12-25 13:17:25,028 DEBUG:Starting new HTTP connection (1): web.ifzq.gtimg.cn:80
+2023-12-25 13:17:25,029 DEBUG:Starting new HTTP connection (1): web.ifzq.gtimg.cn:80
+2023-12-25 13:17:25,029 DEBUG:Starting new HTTP connection (1): web.ifzq.gtimg.cn:80
+2023-12-25 13:17:25,030 DEBUG:Starting new HTTP connection (1): web.ifzq.gtimg.cn:80
+2023-12-25 13:17:25,030 DEBUG:Starting new HTTP connection (1): web.ifzq.gtimg.cn:80
+2023-12-25 13:17:25,084 DEBUG:http://web.ifzq.gtimg.cn:80 "GET /other/klineweb/klineWeb/weekTrends?code=sh600004&type=qfq&_var=trend_qfq&r=0.3506048543943414 HTTP/1.1" 302 137
+2023-12-25 13:17:25,085 DEBUG:http://web.ifzq.gtimg.cn:80 "GET /other/klineweb/klineWeb/weekTrends?code=sh600000&type=qfq&_var=trend_qfq&r=0.3506048543943414 HTTP/1.1" 302 137
+2023-12-25 13:17:25,087 DEBUG:Starting new HTTPS connection (1): web.ifzq.gtimg.cn:443
+2023-12-25 13:17:25,087 DEBUG:Starting new HTTPS connection (1): web.ifzq.gtimg.cn:443
+2023-12-25 13:17:25,088 DEBUG:http://web.ifzq.gtimg.cn:80 "GET /other/klineweb/klineWeb/weekTrends?code=sh600011&type=qfq&_var=trend_qfq&r=0.3506048543943414 HTTP/1.1" 302 137
+2023-12-25 13:17:25,089 DEBUG:Starting new HTTPS connection (1): web.ifzq.gtimg.cn:443
+2023-12-25 13:17:25,091 DEBUG:http://web.ifzq.gtimg.cn:80 "GET /other/klineweb/klineWeb/weekTrends?code=sh600007&type=qfq&_var=trend_qfq&r=0.3506048543943414 HTTP/1.1" 302 137
+2023-12-25 13:17:25,091 DEBUG:http://web.ifzq.gtimg.cn:80 "GET /other/klineweb/klineWeb/weekTrends?code=sh600006&type=qfq&_var=trend_qfq&r=0.3506048543943414 HTTP/1.1" 302 137
+2023-12-25 13:17:25,093 DEBUG:Starting new HTTPS connection (1): web.ifzq.gtimg.cn:443
+2023-12-25 13:17:25,093 DEBUG:Starting new HTTPS connection (1): web.ifzq.gtimg.cn:443
+2023-12-25 13:17:25,201 DEBUG:https://web.ifzq.gtimg.cn:443 "GET /other/klineweb/klineWeb/weekTrends?code=sh600007&type=qfq&_var=trend_qfq&r=0.3506048543943414 HTTP/1.1" 200 None
+2023-12-25 13:17:25,216 DEBUG:https://web.ifzq.gtimg.cn:443 "GET /other/klineweb/klineWeb/weekTrends?code=sh600011&type=qfq&_var=trend_qfq&r=0.3506048543943414 HTTP/1.1" 200 None
+2023-12-25 13:17:25,217 DEBUG:https://web.ifzq.gtimg.cn:443 "GET /other/klineweb/klineWeb/weekTrends?code=sh600006&type=qfq&_var=trend_qfq&r=0.3506048543943414 HTTP/1.1" 200 None
+2023-12-25 13:17:25,223 DEBUG:https://web.ifzq.gtimg.cn:443 "GET /other/klineweb/klineWeb/weekTrends?code=sh600000&type=qfq&_var=trend_qfq&r=0.3506048543943414 HTTP/1.1" 200 None
+2023-12-25 13:17:25,229 DEBUG:https://web.ifzq.gtimg.cn:443 "GET /other/klineweb/klineWeb/weekTrends?code=sh600004&type=qfq&_var=trend_qfq&r=0.3506048543943414 HTTP/1.1" 200 None
+2023-12-25 13:17:26,060 DEBUG:Starting new HTTPS connection (1): proxy.finance.qq.com:443
+2023-12-25 13:17:26,060 DEBUG:Starting new HTTPS connection (1): proxy.finance.qq.com:443
+2023-12-25 13:17:26,061 DEBUG:Starting new HTTPS connection (1): proxy.finance.qq.com:443
+2023-12-25 13:17:26,062 DEBUG:Starting new HTTPS connection (1): proxy.finance.qq.com:443
+2023-12-25 13:17:26,062 DEBUG:Starting new HTTPS connection (1): proxy.finance.qq.com:443
+2023-12-25 13:17:26,301 DEBUG:https://proxy.finance.qq.com:443 "GET /ifzqgtimg/appstock/app/newfqkline/get?_var=kline_day2023&param=sh600004%2Cday%2C2023-01-01%2C2024-12-31%2C640%2C&r=0.8205512681390605 HTTP/1.1" 200 None
+2023-12-25 13:17:26,323 DEBUG:https://proxy.finance.qq.com:443 "GET /ifzqgtimg/appstock/app/newfqkline/get?_var=kline_day2022&param=sh600006%2Cday%2C2022-01-01%2C2023-12-31%2C640%2C&r=0.8205512681390605 HTTP/1.1" 200 None
+2023-12-25 13:17:26,329 DEBUG:https://proxy.finance.qq.com:443 "GET /ifzqgtimg/appstock/app/newfqkline/get?_var=kline_day2022&param=sh600007%2Cday%2C2022-01-01%2C2023-12-31%2C640%2C&r=0.8205512681390605 HTTP/1.1" 200 None
+2023-12-25 13:17:26,336 DEBUG:https://proxy.finance.qq.com:443 "GET /ifzqgtimg/appstock/app/newfqkline/get?_var=kline_day2022&param=sh600011%2Cday%2C2022-01-01%2C2023-12-31%2C640%2C&r=0.8205512681390605 HTTP/1.1" 200 None
+2023-12-25 13:17:26,348 DEBUG:https://proxy.finance.qq.com:443 "GET /ifzqgtimg/appstock/app/newfqkline/get?_var=kline_day2022&param=sh600000%2Cday%2C2022-01-01%2C2023-12-31%2C640%2C&r=0.8205512681390605 HTTP/1.1" 200 None
+2023-12-25 13:17:27,214 DEBUG:Starting new HTTPS connection (1): proxy.finance.qq.com:443
+2023-12-25 13:17:27,228 DEBUG:Starting new HTTPS connection (1): proxy.finance.qq.com:443
+2023-12-25 13:17:27,229 INFO:Deleted data from A_share7 for stock ID sh600004 between 20230109 and 20230110
+2023-12-25 13:17:27,267 DEBUG:Starting new HTTPS connection (1): proxy.finance.qq.com:443
+2023-12-25 13:17:27,280 DEBUG:Starting new HTTPS connection (1): proxy.finance.qq.com:443
+2023-12-25 13:17:27,293 INFO:Data insertion verified successfully, updated 2 records in table A_share7.
+2023-12-25 13:17:27,294 DEBUG:Starting new HTTP connection (1): web.ifzq.gtimg.cn:80
+2023-12-25 13:17:27,331 DEBUG:http://web.ifzq.gtimg.cn:80 "GET /other/klineweb/klineWeb/weekTrends?code=sh600004&type=qfq&_var=trend_qfq&r=0.3506048543943414 HTTP/1.1" 302 137
+2023-12-25 13:17:27,332 DEBUG:Starting new HTTPS connection (1): web.ifzq.gtimg.cn:443
+2023-12-25 13:17:27,452 DEBUG:https://web.ifzq.gtimg.cn:443 "GET /other/klineweb/klineWeb/weekTrends?code=sh600004&type=qfq&_var=trend_qfq&r=0.3506048543943414 HTTP/1.1" 200 None
+2023-12-25 13:17:27,476 DEBUG:https://proxy.finance.qq.com:443 "GET /ifzqgtimg/appstock/app/newfqkline/get?_var=kline_day2023&param=sh600006%2Cday%2C2023-01-01%2C2024-12-31%2C640%2C&r=0.8205512681390605 HTTP/1.1" 200 None
+2023-12-25 13:17:27,502 DEBUG:https://proxy.finance.qq.com:443 "GET /ifzqgtimg/appstock/app/newfqkline/get?_var=kline_day2023&param=sh600007%2Cday%2C2023-01-01%2C2024-12-31%2C640%2C&r=0.8205512681390605 HTTP/1.1" 200 None
+2023-12-25 13:17:27,521 DEBUG:https://proxy.finance.qq.com:443 "GET /ifzqgtimg/appstock/app/newfqkline/get?_var=kline_day2023&param=sh600000%2Cday%2C2023-01-01%2C2024-12-31%2C640%2C&r=0.8205512681390605 HTTP/1.1" 200 None
+2023-12-25 13:17:27,540 DEBUG:https://proxy.finance.qq.com:443 "GET /ifzqgtimg/appstock/app/newfqkline/get?_var=kline_day2023&param=sh600011%2Cday%2C2023-01-01%2C2024-12-31%2C640%2C&r=0.8205512681390605 HTTP/1.1" 200 None
+2023-12-25 13:17:27,935 DEBUG:Starting new HTTPS connection (1): proxy.finance.qq.com:443
+2023-12-25 13:17:28,271 DEBUG:https://proxy.finance.qq.com:443 "GET /ifzqgtimg/appstock/app/newfqkline/get?_var=kline_day2023&param=sh600004%2Cday%2C2023-01-01%2C2024-12-31%2C640%2C&r=0.8205512681390605 HTTP/1.1" 200 None
+2023-12-25 13:17:28,374 INFO:Deleted data from A_share0 for stock ID sh600007 between 20220510 and 20220601
+2023-12-25 13:17:28,455 INFO:Deleted data from A_share5 for stock ID sh600011 between 20220819 and 20220908
+2023-12-25 13:17:28,455 INFO:Deleted data from A_share3 for stock ID sh600000 between 20220801 and 20220818
+2023-12-25 13:17:28,455 INFO:Deleted data from A_share9 for stock ID sh600006 between 20220605 and 20220703
+2023-12-25 13:17:28,577 INFO:Deleted data from A_share7 for stock ID sh600004 between 20230728 and 20230818
+2023-12-25 13:17:28,581 INFO:Data insertion verified successfully, updated 17 records in table A_share0.
+2023-12-25 13:17:28,582 INFO:Data insertion verified successfully, updated 14 records in table A_share3.
+2023-12-25 13:17:28,583 DEBUG:Starting new HTTP connection (1): web.ifzq.gtimg.cn:80
+2023-12-25 13:17:28,583 INFO:Data insertion verified successfully, updated 15 records in table A_share5.
+2023-12-25 13:17:28,584 DEBUG:Starting new HTTP connection (1): web.ifzq.gtimg.cn:80
+2023-12-25 13:17:28,586 DEBUG:Starting new HTTP connection (1): web.ifzq.gtimg.cn:80
+2023-12-25 13:17:28,587 INFO:Data insertion verified successfully, updated 20 records in table A_share9.
+2023-12-25 13:17:28,588 DEBUG:Starting new HTTP connection (1): web.ifzq.gtimg.cn:80
+2023-12-25 13:17:28,590 INFO:Data insertion verified successfully, updated 16 records in table A_share7.
+2023-12-25 13:17:28,591 DEBUG:Starting new HTTP connection (1): web.ifzq.gtimg.cn:80
+2023-12-25 13:17:28,627 DEBUG:http://web.ifzq.gtimg.cn:80 "GET /other/klineweb/klineWeb/weekTrends?code=sh600006&type=qfq&_var=trend_qfq&r=0.3506048543943414 HTTP/1.1" 302 137
+2023-12-25 13:17:28,627 DEBUG:http://web.ifzq.gtimg.cn:80 "GET /other/klineweb/klineWeb/weekTrends?code=sh600007&type=qfq&_var=trend_qfq&r=0.3506048543943414 HTTP/1.1" 302 137
+2023-12-25 13:17:28,627 DEBUG:http://web.ifzq.gtimg.cn:80 "GET /other/klineweb/klineWeb/weekTrends?code=sh600000&type=qfq&_var=trend_qfq&r=0.3506048543943414 HTTP/1.1" 302 137
+2023-12-25 13:17:28,629 DEBUG:Starting new HTTPS connection (1): web.ifzq.gtimg.cn:443
+2023-12-25 13:17:28,629 DEBUG:Starting new HTTPS connection (1): web.ifzq.gtimg.cn:443
+2023-12-25 13:17:28,629 DEBUG:Starting new HTTPS connection (1): web.ifzq.gtimg.cn:443
+2023-12-25 13:17:28,629 DEBUG:http://web.ifzq.gtimg.cn:80 "GET /other/klineweb/klineWeb/weekTrends?code=sh600011&type=qfq&_var=trend_qfq&r=0.3506048543943414 HTTP/1.1" 302 137
+2023-12-25 13:17:28,630 DEBUG:Starting new HTTPS connection (1): web.ifzq.gtimg.cn:443
+2023-12-25 13:17:28,637 DEBUG:http://web.ifzq.gtimg.cn:80 "GET /other/klineweb/klineWeb/weekTrends?code=sh600012&type=qfq&_var=trend_qfq&r=0.3506048543943414 HTTP/1.1" 302 137
+2023-12-25 13:17:28,638 DEBUG:Starting new HTTPS connection (1): web.ifzq.gtimg.cn:443
+2023-12-25 13:17:28,745 DEBUG:https://web.ifzq.gtimg.cn:443 "GET /other/klineweb/klineWeb/weekTrends?code=sh600006&type=qfq&_var=trend_qfq&r=0.3506048543943414 HTTP/1.1" 200 None
+2023-12-25 13:17:28,745 DEBUG:https://web.ifzq.gtimg.cn:443 "GET /other/klineweb/klineWeb/weekTrends?code=sh600011&type=qfq&_var=trend_qfq&r=0.3506048543943414 HTTP/1.1" 200 None
+2023-12-25 13:17:28,746 DEBUG:https://web.ifzq.gtimg.cn:443 "GET /other/klineweb/klineWeb/weekTrends?code=sh600000&type=qfq&_var=trend_qfq&r=0.3506048543943414 HTTP/1.1" 200 None
+2023-12-25 13:17:28,765 DEBUG:https://web.ifzq.gtimg.cn:443 "GET /other/klineweb/klineWeb/weekTrends?code=sh600007&type=qfq&_var=trend_qfq&r=0.3506048543943414 HTTP/1.1" 200 None
+2023-12-25 13:17:28,772 DEBUG:https://web.ifzq.gtimg.cn:443 "GET /other/klineweb/klineWeb/weekTrends?code=sh600012&type=qfq&_var=trend_qfq&r=0.3506048543943414 HTTP/1.1" 200 None
+2023-12-25 13:17:29,494 DEBUG:Starting new HTTPS connection (1): proxy.finance.qq.com:443
+2023-12-25 13:17:29,586 DEBUG:Starting new HTTPS connection (1): proxy.finance.qq.com:443
+2023-12-25 13:17:29,586 DEBUG:Starting new HTTPS connection (1): proxy.finance.qq.com:443
+2023-12-25 13:17:29,587 DEBUG:Starting new HTTPS connection (1): proxy.finance.qq.com:443
+2023-12-25 13:17:29,587 DEBUG:Starting new HTTPS connection (1): proxy.finance.qq.com:443
+2023-12-25 13:17:29,688 DEBUG:https://proxy.finance.qq.com:443 "GET /ifzqgtimg/appstock/app/newfqkline/get?_var=kline_day2023&param=sh600011%2Cday%2C2023-01-01%2C2024-12-31%2C640%2C&r=0.8205512681390605 HTTP/1.1" 200 None
+2023-12-25 13:17:29,700 DEBUG:https://proxy.finance.qq.com:443 "GET /ifzqgtimg/appstock/app/newfqkline/get?_var=kline_day2023&param=sh600000%2Cday%2C2023-01-01%2C2024-12-31%2C640%2C&r=0.8205512681390605 HTTP/1.1" 200 None
+2023-12-25 13:17:29,725 DEBUG:https://proxy.finance.qq.com:443 "GET /ifzqgtimg/appstock/app/newfqkline/get?_var=kline_day2023&param=sh600007%2Cday%2C2023-01-01%2C2024-12-31%2C640%2C&r=0.8205512681390605 HTTP/1.1" 200 None
+2023-12-25 13:17:29,725 DEBUG:https://proxy.finance.qq.com:443 "GET /ifzqgtimg/appstock/app/newfqkline/get?_var=kline_day2022&param=sh600006%2Cday%2C2022-01-01%2C2023-12-31%2C640%2C&r=0.8205512681390605 HTTP/1.1" 200 None
+2023-12-25 13:17:29,815 DEBUG:https://proxy.finance.qq.com:443 "GET /ifzqgtimg/appstock/app/newfqkline/get?_var=kline_day2023&param=sh600012%2Cday%2C2023-01-01%2C2024-12-31%2C640%2C&r=0.8205512681390605 HTTP/1.1" 200 None
+2023-12-25 13:17:30,481 INFO:Deleted data from A_share5 for stock ID sh600011 between 20230325 and 20230406
+2023-12-25 13:17:30,643 DEBUG:Starting new HTTPS connection (1): proxy.finance.qq.com:443
+2023-12-25 13:17:30,658 INFO:Deleted data from A_share0 for stock ID sh600007 between 20230702 and 20230709
+2023-12-25 13:17:30,658 INFO:Deleted data from A_share3 for stock ID sh600000 between 20230904 and 20230913
+2023-12-25 13:17:30,659 INFO:Data insertion verified successfully, updated 8 records in table A_share5.
+2023-12-25 13:17:30,665 INFO:Deleted data from A_share6 for stock ID sh600012 between 20230125 and 20230207
+2023-12-25 13:17:30,667 INFO:Data insertion verified successfully, updated 8 records in table A_share3.
+2023-12-25 13:17:30,669 DEBUG:Starting new HTTP connection (1): web.ifzq.gtimg.cn:80
+2023-12-25 13:17:30,669 INFO:Data insertion verified successfully, updated 5 records in table A_share0.
+2023-12-25 13:17:30,671 DEBUG:Starting new HTTP connection (1): web.ifzq.gtimg.cn:80
+2023-12-25 13:17:30,671 INFO:Data insertion verified successfully, updated 7 records in table A_share6.
+2023-12-25 13:17:30,672 DEBUG:Starting new HTTP connection (1): web.ifzq.gtimg.cn:80
+2023-12-25 13:17:30,707 DEBUG:http://web.ifzq.gtimg.cn:80 "GET /other/klineweb/klineWeb/weekTrends?code=sh600012&type=qfq&_var=trend_qfq&r=0.3506048543943414 HTTP/1.1" 302 137
+2023-12-25 13:17:30,708 DEBUG:Starting new HTTPS connection (1): web.ifzq.gtimg.cn:443
+2023-12-25 13:17:30,711 DEBUG:http://web.ifzq.gtimg.cn:80 "GET /other/klineweb/klineWeb/weekTrends?code=sh600008&type=qfq&_var=trend_qfq&r=0.3506048543943414 HTTP/1.1" 302 137
+2023-12-25 13:17:30,711 DEBUG:http://web.ifzq.gtimg.cn:80 "GET /other/klineweb/klineWeb/weekTrends?code=sh600009&type=qfq&_var=trend_qfq&r=0.3506048543943414 HTTP/1.1" 302 137
+2023-12-25 13:17:30,712 DEBUG:Starting new HTTPS connection (1): web.ifzq.gtimg.cn:443
+2023-12-25 13:17:30,712 DEBUG:Starting new HTTPS connection (1): web.ifzq.gtimg.cn:443
+2023-12-25 13:17:30,764 DEBUG:https://proxy.finance.qq.com:443 "GET /ifzqgtimg/appstock/app/newfqkline/get?_var=kline_day2023&param=sh600006%2Cday%2C2023-01-01%2C2024-12-31%2C640%2C&r=0.8205512681390605 HTTP/1.1" 200 None
+2023-12-25 13:17:30,841 DEBUG:https://web.ifzq.gtimg.cn:443 "GET /other/klineweb/klineWeb/weekTrends?code=sh600009&type=qfq&_var=trend_qfq&r=0.3506048543943414 HTTP/1.1" 200 None
+2023-12-25 13:17:30,841 DEBUG:https://web.ifzq.gtimg.cn:443 "GET /other/klineweb/klineWeb/weekTrends?code=sh600008&type=qfq&_var=trend_qfq&r=0.3506048543943414 HTTP/1.1" 200 None
+2023-12-25 13:17:30,853 DEBUG:https://web.ifzq.gtimg.cn:443 "GET /other/klineweb/klineWeb/weekTrends?code=sh600012&type=qfq&_var=trend_qfq&r=0.3506048543943414 HTTP/1.1" 200 None
+2023-12-25 13:17:31,472 INFO:Deleted data from A_share9 for stock ID sh600006 between 20220626 and 20220704
+2023-12-25 13:17:31,482 DEBUG:Starting new HTTPS connection (1): proxy.finance.qq.com:443
+2023-12-25 13:17:31,484 DEBUG:Starting new HTTPS connection (1): proxy.finance.qq.com:443
+2023-12-25 13:17:31,484 DEBUG:Starting new HTTPS connection (1): proxy.finance.qq.com:443
+2023-12-25 13:17:31,490 INFO:Data insertion verified successfully, updated 6 records in table A_share9.
+2023-12-25 13:17:31,491 DEBUG:Starting new HTTP connection (1): web.ifzq.gtimg.cn:80
+2023-12-25 13:17:31,527 DEBUG:http://web.ifzq.gtimg.cn:80 "GET /other/klineweb/klineWeb/weekTrends?code=sh600015&type=qfq&_var=trend_qfq&r=0.3506048543943414 HTTP/1.1" 302 137
+2023-12-25 13:17:31,528 DEBUG:Starting new HTTPS connection (1): web.ifzq.gtimg.cn:443
+2023-12-25 13:17:31,617 DEBUG:https://proxy.finance.qq.com:443 "GET /ifzqgtimg/appstock/app/newfqkline/get?_var=kline_day2023&param=sh600012%2Cday%2C2023-01-01%2C2024-12-31%2C640%2C&r=0.8205512681390605 HTTP/1.1" 200 None
+2023-12-25 13:17:31,635 DEBUG:https://web.ifzq.gtimg.cn:443 "GET /other/klineweb/klineWeb/weekTrends?code=sh600015&type=qfq&_var=trend_qfq&r=0.3506048543943414 HTTP/1.1" 200 None
+2023-12-25 13:17:31,699 DEBUG:https://proxy.finance.qq.com:443 "GET /ifzqgtimg/appstock/app/newfqkline/get?_var=kline_day2022&param=sh600008%2Cday%2C2022-01-01%2C2023-12-31%2C640%2C&r=0.8205512681390605 HTTP/1.1" 200 None
+2023-12-25 13:17:31,743 DEBUG:https://proxy.finance.qq.com:443 "GET /ifzqgtimg/appstock/app/newfqkline/get?_var=kline_day2022&param=sh600009%2Cday%2C2022-01-01%2C2023-12-31%2C640%2C&r=0.8205512681390605 HTTP/1.1" 200 None
+2023-12-25 13:17:32,193 DEBUG:Starting new HTTPS connection (1): proxy.finance.qq.com:443
+2023-12-25 13:17:32,331 INFO:Deleted data from A_share6 for stock ID sh600012 between 20231025 and 20231117
+2023-12-25 13:17:32,352 DEBUG:Starting new HTTPS connection (1): proxy.finance.qq.com:443
+2023-12-25 13:17:32,352 DEBUG:Starting new HTTPS connection (1): proxy.finance.qq.com:443
+2023-12-25 13:17:32,361 INFO:Data insertion verified successfully, updated 18 records in table A_share6.
+2023-12-25 13:17:32,513 DEBUG:https://proxy.finance.qq.com:443 "GET /ifzqgtimg/appstock/app/newfqkline/get?_var=kline_day2022&param=sh600015%2Cday%2C2022-01-01%2C2023-12-31%2C640%2C&r=0.8205512681390605 HTTP/1.1" 200 None
+2023-12-25 13:17:32,595 DEBUG:https://proxy.finance.qq.com:443 "GET /ifzqgtimg/appstock/app/newfqkline/get?_var=kline_day2023&param=sh600009%2Cday%2C2023-01-01%2C2024-12-31%2C640%2C&r=0.8205512681390605 HTTP/1.1" 200 None
+2023-12-25 13:17:32,601 DEBUG:https://proxy.finance.qq.com:443 "GET /ifzqgtimg/appstock/app/newfqkline/get?_var=kline_day2023&param=sh600008%2Cday%2C2023-01-01%2C2024-12-31%2C640%2C&r=0.8205512681390605 HTTP/1.1" 200 None
+2023-12-25 13:17:32,914 DEBUG:Starting new HTTPS connection (1): proxy.finance.qq.com:443
+2023-12-25 13:17:33,111 INFO:Deleted data from A_share1 for stock ID sh600008 between 20220109 and 20220120
+2023-12-25 13:17:33,112 INFO:Deleted data from A_share2 for stock ID sh600009 between 20220912 and 20220930
+2023-12-25 13:17:33,121 INFO:Data insertion verified successfully, updated 9 records in table A_share1.
+2023-12-25 13:17:33,123 DEBUG:Starting new HTTP connection (1): web.ifzq.gtimg.cn:80
+2023-12-25 13:17:33,123 INFO:Data insertion verified successfully, updated 14 records in table A_share2.
+2023-12-25 13:17:33,124 DEBUG:Starting new HTTP connection (1): web.ifzq.gtimg.cn:80
+2023-12-25 13:17:33,161 DEBUG:http://web.ifzq.gtimg.cn:80 "GET /other/klineweb/klineWeb/weekTrends?code=sh600009&type=qfq&_var=trend_qfq&r=0.3506048543943414 HTTP/1.1" 302 137
+2023-12-25 13:17:33,162 DEBUG:http://web.ifzq.gtimg.cn:80 "GET /other/klineweb/klineWeb/weekTrends?code=sh600008&type=qfq&_var=trend_qfq&r=0.3506048543943414 HTTP/1.1" 302 137
+2023-12-25 13:17:33,163 DEBUG:Starting new HTTPS connection (1): web.ifzq.gtimg.cn:443
+2023-12-25 13:17:33,163 DEBUG:Starting new HTTPS connection (1): web.ifzq.gtimg.cn:443
+2023-12-25 13:17:33,208 DEBUG:https://proxy.finance.qq.com:443 "GET /ifzqgtimg/appstock/app/newfqkline/get?_var=kline_day2023&param=sh600015%2Cday%2C2023-01-01%2C2024-12-31%2C640%2C&r=0.8205512681390605 HTTP/1.1" 200 None
+2023-12-25 13:17:33,277 DEBUG:https://web.ifzq.gtimg.cn:443 "GET /other/klineweb/klineWeb/weekTrends?code=sh600008&type=qfq&_var=trend_qfq&r=0.3506048543943414 HTTP/1.1" 200 None
+2023-12-25 13:17:33,303 DEBUG:https://web.ifzq.gtimg.cn:443 "GET /other/klineweb/klineWeb/weekTrends?code=sh600009&type=qfq&_var=trend_qfq&r=0.3506048543943414 HTTP/1.1" 200 None
+2023-12-25 13:17:33,783 DEBUG:Starting new HTTPS connection (1): proxy.finance.qq.com:443
+2023-12-25 13:17:33,783 INFO:Deleted data from A_share9 for stock ID sh600015 between 20220114 and 20220201
+2023-12-25 13:17:33,784 DEBUG:Starting new HTTPS connection (1): proxy.finance.qq.com:443
+2023-12-25 13:17:33,793 INFO:Data insertion verified successfully, updated 11 records in table A_share9.
+2023-12-25 13:17:33,794 DEBUG:Starting new HTTP connection (1): web.ifzq.gtimg.cn:80
+2023-12-25 13:17:33,830 DEBUG:http://web.ifzq.gtimg.cn:80 "GET /other/klineweb/klineWeb/weekTrends?code=sh600015&type=qfq&_var=trend_qfq&r=0.3506048543943414 HTTP/1.1" 302 137
+2023-12-25 13:17:33,831 DEBUG:Starting new HTTPS connection (1): web.ifzq.gtimg.cn:443
+2023-12-25 13:17:33,905 DEBUG:https://proxy.finance.qq.com:443 "GET /ifzqgtimg/appstock/app/newfqkline/get?_var=kline_day2023&param=sh600009%2Cday%2C2023-01-01%2C2024-12-31%2C640%2C&r=0.8205512681390605 HTTP/1.1" 200 None
+2023-12-25 13:17:33,921 DEBUG:https://proxy.finance.qq.com:443 "GET /ifzqgtimg/appstock/app/newfqkline/get?_var=kline_day2023&param=sh600008%2Cday%2C2023-01-01%2C2024-12-31%2C640%2C&r=0.8205512681390605 HTTP/1.1" 200 None
+2023-12-25 13:17:33,957 DEBUG:https://web.ifzq.gtimg.cn:443 "GET /other/klineweb/klineWeb/weekTrends?code=sh600015&type=qfq&_var=trend_qfq&r=0.3506048543943414 HTTP/1.1" 200 None
+2023-12-25 13:17:34,451 DEBUG:Starting new HTTPS connection (1): proxy.finance.qq.com:443
+2023-12-25 13:17:34,455 INFO:Deleted data from A_share1 for stock ID sh600008 between 20230606 and 20230617
+2023-12-25 13:17:34,456 INFO:Deleted data from A_share2 for stock ID sh600009 between 20230524 and 20230616
+2023-12-25 13:17:34,466 INFO:Data insertion verified successfully, updated 9 records in table A_share1.
+2023-12-25 13:17:34,467 INFO:Data insertion verified successfully, updated 18 records in table A_share2.
+2023-12-25 13:17:34,574 DEBUG:https://proxy.finance.qq.com:443 "GET /ifzqgtimg/appstock/app/newfqkline/get?_var=kline_day2022&param=sh600015%2Cday%2C2022-01-01%2C2023-12-31%2C640%2C&r=0.8205512681390605 HTTP/1.1" 200 None
+2023-12-25 13:17:34,784 DEBUG:Starting new HTTPS connection (1): proxy.finance.qq.com:443
+2023-12-25 13:17:34,921 DEBUG:https://proxy.finance.qq.com:443 "GET /ifzqgtimg/appstock/app/newfqkline/get?_var=kline_day2023&param=sh600015%2Cday%2C2023-01-01%2C2024-12-31%2C640%2C&r=0.8205512681390605 HTTP/1.1" 200 None
+2023-12-25 13:17:35,140 INFO:Deleted data from A_share9 for stock ID sh600015 between 20220706 and 20220721
+2023-12-25 13:17:35,150 INFO:Data insertion verified successfully, updated 12 records in table A_share9.
+2023-12-25 13:17:35,152 DEBUG:Starting new HTTP connection (1): web.ifzq.gtimg.cn:80
+2023-12-25 13:17:35,193 DEBUG:http://web.ifzq.gtimg.cn:80 "GET /other/klineweb/klineWeb/weekTrends?code=sh600023&type=qfq&_var=trend_qfq&r=0.3506048543943414 HTTP/1.1" 302 137
+2023-12-25 13:17:35,194 DEBUG:Starting new HTTPS connection (1): web.ifzq.gtimg.cn:443
+2023-12-25 13:17:35,314 DEBUG:https://web.ifzq.gtimg.cn:443 "GET /other/klineweb/klineWeb/weekTrends?code=sh600023&type=qfq&_var=trend_qfq&r=0.3506048543943414 HTTP/1.1" 200 None
+2023-12-25 13:17:35,400 DEBUG:Starting new HTTPS connection (1): proxy.finance.qq.com:443
+2023-12-25 13:17:35,634 DEBUG:https://proxy.finance.qq.com:443 "GET /ifzqgtimg/appstock/app/newfqkline/get?_var=kline_day2022&param=sh600023%2Cday%2C2022-01-01%2C2023-12-31%2C640%2C&r=0.8205512681390605 HTTP/1.1" 200 None
+2023-12-25 13:17:35,858 DEBUG:Starting new HTTPS connection (1): proxy.finance.qq.com:443
+2023-12-25 13:17:36,095 DEBUG:https://proxy.finance.qq.com:443 "GET /ifzqgtimg/appstock/app/newfqkline/get?_var=kline_day2023&param=sh600023%2Cday%2C2023-01-01%2C2024-12-31%2C640%2C&r=0.8205512681390605 HTTP/1.1" 200 None
+2023-12-25 13:17:36,317 INFO:Deleted data from A_share8 for stock ID sh600023 between 20220919 and 20221011
+2023-12-25 13:17:36,327 INFO:Data insertion verified successfully, updated 12 records in table A_share8.
+2023-12-25 13:17:36,328 DEBUG:Starting new HTTP connection (1): web.ifzq.gtimg.cn:80
+2023-12-25 13:17:36,361 DEBUG:http://web.ifzq.gtimg.cn:80 "GET /other/klineweb/klineWeb/weekTrends?code=sh600023&type=qfq&_var=trend_qfq&r=0.3506048543943414 HTTP/1.1" 302 137
+2023-12-25 13:17:36,362 DEBUG:Starting new HTTPS connection (1): web.ifzq.gtimg.cn:443
+2023-12-25 13:17:36,470 DEBUG:https://web.ifzq.gtimg.cn:443 "GET /other/klineweb/klineWeb/weekTrends?code=sh600023&type=qfq&_var=trend_qfq&r=0.3506048543943414 HTTP/1.1" 200 None
+2023-12-25 13:17:36,548 DEBUG:Starting new HTTPS connection (1): proxy.finance.qq.com:443
+2023-12-25 13:17:36,661 DEBUG:https://proxy.finance.qq.com:443 "GET /ifzqgtimg/appstock/app/newfqkline/get?_var=kline_day2022&param=sh600023%2Cday%2C2022-01-01%2C2023-12-31%2C640%2C&r=0.8205512681390605 HTTP/1.1" 200 None
+2023-12-25 13:17:36,866 DEBUG:Starting new HTTPS connection (1): proxy.finance.qq.com:443
+2023-12-25 13:17:36,978 DEBUG:https://proxy.finance.qq.com:443 "GET /ifzqgtimg/appstock/app/newfqkline/get?_var=kline_day2023&param=sh600023%2Cday%2C2023-01-01%2C2024-12-31%2C640%2C&r=0.8205512681390605 HTTP/1.1" 200 None
+2023-12-25 13:17:37,186 INFO:Deleted data from A_share8 for stock ID sh600023 between 20221208 and 20230101
+2023-12-25 13:17:37,197 INFO:Data insertion verified successfully, updated 17 records in table A_share8.
+2023-12-25 13:17:37,198 INFO:All tasks processed successfully.
+2023-12-25 13:17:43,281 DEBUG:Starting new HTTP connection (1): vip.stock.finance.sina.com.cn:80
+2023-12-25 13:17:43,463 DEBUG:http://vip.stock.finance.sina.com.cn:80 "GET /quotes_service/api/json_v2.php/Market_Center.getHQNodeStockCount?node=hs_a HTTP/1.1" 200 None
+2023-12-25 13:17:43,472 DEBUG:Starting new HTTP connection (1): vip.stock.finance.sina.com.cn:80
+2023-12-25 13:17:43,922 DEBUG:http://vip.stock.finance.sina.com.cn:80 "GET /quotes_service/api/json_v2.php/Market_Center.getHQNodeData?page=1&num=80&sort=symbol&asc=1&node=hs_a&symbol=&_s_r_a=page HTTP/1.1" 200 None
+2023-12-25 13:17:44,019 DEBUG:Starting new HTTP connection (1): vip.stock.finance.sina.com.cn:80
+2023-12-25 13:17:44,556 DEBUG:http://vip.stock.finance.sina.com.cn:80 "GET /quotes_service/api/json_v2.php/Market_Center.getHQNodeData?page=2&num=80&sort=symbol&asc=1&node=hs_a&symbol=&_s_r_a=page HTTP/1.1" 200 None
+2023-12-25 13:17:44,652 DEBUG:Starting new HTTP connection (1): vip.stock.finance.sina.com.cn:80
+2023-12-25 13:17:45,169 DEBUG:http://vip.stock.finance.sina.com.cn:80 "GET /quotes_service/api/json_v2.php/Market_Center.getHQNodeData?page=3&num=80&sort=symbol&asc=1&node=hs_a&symbol=&_s_r_a=page HTTP/1.1" 200 None
+2023-12-25 13:17:45,263 DEBUG:Starting new HTTP connection (1): vip.stock.finance.sina.com.cn:80
+2023-12-25 13:17:45,784 DEBUG:http://vip.stock.finance.sina.com.cn:80 "GET /quotes_service/api/json_v2.php/Market_Center.getHQNodeData?page=4&num=80&sort=symbol&asc=1&node=hs_a&symbol=&_s_r_a=page HTTP/1.1" 200 None
+2023-12-25 13:17:45,880 DEBUG:Starting new HTTP connection (1): vip.stock.finance.sina.com.cn:80
+2023-12-25 13:17:46,296 DEBUG:http://vip.stock.finance.sina.com.cn:80 "GET /quotes_service/api/json_v2.php/Market_Center.getHQNodeData?page=5&num=80&sort=symbol&asc=1&node=hs_a&symbol=&_s_r_a=page HTTP/1.1" 200 None
+2023-12-25 13:17:46,393 DEBUG:Starting new HTTP connection (1): vip.stock.finance.sina.com.cn:80
+2023-12-25 13:17:46,855 DEBUG:http://vip.stock.finance.sina.com.cn:80 "GET /quotes_service/api/json_v2.php/Market_Center.getHQNodeData?page=6&num=80&sort=symbol&asc=1&node=hs_a&symbol=&_s_r_a=page HTTP/1.1" 200 None
+2023-12-25 13:17:46,954 DEBUG:Starting new HTTP connection (1): vip.stock.finance.sina.com.cn:80
+2023-12-25 13:17:47,424 DEBUG:http://vip.stock.finance.sina.com.cn:80 "GET /quotes_service/api/json_v2.php/Market_Center.getHQNodeData?page=7&num=80&sort=symbol&asc=1&node=hs_a&symbol=&_s_r_a=page HTTP/1.1" 200 None
+2023-12-25 13:17:47,521 DEBUG:Starting new HTTP connection (1): vip.stock.finance.sina.com.cn:80
+2023-12-25 13:17:47,934 DEBUG:http://vip.stock.finance.sina.com.cn:80 "GET /quotes_service/api/json_v2.php/Market_Center.getHQNodeData?page=8&num=80&sort=symbol&asc=1&node=hs_a&symbol=&_s_r_a=page HTTP/1.1" 200 None
+2023-12-25 13:17:48,032 DEBUG:Starting new HTTP connection (1): vip.stock.finance.sina.com.cn:80
+2023-12-25 13:17:48,550 DEBUG:http://vip.stock.finance.sina.com.cn:80 "GET /quotes_service/api/json_v2.php/Market_Center.getHQNodeData?page=9&num=80&sort=symbol&asc=1&node=hs_a&symbol=&_s_r_a=page HTTP/1.1" 200 None
+2023-12-25 13:17:48,646 DEBUG:Starting new HTTP connection (1): vip.stock.finance.sina.com.cn:80
+2023-12-25 13:17:49,060 DEBUG:http://vip.stock.finance.sina.com.cn:80 "GET /quotes_service/api/json_v2.php/Market_Center.getHQNodeData?page=10&num=80&sort=symbol&asc=1&node=hs_a&symbol=&_s_r_a=page HTTP/1.1" 200 None
+2023-12-25 13:17:49,158 DEBUG:Starting new HTTP connection (1): vip.stock.finance.sina.com.cn:80
+2023-12-25 13:17:49,675 DEBUG:http://vip.stock.finance.sina.com.cn:80 "GET /quotes_service/api/json_v2.php/Market_Center.getHQNodeData?page=11&num=80&sort=symbol&asc=1&node=hs_a&symbol=&_s_r_a=page HTTP/1.1" 200 None
+2023-12-25 13:17:49,773 DEBUG:Starting new HTTP connection (1): vip.stock.finance.sina.com.cn:80
+2023-12-25 13:17:50,188 DEBUG:http://vip.stock.finance.sina.com.cn:80 "GET /quotes_service/api/json_v2.php/Market_Center.getHQNodeData?page=12&num=80&sort=symbol&asc=1&node=hs_a&symbol=&_s_r_a=page HTTP/1.1" 200 None
+2023-12-25 13:17:50,283 DEBUG:Starting new HTTP connection (1): vip.stock.finance.sina.com.cn:80
+2023-12-25 13:17:50,700 DEBUG:http://vip.stock.finance.sina.com.cn:80 "GET /quotes_service/api/json_v2.php/Market_Center.getHQNodeData?page=13&num=80&sort=symbol&asc=1&node=hs_a&symbol=&_s_r_a=page HTTP/1.1" 200 None
+2023-12-25 13:17:50,808 DEBUG:Starting new HTTP connection (1): vip.stock.finance.sina.com.cn:80
+2023-12-25 13:17:51,314 DEBUG:http://vip.stock.finance.sina.com.cn:80 "GET /quotes_service/api/json_v2.php/Market_Center.getHQNodeData?page=14&num=80&sort=symbol&asc=1&node=hs_a&symbol=&_s_r_a=page HTTP/1.1" 200 None
+2023-12-25 13:17:51,420 DEBUG:Starting new HTTP connection (1): vip.stock.finance.sina.com.cn:80
+2023-12-25 13:17:51,927 DEBUG:http://vip.stock.finance.sina.com.cn:80 "GET /quotes_service/api/json_v2.php/Market_Center.getHQNodeData?page=15&num=80&sort=symbol&asc=1&node=hs_a&symbol=&_s_r_a=page HTTP/1.1" 200 None
+2023-12-25 13:17:52,034 DEBUG:Starting new HTTP connection (1): vip.stock.finance.sina.com.cn:80
+2023-12-25 13:17:52,373 DEBUG:http://vip.stock.finance.sina.com.cn:80 "GET /quotes_service/api/json_v2.php/Market_Center.getHQNodeData?page=16&num=80&sort=symbol&asc=1&node=hs_a&symbol=&_s_r_a=page HTTP/1.1" 200 None
+2023-12-25 13:17:52,481 DEBUG:Starting new HTTP connection (1): vip.stock.finance.sina.com.cn:80
+2023-12-25 13:17:52,904 DEBUG:http://vip.stock.finance.sina.com.cn:80 "GET /quotes_service/api/json_v2.php/Market_Center.getHQNodeData?page=17&num=80&sort=symbol&asc=1&node=hs_a&symbol=&_s_r_a=page HTTP/1.1" 200 None
+2023-12-25 13:17:53,014 DEBUG:Starting new HTTP connection (1): vip.stock.finance.sina.com.cn:80
+2023-12-25 13:17:53,465 DEBUG:http://vip.stock.finance.sina.com.cn:80 "GET /quotes_service/api/json_v2.php/Market_Center.getHQNodeData?page=18&num=80&sort=symbol&asc=1&node=hs_a&symbol=&_s_r_a=page HTTP/1.1" 200 None
+2023-12-25 13:17:53,570 DEBUG:Starting new HTTP connection (1): vip.stock.finance.sina.com.cn:80
+2023-12-25 13:17:53,977 DEBUG:http://vip.stock.finance.sina.com.cn:80 "GET /quotes_service/api/json_v2.php/Market_Center.getHQNodeData?page=19&num=80&sort=symbol&asc=1&node=hs_a&symbol=&_s_r_a=page HTTP/1.1" 200 None
+2023-12-25 13:17:54,093 DEBUG:Starting new HTTP connection (1): vip.stock.finance.sina.com.cn:80
+2023-12-25 13:17:54,502 DEBUG:http://vip.stock.finance.sina.com.cn:80 "GET /quotes_service/api/json_v2.php/Market_Center.getHQNodeData?page=20&num=80&sort=symbol&asc=1&node=hs_a&symbol=&_s_r_a=page HTTP/1.1" 200 None
+2023-12-25 13:17:54,612 DEBUG:Starting new HTTP connection (1): vip.stock.finance.sina.com.cn:80
+2023-12-25 13:17:55,000 DEBUG:http://vip.stock.finance.sina.com.cn:80 "GET /quotes_service/api/json_v2.php/Market_Center.getHQNodeData?page=21&num=80&sort=symbol&asc=1&node=hs_a&symbol=&_s_r_a=page HTTP/1.1" 200 None
+2023-12-25 13:17:55,250 DEBUG:Starting new HTTP connection (1): vip.stock.finance.sina.com.cn:80
+2023-12-25 13:17:55,623 DEBUG:http://vip.stock.finance.sina.com.cn:80 "GET /quotes_service/api/json_v2.php/Market_Center.getHQNodeData?page=22&num=80&sort=symbol&asc=1&node=hs_a&symbol=&_s_r_a=page HTTP/1.1" 200 None
+2023-12-25 13:17:55,788 DEBUG:Starting new HTTP connection (1): vip.stock.finance.sina.com.cn:80
+2023-12-25 13:17:56,142 DEBUG:http://vip.stock.finance.sina.com.cn:80 "GET /quotes_service/api/json_v2.php/Market_Center.getHQNodeData?page=23&num=80&sort=symbol&asc=1&node=hs_a&symbol=&_s_r_a=page HTTP/1.1" 200 None
+2023-12-25 13:17:56,271 DEBUG:Starting new HTTP connection (1): vip.stock.finance.sina.com.cn:80
+2023-12-25 13:17:56,707 DEBUG:http://vip.stock.finance.sina.com.cn:80 "GET /quotes_service/api/json_v2.php/Market_Center.getHQNodeData?page=24&num=80&sort=symbol&asc=1&node=hs_a&symbol=&_s_r_a=page HTTP/1.1" 200 None
+2023-12-25 13:17:56,807 DEBUG:Starting new HTTP connection (1): vip.stock.finance.sina.com.cn:80
+2023-12-25 13:17:57,228 DEBUG:http://vip.stock.finance.sina.com.cn:80 "GET /quotes_service/api/json_v2.php/Market_Center.getHQNodeData?page=25&num=80&sort=symbol&asc=1&node=hs_a&symbol=&_s_r_a=page HTTP/1.1" 200 None
+2023-12-25 13:17:57,324 DEBUG:Starting new HTTP connection (1): vip.stock.finance.sina.com.cn:80
+2023-12-25 13:17:57,800 DEBUG:http://vip.stock.finance.sina.com.cn:80 "GET /quotes_service/api/json_v2.php/Market_Center.getHQNodeData?page=26&num=80&sort=symbol&asc=1&node=hs_a&symbol=&_s_r_a=page HTTP/1.1" 200 None
+2023-12-25 13:17:57,894 DEBUG:Starting new HTTP connection (1): vip.stock.finance.sina.com.cn:80
+2023-12-25 13:17:58,375 DEBUG:http://vip.stock.finance.sina.com.cn:80 "GET /quotes_service/api/json_v2.php/Market_Center.getHQNodeData?page=27&num=80&sort=symbol&asc=1&node=hs_a&symbol=&_s_r_a=page HTTP/1.1" 200 None
+2023-12-25 13:17:58,475 DEBUG:Starting new HTTP connection (1): vip.stock.finance.sina.com.cn:80
+2023-12-25 13:17:58,994 DEBUG:http://vip.stock.finance.sina.com.cn:80 "GET /quotes_service/api/json_v2.php/Market_Center.getHQNodeData?page=28&num=80&sort=symbol&asc=1&node=hs_a&symbol=&_s_r_a=page HTTP/1.1" 200 None
+2023-12-25 13:17:59,092 DEBUG:Starting new HTTP connection (1): vip.stock.finance.sina.com.cn:80
+2023-12-25 13:17:59,610 DEBUG:http://vip.stock.finance.sina.com.cn:80 "GET /quotes_service/api/json_v2.php/Market_Center.getHQNodeData?page=29&num=80&sort=symbol&asc=1&node=hs_a&symbol=&_s_r_a=page HTTP/1.1" 200 None
+2023-12-25 13:17:59,719 DEBUG:Starting new HTTP connection (1): vip.stock.finance.sina.com.cn:80
+2023-12-25 13:18:00,325 DEBUG:http://vip.stock.finance.sina.com.cn:80 "GET /quotes_service/api/json_v2.php/Market_Center.getHQNodeData?page=30&num=80&sort=symbol&asc=1&node=hs_a&symbol=&_s_r_a=page HTTP/1.1" 200 None
+2023-12-25 13:18:00,437 DEBUG:Starting new HTTP connection (1): vip.stock.finance.sina.com.cn:80
+2023-12-25 13:18:00,939 DEBUG:http://vip.stock.finance.sina.com.cn:80 "GET /quotes_service/api/json_v2.php/Market_Center.getHQNodeData?page=31&num=80&sort=symbol&asc=1&node=hs_a&symbol=&_s_r_a=page HTTP/1.1" 200 None
+2023-12-25 13:18:01,042 DEBUG:Starting new HTTP connection (1): vip.stock.finance.sina.com.cn:80
+2023-12-25 13:18:01,474 DEBUG:http://vip.stock.finance.sina.com.cn:80 "GET /quotes_service/api/json_v2.php/Market_Center.getHQNodeData?page=32&num=80&sort=symbol&asc=1&node=hs_a&symbol=&_s_r_a=page HTTP/1.1" 200 None
+2023-12-25 13:18:01,587 DEBUG:Starting new HTTP connection (1): vip.stock.finance.sina.com.cn:80
+2023-12-25 13:18:02,066 DEBUG:http://vip.stock.finance.sina.com.cn:80 "GET /quotes_service/api/json_v2.php/Market_Center.getHQNodeData?page=33&num=80&sort=symbol&asc=1&node=hs_a&symbol=&_s_r_a=page HTTP/1.1" 200 None
+2023-12-25 13:18:02,176 DEBUG:Starting new HTTP connection (1): vip.stock.finance.sina.com.cn:80
+2023-12-25 13:18:02,788 DEBUG:http://vip.stock.finance.sina.com.cn:80 "GET /quotes_service/api/json_v2.php/Market_Center.getHQNodeData?page=34&num=80&sort=symbol&asc=1&node=hs_a&symbol=&_s_r_a=page HTTP/1.1" 200 None
+2023-12-25 13:18:02,897 DEBUG:Starting new HTTP connection (1): vip.stock.finance.sina.com.cn:80
+2023-12-25 13:18:03,368 DEBUG:http://vip.stock.finance.sina.com.cn:80 "GET /quotes_service/api/json_v2.php/Market_Center.getHQNodeData?page=35&num=80&sort=symbol&asc=1&node=hs_a&symbol=&_s_r_a=page HTTP/1.1" 200 None
+2023-12-25 13:18:03,475 DEBUG:Starting new HTTP connection (1): vip.stock.finance.sina.com.cn:80
+2023-12-25 13:18:03,895 DEBUG:http://vip.stock.finance.sina.com.cn:80 "GET /quotes_service/api/json_v2.php/Market_Center.getHQNodeData?page=36&num=80&sort=symbol&asc=1&node=hs_a&symbol=&_s_r_a=page HTTP/1.1" 200 None
+2023-12-25 13:18:04,009 DEBUG:Starting new HTTP connection (1): vip.stock.finance.sina.com.cn:80
+2023-12-25 13:18:04,626 DEBUG:http://vip.stock.finance.sina.com.cn:80 "GET /quotes_service/api/json_v2.php/Market_Center.getHQNodeData?page=37&num=80&sort=symbol&asc=1&node=hs_a&symbol=&_s_r_a=page HTTP/1.1" 200 None
+2023-12-25 13:18:04,734 DEBUG:Starting new HTTP connection (1): vip.stock.finance.sina.com.cn:80
+2023-12-25 13:18:05,241 DEBUG:http://vip.stock.finance.sina.com.cn:80 "GET /quotes_service/api/json_v2.php/Market_Center.getHQNodeData?page=38&num=80&sort=symbol&asc=1&node=hs_a&symbol=&_s_r_a=page HTTP/1.1" 200 None
+2023-12-25 13:18:05,349 DEBUG:Starting new HTTP connection (1): vip.stock.finance.sina.com.cn:80
+2023-12-25 13:18:05,856 DEBUG:http://vip.stock.finance.sina.com.cn:80 "GET /quotes_service/api/json_v2.php/Market_Center.getHQNodeData?page=39&num=80&sort=symbol&asc=1&node=hs_a&symbol=&_s_r_a=page HTTP/1.1" 200 None
+2023-12-25 13:18:05,966 DEBUG:Starting new HTTP connection (1): vip.stock.finance.sina.com.cn:80
+2023-12-25 13:18:06,470 DEBUG:http://vip.stock.finance.sina.com.cn:80 "GET /quotes_service/api/json_v2.php/Market_Center.getHQNodeData?page=40&num=80&sort=symbol&asc=1&node=hs_a&symbol=&_s_r_a=page HTTP/1.1" 200 None
+2023-12-25 13:18:06,581 DEBUG:Starting new HTTP connection (1): vip.stock.finance.sina.com.cn:80
+2023-12-25 13:18:07,045 DEBUG:http://vip.stock.finance.sina.com.cn:80 "GET /quotes_service/api/json_v2.php/Market_Center.getHQNodeData?page=41&num=80&sort=symbol&asc=1&node=hs_a&symbol=&_s_r_a=page HTTP/1.1" 200 None
+2023-12-25 13:18:07,155 DEBUG:Starting new HTTP connection (1): vip.stock.finance.sina.com.cn:80
+2023-12-25 13:18:07,700 DEBUG:http://vip.stock.finance.sina.com.cn:80 "GET /quotes_service/api/json_v2.php/Market_Center.getHQNodeData?page=42&num=80&sort=symbol&asc=1&node=hs_a&symbol=&_s_r_a=page HTTP/1.1" 200 None
+2023-12-25 13:18:07,813 DEBUG:Starting new HTTP connection (1): vip.stock.finance.sina.com.cn:80
+2023-12-25 13:18:08,416 DEBUG:http://vip.stock.finance.sina.com.cn:80 "GET /quotes_service/api/json_v2.php/Market_Center.getHQNodeData?page=43&num=80&sort=symbol&asc=1&node=hs_a&symbol=&_s_r_a=page HTTP/1.1" 200 None
+2023-12-25 13:18:08,528 DEBUG:Starting new HTTP connection (1): vip.stock.finance.sina.com.cn:80
+2023-12-25 13:18:09,031 DEBUG:http://vip.stock.finance.sina.com.cn:80 "GET /quotes_service/api/json_v2.php/Market_Center.getHQNodeData?page=44&num=80&sort=symbol&asc=1&node=hs_a&symbol=&_s_r_a=page HTTP/1.1" 200 None
+2023-12-25 13:18:09,143 DEBUG:Starting new HTTP connection (1): vip.stock.finance.sina.com.cn:80
+2023-12-25 13:18:09,644 DEBUG:http://vip.stock.finance.sina.com.cn:80 "GET /quotes_service/api/json_v2.php/Market_Center.getHQNodeData?page=45&num=80&sort=symbol&asc=1&node=hs_a&symbol=&_s_r_a=page HTTP/1.1" 200 None
+2023-12-25 13:18:09,753 DEBUG:Starting new HTTP connection (1): vip.stock.finance.sina.com.cn:80
+2023-12-25 13:18:10,259 DEBUG:http://vip.stock.finance.sina.com.cn:80 "GET /quotes_service/api/json_v2.php/Market_Center.getHQNodeData?page=46&num=80&sort=symbol&asc=1&node=hs_a&symbol=&_s_r_a=page HTTP/1.1" 200 None
+2023-12-25 13:18:10,370 DEBUG:Starting new HTTP connection (1): vip.stock.finance.sina.com.cn:80
+2023-12-25 13:18:10,873 DEBUG:http://vip.stock.finance.sina.com.cn:80 "GET /quotes_service/api/json_v2.php/Market_Center.getHQNodeData?page=47&num=80&sort=symbol&asc=1&node=hs_a&symbol=&_s_r_a=page HTTP/1.1" 200 None
+2023-12-25 13:18:10,985 DEBUG:Starting new HTTP connection (1): vip.stock.finance.sina.com.cn:80
+2023-12-25 13:18:11,488 DEBUG:http://vip.stock.finance.sina.com.cn:80 "GET /quotes_service/api/json_v2.php/Market_Center.getHQNodeData?page=48&num=80&sort=symbol&asc=1&node=hs_a&symbol=&_s_r_a=page HTTP/1.1" 200 None
+2023-12-25 13:18:11,596 DEBUG:Starting new HTTP connection (1): vip.stock.finance.sina.com.cn:80
+2023-12-25 13:18:11,976 DEBUG:http://vip.stock.finance.sina.com.cn:80 "GET /quotes_service/api/json_v2.php/Market_Center.getHQNodeData?page=49&num=80&sort=symbol&asc=1&node=hs_a&symbol=&_s_r_a=page HTTP/1.1" 200 None
+2023-12-25 13:18:12,086 DEBUG:Starting new HTTP connection (1): vip.stock.finance.sina.com.cn:80
+2023-12-25 13:18:12,511 DEBUG:http://vip.stock.finance.sina.com.cn:80 "GET /quotes_service/api/json_v2.php/Market_Center.getHQNodeData?page=50&num=80&sort=symbol&asc=1&node=hs_a&symbol=&_s_r_a=page HTTP/1.1" 200 None
+2023-12-25 13:18:12,620 DEBUG:Starting new HTTP connection (1): vip.stock.finance.sina.com.cn:80
+2023-12-25 13:18:13,228 DEBUG:http://vip.stock.finance.sina.com.cn:80 "GET /quotes_service/api/json_v2.php/Market_Center.getHQNodeData?page=51&num=80&sort=symbol&asc=1&node=hs_a&symbol=&_s_r_a=page HTTP/1.1" 200 None
+2023-12-25 13:18:13,339 DEBUG:Starting new HTTP connection (1): vip.stock.finance.sina.com.cn:80
+2023-12-25 13:18:13,774 DEBUG:http://vip.stock.finance.sina.com.cn:80 "GET /quotes_service/api/json_v2.php/Market_Center.getHQNodeData?page=52&num=80&sort=symbol&asc=1&node=hs_a&symbol=&_s_r_a=page HTTP/1.1" 200 None
+2023-12-25 13:18:13,873 DEBUG:Starting new HTTP connection (1): vip.stock.finance.sina.com.cn:80
+2023-12-25 13:18:14,383 DEBUG:http://vip.stock.finance.sina.com.cn:80 "GET /quotes_service/api/json_v2.php/Market_Center.getHQNodeData?page=53&num=80&sort=symbol&asc=1&node=hs_a&symbol=&_s_r_a=page HTTP/1.1" 200 None
+2023-12-25 13:18:14,489 DEBUG:Starting new HTTP connection (1): vip.stock.finance.sina.com.cn:80
+2023-12-25 13:18:14,927 DEBUG:http://vip.stock.finance.sina.com.cn:80 "GET /quotes_service/api/json_v2.php/Market_Center.getHQNodeData?page=54&num=80&sort=symbol&asc=1&node=hs_a&symbol=&_s_r_a=page HTTP/1.1" 200 None
+2023-12-25 13:18:15,038 DEBUG:Starting new HTTP connection (1): vip.stock.finance.sina.com.cn:80
+2023-12-25 13:18:15,582 DEBUG:http://vip.stock.finance.sina.com.cn:80 "GET /quotes_service/api/json_v2.php/Market_Center.getHQNodeData?page=55&num=80&sort=symbol&asc=1&node=hs_a&symbol=&_s_r_a=page HTTP/1.1" 200 None
+2023-12-25 13:18:15,694 DEBUG:Starting new HTTP connection (1): vip.stock.finance.sina.com.cn:80
+2023-12-25 13:18:16,303 DEBUG:http://vip.stock.finance.sina.com.cn:80 "GET /quotes_service/api/json_v2.php/Market_Center.getHQNodeData?page=56&num=80&sort=symbol&asc=1&node=hs_a&symbol=&_s_r_a=page HTTP/1.1" 200 None
+2023-12-25 13:18:16,415 DEBUG:Starting new HTTP connection (1): vip.stock.finance.sina.com.cn:80
+2023-12-25 13:18:16,915 DEBUG:http://vip.stock.finance.sina.com.cn:80 "GET /quotes_service/api/json_v2.php/Market_Center.getHQNodeData?page=57&num=80&sort=symbol&asc=1&node=hs_a&symbol=&_s_r_a=page HTTP/1.1" 200 None
+2023-12-25 13:18:17,028 DEBUG:Starting new HTTP connection (1): vip.stock.finance.sina.com.cn:80
+2023-12-25 13:18:17,529 DEBUG:http://vip.stock.finance.sina.com.cn:80 "GET /quotes_service/api/json_v2.php/Market_Center.getHQNodeData?page=58&num=80&sort=symbol&asc=1&node=hs_a&symbol=&_s_r_a=page HTTP/1.1" 200 None
+2023-12-25 13:18:17,643 DEBUG:Starting new HTTP connection (1): vip.stock.finance.sina.com.cn:80
+2023-12-25 13:18:18,148 DEBUG:http://vip.stock.finance.sina.com.cn:80 "GET /quotes_service/api/json_v2.php/Market_Center.getHQNodeData?page=59&num=80&sort=symbol&asc=1&node=hs_a&symbol=&_s_r_a=page HTTP/1.1" 200 None
+2023-12-25 13:18:18,262 DEBUG:Starting new HTTP connection (1): vip.stock.finance.sina.com.cn:80
+2023-12-25 13:18:18,759 DEBUG:http://vip.stock.finance.sina.com.cn:80 "GET /quotes_service/api/json_v2.php/Market_Center.getHQNodeData?page=60&num=80&sort=symbol&asc=1&node=hs_a&symbol=&_s_r_a=page HTTP/1.1" 200 None
+2023-12-25 13:18:18,867 DEBUG:Starting new HTTP connection (1): vip.stock.finance.sina.com.cn:80
+2023-12-25 13:18:19,373 DEBUG:http://vip.stock.finance.sina.com.cn:80 "GET /quotes_service/api/json_v2.php/Market_Center.getHQNodeData?page=61&num=80&sort=symbol&asc=1&node=hs_a&symbol=&_s_r_a=page HTTP/1.1" 200 None
+2023-12-25 13:18:19,481 DEBUG:Starting new HTTP connection (1): vip.stock.finance.sina.com.cn:80
+2023-12-25 13:18:19,988 DEBUG:http://vip.stock.finance.sina.com.cn:80 "GET /quotes_service/api/json_v2.php/Market_Center.getHQNodeData?page=62&num=80&sort=symbol&asc=1&node=hs_a&symbol=&_s_r_a=page HTTP/1.1" 200 None
+2023-12-25 13:18:20,098 DEBUG:Starting new HTTP connection (1): vip.stock.finance.sina.com.cn:80
+2023-12-25 13:18:20,603 DEBUG:http://vip.stock.finance.sina.com.cn:80 "GET /quotes_service/api/json_v2.php/Market_Center.getHQNodeData?page=63&num=80&sort=symbol&asc=1&node=hs_a&symbol=&_s_r_a=page HTTP/1.1" 200 None
+2023-12-25 13:18:20,716 DEBUG:Starting new HTTP connection (1): vip.stock.finance.sina.com.cn:80
+2023-12-25 13:18:21,218 DEBUG:http://vip.stock.finance.sina.com.cn:80 "GET /quotes_service/api/json_v2.php/Market_Center.getHQNodeData?page=64&num=80&sort=symbol&asc=1&node=hs_a&symbol=&_s_r_a=page HTTP/1.1" 200 None
+2023-12-25 13:18:21,326 DEBUG:Starting new HTTP connection (1): vip.stock.finance.sina.com.cn:80
+2023-12-25 13:18:22,036 DEBUG:http://vip.stock.finance.sina.com.cn:80 "GET /quotes_service/api/json_v2.php/Market_Center.getHQNodeData?page=65&num=80&sort=symbol&asc=1&node=hs_a&symbol=&_s_r_a=page HTTP/1.1" 200 None
+2023-12-25 13:18:22,151 DEBUG:Starting new HTTP connection (1): vip.stock.finance.sina.com.cn:80
+2023-12-25 13:18:22,649 DEBUG:http://vip.stock.finance.sina.com.cn:80 "GET /quotes_service/api/json_v2.php/Market_Center.getHQNodeData?page=66&num=80&sort=symbol&asc=1&node=hs_a&symbol=&_s_r_a=page HTTP/1.1" 200 None
+2023-12-25 13:18:22,762 DEBUG:Starting new HTTP connection (1): vip.stock.finance.sina.com.cn:80
+2023-12-25 13:18:23,162 DEBUG:http://vip.stock.finance.sina.com.cn:80 "GET /quotes_service/api/json_v2.php/Market_Center.getHQNodeData?page=67&num=80&sort=symbol&asc=1&node=hs_a&symbol=&_s_r_a=page HTTP/1.1" 200 None
+2023-12-25 13:18:30,092 DEBUG:Starting new HTTPS connection (1): finance.sina.com.cn:443
+2023-12-25 13:18:30,420 DEBUG:https://finance.sina.com.cn:443 "GET /realstock/company/sh000300/hisdata/klc_kl.js?d=2020_2_4 HTTP/1.1" 200 65543
+2023-12-25 13:18:30,452 DEBUG:Encoding detection: ascii is most likely the one.

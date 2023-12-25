@@ -91,3 +91,21 @@ def create_db_engine(config_file):
     except Exception as e:
         logging.error(f"An error occurred creating the database engine: {e}")
         return None
+
+
+def get_ids(engine):
+    query = "SELECT id FROM stock_ids"  # 替换 your_table_name 为您的表名
+    df = pd.read_sql(query, engine)
+
+    # 将 'id' 列转换为列表
+    id_list = df['id'].tolist()
+    return id_list
+
+def validate_date(input_date):
+    # 验证日期格式是否正确
+    try:
+        return datetime.strptime(input_date, "%Y-%m-%d").date()
+    except ValueError:
+        return None
+
+

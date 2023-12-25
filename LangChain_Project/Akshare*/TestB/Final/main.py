@@ -1,28 +1,20 @@
-# import akshare as ak
-# import mysql.connector
-# import pandas as pd
-# from sqlalchemy import create_engine, text, MetaData, Table
-# import json
-# from datetime import datetime, timedelta, date
-# from concurrent.futures import ThreadPoolExecutor
-# import sup
-# import traceback
-# import time
-# import logging
-# import os
-
 import write_data as W
 import Initialize as I
-import CSI_INDEX_300_STORE as C
+import store_csi_index_300 as C
+import update_ids
+import insert_task
+import Applications
 
 def main():
-    I.Initialize()
+    I.initialize()
     while True:
         print()
         print("Here are your options:")
         print("1.Update CSI_INDEX_300")
         print("2.Finish all tasks")
-        print("3.search value")
+        print("3.Update ids")
+        print("4.Insert tasks")
+        print("5.Applications")
         print("6.exit")
 
         a = input("")
@@ -30,10 +22,22 @@ def main():
             C.run()
         elif a == "2":
             W.wr_data()
+        elif a == "3":
+            update_ids.updates()
+        elif a == "4":
+            insert_task.Insert_task()
+        elif a == "5":
+            Applications.Menu()
         elif a == "6":
             break
 
     return
+
+def test():
+    I.initialize()
+    C.run()
+    pass
+
 
 if __name__=="__main__":
     main()

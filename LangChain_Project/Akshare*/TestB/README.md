@@ -66,16 +66,13 @@ CREATE TABLE {table_name} (
 ```
 
 ### 设计Python代码，实现数据获取及数据库数据写入(单线程)
-Updated soon
-Now in `Single_threading`
-
+`TestB/Final/store_csi_index_300.py`
 ### 优化代码，实现多线程的并发查询和写入(2线程)
+`TestB/Final/write_data.py`
 
 __优化方向__: 
 
-- 错误处理 
-- 用户交互 
-- 不稳定的Akshare接口?: 
+- 不稳定的Akshare接口?`只出现过一次,严重怀疑是Akshare接口的问题`: 
 
 ```
 An error occurred while writing to the database: 'Value based partial slicing on non-monotonic DatetimeIndexes with non-existing keys is not allowed.'                                                                                                              
@@ -83,13 +80,16 @@ An error occurred while writing to the database: 'Value based partial slicing on
 ```    
 
 ## Application
-__优化方向__: 
-- 函数化:arguments (股票/指数id,开始日期,结束日期)
-- 自动更新??
-- 分离周线,月线,
+`TestB/Final/main.py`
+__优化方向__:
+- 插入任务(User_tasks)时重复插入的错误处理
+- Akshare数据写入数据库时,重复尝试的print
+- 重构(还没方向,感觉沪深300指数的读取不需要多线程)
+- 对数据库内已有股票的自动更新
 
 ### 计算生成A股指数的周线、月线，连阴天数及对应的时间周期(如，7周（3月），20210101-20210220)
-
+`TestB/Final/Applications.py`
 ### 计算生成个股的相关信息
-
+`TestB/Final/Applications.py`
 ### 提供函数方法，针对证券编号、过滤类型(周线、月线)，持续时间(int)返回最终结果数据。
+`TestB/Final/Applications.py`

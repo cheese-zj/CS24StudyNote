@@ -1,0 +1,59 @@
+2023-12-25 16:33:35,066 DEBUG:Starting new HTTP connection (1): web.ifzq.gtimg.cn:80
+2023-12-25 16:33:35,066 DEBUG:Starting new HTTP connection (1): web.ifzq.gtimg.cn:80
+2023-12-25 16:33:36,839 DEBUG:http://web.ifzq.gtimg.cn:80 "GET /other/klineweb/klineWeb/weekTrends?code=sh600000&type=qfq&_var=trend_qfq&r=0.3506048543943414 HTTP/1.1" 302 137
+2023-12-25 16:33:36,839 DEBUG:http://web.ifzq.gtimg.cn:80 "GET /other/klineweb/klineWeb/weekTrends?code=sh600004&type=qfq&_var=trend_qfq&r=0.3506048543943414 HTTP/1.1" 302 137
+2023-12-25 16:33:36,844 DEBUG:Starting new HTTPS connection (1): web.ifzq.gtimg.cn:443
+2023-12-25 16:33:36,844 DEBUG:Starting new HTTPS connection (1): web.ifzq.gtimg.cn:443
+2023-12-25 16:33:39,084 DEBUG:https://web.ifzq.gtimg.cn:443 "GET /other/klineweb/klineWeb/weekTrends?code=sh600000&type=qfq&_var=trend_qfq&r=0.3506048543943414 HTTP/1.1" 200 None
+2023-12-25 16:33:39,086 DEBUG:https://web.ifzq.gtimg.cn:443 "GET /other/klineweb/klineWeb/weekTrends?code=sh600004&type=qfq&_var=trend_qfq&r=0.3506048543943414 HTTP/1.1" 200 None
+2023-12-25 16:33:39,436 DEBUG:Starting new HTTPS connection (1): proxy.finance.qq.com:443
+2023-12-25 16:33:39,437 DEBUG:Starting new HTTPS connection (1): proxy.finance.qq.com:443
+2023-12-25 16:33:41,649 DEBUG:https://proxy.finance.qq.com:443 "GET /ifzqgtimg/appstock/app/newfqkline/get?_var=kline_day2003&param=sh600004%2Cday%2C2003-01-01%2C2004-12-31%2C640%2C&r=0.8205512681390605 HTTP/1.1" 200 None
+2023-12-25 16:33:41,650 DEBUG:https://proxy.finance.qq.com:443 "GET /ifzqgtimg/appstock/app/newfqkline/get?_var=kline_day2023&param=sh600000%2Cday%2C2023-01-01%2C2024-12-31%2C640%2C&r=0.8205512681390605 HTTP/1.1" 200 None
+2023-12-25 16:33:42,434 DEBUG:Starting new HTTPS connection (1): proxy.finance.qq.com:443
+2023-12-25 16:33:42,501 INFO:Deleted data from A_share3 for stock ID sh600000 between 20230101 and 20231231
+2023-12-25 16:33:42,543 INFO:Data insertion verified successfully, updated 238 records in table A_share3.
+2023-12-25 16:33:42,544 INFO:Deleted completed task for stock ID sh600000 from User_tasks.
+2023-12-25 16:33:44,147 DEBUG:https://proxy.finance.qq.com:443 "GET /ifzqgtimg/appstock/app/newfqkline/get?_var=kline_day2004&param=sh600004%2Cday%2C2004-01-01%2C2005-12-31%2C640%2C&r=0.8205512681390605 HTTP/1.1" 200 None
+2023-12-25 16:33:44,834 DEBUG:Starting new HTTPS connection (1): proxy.finance.qq.com:443
+2023-12-25 16:33:46,499 DEBUG:https://proxy.finance.qq.com:443 "GET /ifzqgtimg/appstock/app/newfqkline/get?_var=kline_day2005&param=sh600004%2Cday%2C2005-01-01%2C2006-12-31%2C640%2C&r=0.8205512681390605 HTTP/1.1" 200 None
+2023-12-25 16:33:47,276 DEBUG:Starting new HTTPS connection (1): proxy.finance.qq.com:443
+2023-12-25 16:33:48,854 DEBUG:https://proxy.finance.qq.com:443 "GET /ifzqgtimg/appstock/app/newfqkline/get?_var=kline_day2006&param=sh600004%2Cday%2C2006-01-01%2C2007-12-31%2C640%2C&r=0.8205512681390605 HTTP/1.1" 200 None
+2023-12-25 16:33:49,547 DEBUG:Starting new HTTPS connection (1): proxy.finance.qq.com:443
+2023-12-25 16:33:51,092 DEBUG:https://proxy.finance.qq.com:443 "GET /ifzqgtimg/appstock/app/newfqkline/get?_var=kline_day2007&param=sh600004%2Cday%2C2007-01-01%2C2008-12-31%2C640%2C&r=0.8205512681390605 HTTP/1.1" 200 None
+2023-12-25 16:33:51,783 DEBUG:Starting new HTTPS connection (1): proxy.finance.qq.com:443
+2023-12-25 16:33:53,421 DEBUG:https://proxy.finance.qq.com:443 "GET /ifzqgtimg/appstock/app/newfqkline/get?_var=kline_day2008&param=sh600004%2Cday%2C2008-01-01%2C2009-12-31%2C640%2C&r=0.8205512681390605 HTTP/1.1" 200 None
+2023-12-25 16:33:54,147 DEBUG:Starting new HTTPS connection (1): proxy.finance.qq.com:443
+2023-12-25 16:33:55,723 DEBUG:https://proxy.finance.qq.com:443 "GET /ifzqgtimg/appstock/app/newfqkline/get?_var=kline_day2009&param=sh600004%2Cday%2C2009-01-01%2C2010-12-31%2C640%2C&r=0.8205512681390605 HTTP/1.1" 200 None
+2023-12-25 16:33:56,406 DEBUG:Starting new HTTPS connection (1): proxy.finance.qq.com:443
+2023-12-25 16:33:58,477 DEBUG:https://proxy.finance.qq.com:443 "GET /ifzqgtimg/appstock/app/newfqkline/get?_var=kline_day2010&param=sh600004%2Cday%2C2010-01-01%2C2011-12-31%2C640%2C&r=0.8205512681390605 HTTP/1.1" 200 None
+2023-12-25 16:33:59,189 DEBUG:Starting new HTTPS connection (1): proxy.finance.qq.com:443
+2023-12-25 16:34:00,836 DEBUG:https://proxy.finance.qq.com:443 "GET /ifzqgtimg/appstock/app/newfqkline/get?_var=kline_day2011&param=sh600004%2Cday%2C2011-01-01%2C2012-12-31%2C640%2C&r=0.8205512681390605 HTTP/1.1" 200 None
+2023-12-25 16:34:01,513 DEBUG:Starting new HTTPS connection (1): proxy.finance.qq.com:443
+2023-12-25 16:34:03,151 DEBUG:https://proxy.finance.qq.com:443 "GET /ifzqgtimg/appstock/app/newfqkline/get?_var=kline_day2012&param=sh600004%2Cday%2C2012-01-01%2C2013-12-31%2C640%2C&r=0.8205512681390605 HTTP/1.1" 200 None
+2023-12-25 16:34:03,869 DEBUG:Starting new HTTPS connection (1): proxy.finance.qq.com:443
+2023-12-25 16:34:05,443 DEBUG:https://proxy.finance.qq.com:443 "GET /ifzqgtimg/appstock/app/newfqkline/get?_var=kline_day2013&param=sh600004%2Cday%2C2013-01-01%2C2014-12-31%2C640%2C&r=0.8205512681390605 HTTP/1.1" 200 None
+2023-12-25 16:34:06,138 DEBUG:Starting new HTTPS connection (1): proxy.finance.qq.com:443
+2023-12-25 16:34:07,689 DEBUG:https://proxy.finance.qq.com:443 "GET /ifzqgtimg/appstock/app/newfqkline/get?_var=kline_day2014&param=sh600004%2Cday%2C2014-01-01%2C2015-12-31%2C640%2C&r=0.8205512681390605 HTTP/1.1" 200 None
+2023-12-25 16:34:08,378 DEBUG:Starting new HTTPS connection (1): proxy.finance.qq.com:443
+2023-12-25 16:34:09,905 DEBUG:https://proxy.finance.qq.com:443 "GET /ifzqgtimg/appstock/app/newfqkline/get?_var=kline_day2015&param=sh600004%2Cday%2C2015-01-01%2C2016-12-31%2C640%2C&r=0.8205512681390605 HTTP/1.1" 200 None
+2023-12-25 16:34:10,596 DEBUG:Starting new HTTPS connection (1): proxy.finance.qq.com:443
+2023-12-25 16:34:12,215 DEBUG:https://proxy.finance.qq.com:443 "GET /ifzqgtimg/appstock/app/newfqkline/get?_var=kline_day2016&param=sh600004%2Cday%2C2016-01-01%2C2017-12-31%2C640%2C&r=0.8205512681390605 HTTP/1.1" 200 None
+2023-12-25 16:34:12,920 DEBUG:Starting new HTTPS connection (1): proxy.finance.qq.com:443
+2023-12-25 16:34:14,461 DEBUG:https://proxy.finance.qq.com:443 "GET /ifzqgtimg/appstock/app/newfqkline/get?_var=kline_day2017&param=sh600004%2Cday%2C2017-01-01%2C2018-12-31%2C640%2C&r=0.8205512681390605 HTTP/1.1" 200 None
+2023-12-25 16:34:15,147 DEBUG:Starting new HTTPS connection (1): proxy.finance.qq.com:443
+2023-12-25 16:34:16,917 DEBUG:https://proxy.finance.qq.com:443 "GET /ifzqgtimg/appstock/app/newfqkline/get?_var=kline_day2018&param=sh600004%2Cday%2C2018-01-01%2C2019-12-31%2C640%2C&r=0.8205512681390605 HTTP/1.1" 200 None
+2023-12-25 16:34:17,620 DEBUG:Starting new HTTPS connection (1): proxy.finance.qq.com:443
+2023-12-25 16:34:19,380 DEBUG:https://proxy.finance.qq.com:443 "GET /ifzqgtimg/appstock/app/newfqkline/get?_var=kline_day2019&param=sh600004%2Cday%2C2019-01-01%2C2020-12-31%2C640%2C&r=0.8205512681390605 HTTP/1.1" 200 None
+2023-12-25 16:34:20,137 DEBUG:Starting new HTTPS connection (1): proxy.finance.qq.com:443
+2023-12-25 16:34:21,726 DEBUG:https://proxy.finance.qq.com:443 "GET /ifzqgtimg/appstock/app/newfqkline/get?_var=kline_day2020&param=sh600004%2Cday%2C2020-01-01%2C2021-12-31%2C640%2C&r=0.8205512681390605 HTTP/1.1" 200 None
+2023-12-25 16:34:22,415 DEBUG:Starting new HTTPS connection (1): proxy.finance.qq.com:443
+2023-12-25 16:34:23,951 DEBUG:https://proxy.finance.qq.com:443 "GET /ifzqgtimg/appstock/app/newfqkline/get?_var=kline_day2021&param=sh600004%2Cday%2C2021-01-01%2C2022-12-31%2C640%2C&r=0.8205512681390605 HTTP/1.1" 200 None
+2023-12-25 16:34:24,639 DEBUG:Starting new HTTPS connection (1): proxy.finance.qq.com:443
+2023-12-25 16:34:26,220 DEBUG:https://proxy.finance.qq.com:443 "GET /ifzqgtimg/appstock/app/newfqkline/get?_var=kline_day2022&param=sh600004%2Cday%2C2022-01-01%2C2023-12-31%2C640%2C&r=0.8205512681390605 HTTP/1.1" 200 None
+2023-12-25 16:34:26,911 DEBUG:Starting new HTTPS connection (1): proxy.finance.qq.com:443
+2023-12-25 16:34:28,482 DEBUG:https://proxy.finance.qq.com:443 "GET /ifzqgtimg/appstock/app/newfqkline/get?_var=kline_day2023&param=sh600004%2Cday%2C2023-01-01%2C2024-12-31%2C640%2C&r=0.8205512681390605 HTTP/1.1" 200 None
+2023-12-25 16:34:29,255 INFO:Deleted data from A_share7 for stock ID sh600004 between 20000101 and 20231231
+2023-12-25 16:34:29,757 INFO:Data insertion verified successfully, updated 4971 records in table A_share7.
+2023-12-25 16:34:29,758 INFO:Deleted completed task for stock ID sh600004 from User_tasks.
+2023-12-25 16:34:29,759 INFO:All tasks processed successfully.
