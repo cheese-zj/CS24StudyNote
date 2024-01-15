@@ -1,0 +1,24 @@
+{
+  "tables/views": [
+    {
+      "table_name": "CSI_300_Index",
+      "description": "沪深300指数日线数据"
+    },
+    {
+      "table_name": "a_share_view",
+      "description": "沪A股日线数据"
+    },
+    {
+      "table_name": "stock_ids",
+      "description": "沪A股所有的股票id"
+    },
+    {
+      "table_name": "sina_us_stock_data",
+      "description": "新浪美股日线数据"
+    },
+    {
+      "table_name": "us_pink_spot",
+      "description": "美股粉股"
+    }
+  ]
+}
