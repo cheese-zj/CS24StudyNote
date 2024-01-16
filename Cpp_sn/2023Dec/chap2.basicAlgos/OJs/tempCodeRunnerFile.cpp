@@ -1,43 +1,21 @@
 #include <bits/stdc++.h>
-using namespace std; 
-int n;
+//#define int long long
+using namespace std;
+const int N = 1e6+9;
+int o, w, ans;
 
-char match(char c){
-    if (c == 'A') return 'T';
-    else if (c == 'T') return 'A';
-    else if (c == 'C') return 'G';
-    else if (c == 'G') return 'C';
-    return ' ';
-}
-
-int main(){
-    ios::sync_with_stdio(0), cin.tie(0), cout.tie(0);
-    cin >> n;
-    int ans = 0;
-    char arr[n];
-    string a, b; cin >> a >> b;
-    for (int i = 0; i< n ; i++){
-        if ((match(a[i]) == b[i])){
-            arr[i] = 'x';
-        } else {
-            arr[i] = match(a[i]);
+int main() {
+    int n; cin >> n; 
+    int z = 2;
+    for (int i = 1; i <= n; i ++){
+        string s; cin >> s;
+        for (char x : s) if (x=='o') (o++); else (w++);
+        while (w && o >=z) {
+            w--, o--; ans++;
+            if (z==2) z = 1;
         }
+        cout << ans << '\n';
     }
-
-    for (int i = 0; i < n -1 ; i++){
-        if (arr[i] == 'x') continue;
-        for (int j = i ; j < n ; j++){
-            if (match(arr[i]) == arr[j]){
-                ans++;
-                arr[i] = arr[j] = 'x';
-                break;
-            }
-        }
-    }
-
-    for (int i = 0; i < n; i++){
-        if (arr[i] != 'x') ans++;
-    }
-    cout << ans << '\n';
+     
     return 0;
 }
