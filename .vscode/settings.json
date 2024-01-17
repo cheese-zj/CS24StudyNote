@@ -78,5 +78,6 @@
         "format": "cpp",
         "stop_token": "cpp",
         "cinttypes": "cpp"
-    }
+    },
+    "cmake.sourceDirectory": "/Users/jameszhao/USYD/CS24StudyNotes/Cpp_sn/2023Nov"
 }
