@@ -3,5 +3,6 @@
         "ios": "cpp",
         "iostream": "cpp",
         "vector": "cpp"
-    }
+    },
+    "cmake.sourceDirectory": "/Users/jameszhao/USYD/CS24StudyNotes/Cpp_sn/2023Nov"
 }
