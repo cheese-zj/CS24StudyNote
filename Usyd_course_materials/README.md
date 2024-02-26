@@ -5,15 +5,25 @@
 - **MATH1021 Calculus Of One Variable**
 - **ELEC1601 Introduction To Computer System**
 - **INFO1112 Computing 1B OS and Network Platforms**
+- **MATH1064 Discrete Mathematic**
 
 ### In-progress
-- **MATH1064 Discrete Mathematics for Computation**
+- **MATH2022 Linear and Abstract Algebra**
 	+ Completed sections
 	```
-	Notes W1 - W13 [Mingyuan Ba]
+	Notes W1 [Back04oorer]
 	```
 	+ In-progress sections
 	```
-	Example questions [Mingyuan Ba]
 	```
-	
+
+- **INFO2222 Computing 2 Usability and Security**
+	+ Completed sections
+	```
+	```
+	+ In-progress sections
+	```
+	Notes W1 [Back04oorer, Alex]
+	```
+
+		
