@@ -42,9 +42,33 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "030734aeda42039b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "NOTE.README.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "8193c2d3644789aa",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Untitled.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 2
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -110,7 +134,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Data Structure/Conclude from 2823 slides/Trees.md",
+                "file": "Untitled.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +151,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Data Structure/Conclude from 2823 slides/Trees.md",
+                "file": "Untitled.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -150,7 +174,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Data Structure/Conclude from 2823 slides/Trees.md"
+                "file": "Untitled.md"
               }
             }
           }
@@ -171,24 +195,25 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "d74ca9bd07c076b1",
+  "active": "8193c2d3644789aa",
   "lastOpenFiles": [
-    "Basic C++/Include and *Preprocessor in c.md",
+    "NOTE.README.md",
+    "Untitled.md",
+    "Included images/Screenshot 2023-11-25 at 4.20.29 pm.png",
     "Data Structure/Conclude from 2823 slides/Trees.md",
-    "Data Structure/Conclude from 2823 slides",
     "Basic C++/Reference and Pointers.md",
+    "Basic C++/Include and *Preprocessor in c.md",
     "Basic C++/Basic Syntax.md",
+    "Algorithms/Prefix Sum.md",
+    "Data Structure/Conclude from 2823 slides",
     "Problems/Leetcode/191. Number of 1 Bits (Hamming Weight).md",
     "Problems/Leetcode/3.Longest Substring Without Repeating Characters.md",
     "Problems/Leetcode/2147. Number of Ways to Divide a Long Corridor.md",
     "Problems/Leetcode/1685. Sum of Absolute Differences in a Sorted Array.md",
     "Problems/Leetcode/2. Add Two Numbers (Linked List).md",
-    "Algorithms/Prefix Sum.md",
-    "NOTE.README.md",
     "Problems/Leetcode",
     "Problems",
     "Included images",
-    "Included images/Screenshot 2023-11-25 at 4.20.29 pm.png",
     "Table - Data Structure and Algorithm with C++.md",
     "Algorithms",
     "Data Structure",
