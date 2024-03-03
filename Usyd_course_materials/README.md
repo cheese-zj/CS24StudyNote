@@ -11,19 +11,21 @@
 - **MATH2022 Linear and Abstract Algebra**
 	+ Completed sections
 	```
-	Notes W1 [Back04oorer]
+	Notes W1 
 	```
 	+ In-progress sections
 	```
+	Notes W2 
 	```
 
 - **INFO2222 Computing 2 Usability and Security**
+	#### `Notion`
 	+ Completed sections
 	```
+	W1 - W2 Slides Notes
 	```
 	+ In-progress sections
 	```
-	Notes W1 [Back04oorer, Alex]
 	```
 
 		
