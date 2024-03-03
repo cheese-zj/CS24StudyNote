@@ -19,7 +19,7 @@
 	```
 
 - **INFO2222 Computing 2 Usability and Security**
-	#### `Notion`
+	#### `Notion`:https://www.notion.so/INFO2222-ab0a9577d8b84794a879e25b75e2f1eb?pvs=4
 	+ Completed sections
 	```
 	W1 - W2 Slides Notes
