@@ -1,3 +1,0 @@
-This note is for self-studying c++. Well, nothing special...
-May contain Chinese. Yet most of these parts will not be the essential.
-(笑
