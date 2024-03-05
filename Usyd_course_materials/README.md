@@ -11,11 +11,11 @@
 - **MATH2022 Linear and Abstract Algebra**
 	+ Completed sections
 	```
-	Notes W1 
+	Notes W1-W2
 	```
 	+ In-progress sections
 	```
-	Notes W2 
+	Notes W3
 	```
 
 - **INFO2222 Computing 2 Usability and Security**
