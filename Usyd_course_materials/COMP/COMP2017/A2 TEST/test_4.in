@@ -1,0 +1,50 @@
+NEW 5
+a
+b
+hello
+c
+5
+VIEW 0
+VIEW ALL
+NEW 2
+1
+2
+NEW 1
+hello
+NEW 10
+a
+b
+c
+e
+d
+5
+4
+3.14
+2.0
+-1
+VIEW ALL
+VIEW 3
+NEW 10
+1.455
+200000
+terrible
+lorem
+i
+p
+s
+u
+m
+string 1234
+VIEW 2
+VIEW 4
+REMOVE 0
+REMOVE 1
+REMOVE 2
+REMOVE 3
+REMOVE 4
+VIEW 0
+VIEW 1
+VIEW 2
+VIEW 3
+VIEW 4
+VIEW ALL

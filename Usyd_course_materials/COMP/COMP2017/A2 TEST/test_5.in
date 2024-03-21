@@ -1,0 +1,53 @@
+NEW 8
+@
+!a string a
+(
+)
+##
+ 
+end
+
+NEW 6
+-1
+-1.0
+0
+0.0
+123532
+123532.1
+VIEW 0
+VIEW 1
+VIEW ALL
+REMOVE 0
+NEW 1
+it's new!
+VIEW ALL
+NEW 3
+pi
+is
+3.14
+NEW 8
+1
+cm
+is
+as
+long
+as
+100
+mm
+NEW 13
+I
+baked
+4
+pies
+with
+the
+main
+ingredient
+being
+pi
+which
+is
+3.14
+NEW 1
+It's just one really long stringggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg
+VIEW ALL

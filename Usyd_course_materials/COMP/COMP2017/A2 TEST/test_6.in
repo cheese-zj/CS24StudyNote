@@ -1,0 +1,177 @@
+NEW 5
+donut
+55.5
+NEW
+REMOVE
+23
+NEW 3
+some
+strings
+a
+NEW 16
+this
+one
+i
+is
+a
+lot
+of
+strings
+with
+e
+single
+letters
+o
+sprinkled
+in
+!
+NEW 1
+a
+NEW 1
+5
+NEW 1
+2.1
+NEW 1
+word
+NEW 1
+b
+NEW 1
+c
+NEW 1
+d
+NEW 1
+e
+NEW 1
+f
+NEW 1
+g
+NEW 1
+h
+NEW 1
+i
+NEW 1
+j
+NEW 2
+5
+^
+NEW 2
+hello
+3.14
+NEW 2
+world
+&
+NEW 2
+foo
+33251
+NEW 2
+2.13
+8427
+NEW 2
+0.123
+[
+NEW 10
+3.14
+hello
+*
+100%
+-271856
+determined
+'
+1.111
+-0
+8903
+NEW 1
+k
+NEW 1
+L
+NEW 1
+M
+NEW 1
+N
+NEW 1
+O
+NEW 1
+P
+NEW 1
+Q
+NEW 1
+R
+NEW 1
+S
+NEW 1
+T
+NEW 1
+U
+NEW 1
+V
+NEW 1
+W
+NEW 1
+X
+NEW 1
+Y
+NEW 1
+Z
+NEW 3
+making
+some
+lists
+NEW 5
+it's
+a
+lot
+of
+lists
+NEW 4
+I'm
+tired
+of
+lists
+NEW 5
+1
+2
+2.5
+3
+4
+NEW 3
+c
+4
+T
+NEW 4
+L
+3
+3
+T
+NEW 4
+n
+0
+0
+b
+NEW 4
+1
+c
+->
+d
+NEW 2
+VIEW
+ALL
+NEW 4
+NEW 1
+a
+REMOVE 48
+VIEW 48
+NEW 4
+i
+t's
+a little
+tricky
+NEW 3
+to
+think
+of
+NEW 4
+interesting
+lists
+u
+no
+VIEW ALL
