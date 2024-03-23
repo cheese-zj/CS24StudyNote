@@ -1,0 +1,27 @@
+NEW 10
+i
+like
+adding
+words
+to
+this
+list
+yay
+woohoo
+yes
+INSERT 0 1.0 baguette
+INSERT 0.0 1.0 baguette
+INSERT 0 1 there's a space
+TYPE 0
+DELETE 0 1.0
+DELETE 0.0 1.0
+DELETE 0 1 extra-input
+DELETE 0 1
+DELETE 1 1
+INSERT 1 0
+REMOVE 0.0
+INSERT  1  0
+INSERT 0 0  
+INSERT 0 0 
+DELETE 0 0   
+DELETE 0 0

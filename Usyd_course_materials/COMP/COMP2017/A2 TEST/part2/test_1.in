@@ -1,0 +1,27 @@
+NEW 5
+a
+b
+c
+d
+e
+INSERT 0 3 new-thing
+INSERT 0 -3 other-thing
+INSERT 0 7 wont-work
+INSERT 0 -8 wont-work
+INSERT 0 -7 will-work
+DELETE 0 0
+DELETE 0 -2
+DELETE 0 -1
+DELETE 0 8
+DELETE 0 -5
+DELETE 0 4
+DELETE 0 0
+DELETE 0 0
+DELETE 0 0
+DELETE 0 0
+DELETE 0 0
+NEW 0
+INSERT 1 0 2e4
+INSERT 0 -1 5555
+INSERT 0 -1 sixtysixty
+INSERT 1 0 did you ever hear?

@@ -1,0 +1,28 @@
+NEW 3
+a
+simple
+list
+NEW 2
+this is gonna be nested
+{0}
+VIEW-NESTED 1
+INSERT 0 0 extra-word
+VIEW-NESTED 1
+DELETE 0 0
+VIEW-NESTED 1
+NEW 4
+one
+more
+list
+{0}
+VIEW ALL
+REMOVE 0
+DELETE 1 -1
+VIEW ALL
+REMOVE 0
+DELETE 2 3
+VIEW ALL
+REMOVE 0
+INSERT 1 -1 {2}
+VIEW ALL
+VIEW-NESTED 1
