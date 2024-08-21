@@ -1,4 +1,3 @@
-
 # Week 1
 ## 1.Data and DBMS
 
@@ -123,6 +122,11 @@ The <mark style="background: #FF5582A6;">Database Administrator</mark> is respon
 ##### Considerations
 - 可能有性能和成本的代价 (Potential cost and performance trade-offs)
 - 可能不适用于特殊数据类型 (May not perform well with specialized data types)
+
+
+
+
+
 
 
 # Week 2
@@ -431,3 +435,175 @@ Eliminate this redundancy via aggregation
 ![w2_19](Graphs/w2_19.png)
 
 ![w2_20](Graphs/w2_20.png)
+
+
+# Week 3
+
+## 3.1 Schema definition
+- A relational dbms knows the logical schema of the database it manages 
+- The schema is described in SQL statements
+- Schema description are stored int the system catalogue
+
+## 3.2 Create table
+```SQL
+CREATE TABLE <table_name> (variable_name1 type,variable_name2 type,......)
+```
+
+## 3.3 Data Types of PostgreSQL
+
+| Base Datatypes                   | Description                                                   | PostgreSQL Equivalent            |
+| -------------------------------- | ------------------------------------------------------------- | -------------------------------- |
+| SMALLINT, INTEGER, BIGINT        | Integer values                                                | SMALLINT, INTEGER, BIGINT        |
+| DECIMAL(p,q), NUMERIC(p,q)       | Fixed-point numbers with precision `p` and `q` decimal places | DECIMAL(p,q), NUMERIC(p,q)       |
+| FLOAT(p), REAL, DOUBLE PRECISION | Floating point numbers with precision `p`                     | FLOAT(p), REAL, DOUBLE PRECISION |
+| CHAR(q), VARCHAR(q)              | Alphanumerical character string types                         | CHAR(q), VARCHAR(q)              |
+| CLOB(q)                          | Character large object                                        | TEXT                             |
+| BLOB(r)                          | Binary large object                                           | BYTEA                            |
+| DATE                             | Date                                                          | DATE                             |
+| TIME                             | Time                                                          | TIME [WITHOUT TIME ZONE]         |
+| TIMESTAMP                        | Timestamp                                                     | TIMESTAMP [WITHOUT TIME ZONE]    |
+| INTERVAL                         | Time interval                                                 | INTERVAL                         |
+|                                  |                                                               |                                  |
+## 3.4 IC integrity constrains
+### NULL
+- NULL represents facts that are not applicable, or not yet known
+- Not equals to 'NULL' in VARCHAR
+
+```SQL
+CREATE TABlE Instructer(
+	lname varchar(20) NOT NULL,
+	......
+)
+```
+### Primary Key
+In a relational schema, we can declare that a column is a PK
+- This allows it to be used as identifier in other tables, to connect information
+- It will enforce that every row has a different value for this column
+- It will enforce that no row has NULL as value for this column
+```SQL
+	lname varchar(20) NOT NULL,
+	fname varchar(20) PRIMARY KEY
+```
+
+### Composite PK
+```SQL
+CREATE TABlE Instructer(
+	lname varchar(20) NOT NULL,
+	fname varchar(20),
+	PRIMARY KEY (lname,fname)
+)
+```
+
+### UNIQUE
+- A table can have at most one pk declared (single column, composite)
+- The `UNIQUE` constraint guarantees that no two rows in the table can have the same value (or combination of values) in the specified column(s)
+- **Allows `NULL` Values**: Unlike a `PRIMARY KEY`, which does not allow `NULL` values, a column with a `UNIQUE` constraint can have `NULL` values. However, multiple `NULL` values are considered distinct, so they do not violate the uniqueness constraint. <mark style="background: #FF5582A6;">depends on platform</mark>
+- **Supports Multi-Column Uniqueness**: You can apply the `UNIQUE` constraint to multiple columns. In this case, the combination of values across these columns must be unique across all rows in the table.
+
+### Foreign key
+
+```SQL
+CREATE TABLE Customers (
+    CustomerID INT PRIMARY KEY,
+    CustomerName VARCHAR(100)
+);
+
+CREATE TABLE Orders (
+    OrderID INT PRIMARY KEY,
+    OrderDate DATE,
+    CustomerID INT,
+    FOREIGN KEY (CustomerID) REFERENCES Customers(CustomerID)
+);
+
+```
+In the `Orders` table, the `CustomerID` column is a foreign key that references the `CustomerID` column in the `Customers` table.
+
+- This relationship ensures that any value in the `CustomerID` column of the `Orders` table must match a valid `CustomerID` in the `Customers` table.
+
+- It also means that if a customer is deleted from the `Customers` table, the corresponding orders can be deleted, updated, or prevented from being deleted depending on the `ON DELETE` and `ON UPDATE` actions specified in the foreign key constraints.
+
+When referenced table PK is composite, and therefore also referencing table needs a similar combination as the foreign key.
+
+When no column is mentioned for referenced table, implicit reference is to its PK
+
+```SQL
+CREATE TABLE Product (
+	descr VARCHAR(10),
+	SuppID INTEGER REFERENCES Supplier
+);
+
+```
+
+
+### Changing Table definition
+
+```SQL
+DROP TABLE name
+```
+
+```SQL
+ALTER TABLE name ADD COLUmn...| ADD CONSTRAINT
+```
+
+
+## 3.5 Relational Design from ER model
+
+### Mapping usual Entity Set to tables
+
+Each entity type is captured in schema by creating a corresponding table, usually given the same name as the Entity Type
+- Simple attributes map directly onto columns in the table
+- Composite attributes are fattened out by creating a separate column for each component attribute
+- <mark style="background: #FF5582A6;">Multi-valued attribute</mark>: 
+	- Do not include these in the table that corresponds to the entity set
+	- Instead, introduce an additional table, with one column for holding individual single values from the multiple collection, and another column which is a foreign key referencing the entity's primary key
+	- For example, employee 57 has 3 skills of {coding, testing, carpentry}`，then in the additional table, there will be：`(57, coding)`，`(57, testing)`，`(57, carpentry)`。
+
+### Mapping of Weak Entity Types
+Each weak entity type is captured in schema by a separate table
+- introduce a separate table with columns for the attributes(as for strong entity set) and also a column which is a foreign key taken from owning entity
+- PK of this table is composite: the combination with both
+	- Discriminator of weak entity
+	- Foreign key column(s) which references the PK of relation from owning entity 
+![w2_19](Notes/2024%20sem2/ISYS2120/Notes/Graphs/w3_1.png)
+
+### Mapping of relationship Types
+
+- Create an additional table(often called a join table) that includes columns for non-null foreign keys, These foreign keys reference the PKs the entity types involved in the relationship
+- Also, include columns for any non-multivalued attributes of the relationship
+- The name of the join table can either be the <mark style="background: #FF5582A6;">name of the relationship type</mark> or a <mark style="background: #FF5582A6;">combination of the names of the entity sets involved.</mark>
+- The constraints in the join table depend on the constraints of the relationship type.
+![w2_19](Graphs/w3_2.png)
+
+### Alternative mapping of Relationship
+
+![w2_19](Graphs/w3_3.png)
+### Mapping of recursive relationship
+Many Employee to One Employee
+![w3_4](Graphs/w3_4.png)
+### Mapping of ternary relationship
+
+![w3_4](Graphs/w3_5.png)
+
+### Mapping of ISA-Hierarchies
+
+#### Standard Way(works always)
+- Distinct relations: one for the superclass and one for each subclass
+- Superclass attributes(including key and possible relationships go into superclass relation)
+- Subclass attributes go into the appropriate sub-relation ;PK of superclass relation is also included as PK of subclass relation
+- PK of a subclass relation is also a non-null foreign key referencing the superclass relation
+
+![w3_4](Graphs/w3_6.png)
+
+#### Alternative way for <mark style="background: #FF5582A6;">total covering constraint</mark>
+- Distinct relation for each subclass
+	- Its attributes are all those in subclass and also all attributes inherited form higher sets
+	- PK of table is primary key from superclass
+- No foreign-keys needed to capture inheritance
+
+#### Another alternative design (can be used where subclasses are <mark style="background: #FF5582A6;">disjoint</mark>)
+- One relation for the superclass
+- All superclass and all subclass attributes are included in this table, and also an attribute to hold the string name of the subclass appropriate for this row
+	- NULL used for any subclass attribute, in row for entity of a different subclass
+![w3_7](Graphs/w3_7.png)
+
+ 
